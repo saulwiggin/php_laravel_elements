@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <title>PHP Laravel web application</title>
+      <title>Nell Laravel web application</title>
       <link href="{{ asset('css/gradients.css') }}" rel="stylesheet" type="text/css">
       <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css">
     </head>
