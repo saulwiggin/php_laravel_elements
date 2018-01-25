@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/foo', function () {
+    return 'Hello World';
+});
+Route::get('/landing', function () {
+    return view('index');
+});
