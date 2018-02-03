@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="bootstrap-prettyfile.js"></script>
+</header>
+<body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
+    <input style='margin:10px;'type="submit" value="Upload" name="submit">
+</form>
+
+<script>
+      $('input[type="file"]').prettyFile();
+</script>
+
+</body>
+</html>

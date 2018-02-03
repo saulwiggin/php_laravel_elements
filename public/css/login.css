@@ -1,0 +1,23 @@
+<style>
+@font-face {
+    font-family: GTWalsham_med;
+    src: url("fonts/GT-Walsheim-Pro-Trial-Condensed-Medium.woff") format("woff"), url("fonts/GT-Walsheim-Pro-Trial-Condensed-Medium.woff")  format("truetype");
+}
+@font-face {
+    font-family: GTWalsham_reg;
+    src: url("fonts/GT-Walsheim-Pro-Trial-Condensed-Regular.woff") format("woff"), url("fonts/GT-Walsheim-Pro-Trial-Condensed-Regular.woff")  format("truetype");
+}
+#23andme_button{
+  margin-bottom: 15px;
+  margin: 10px;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
