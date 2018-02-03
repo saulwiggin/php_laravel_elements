@@ -1,9 +1,9 @@
 <html>
 <header>
-<link src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css'>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script>
+<!-- <link src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css'>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script> -->
 <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}'">
-<link src='{{asset('css/login.css')}}'>
+<link src='{{URL::asset('css/login.css')}}'>
 </header>
 <body>
   <img src='{{asset('img/the_science_of_feeling_great.jpg')}}'  id='bg' alt= "nell">

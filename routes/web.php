@@ -26,3 +26,12 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/product1', function () {
+    return view('product1');
+});
+Route::get('/product2', function () {
+    return view('product2');
+});
+Route::get('/product3', function () {
+    return view('product3');
+});

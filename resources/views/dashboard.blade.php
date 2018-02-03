@@ -71,12 +71,12 @@
               <div class="container-fluid header"style='background-color: white;'>
                 <div class="navbar-header ">
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
-                  <div class='links' style='float:right;    margin-left: 470px;
+                  <div class='links' style='float:right;    margin-left: 320px;
     margin-top: 20px;'>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Shop</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Ingredients</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Who We Are</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Login</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Health Questionaire</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Blood Results</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Settings</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Logout</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a>
                   </div>
@@ -100,43 +100,28 @@
             <div class='page_content_wrapper' style='margin-top:70px;'>
               <!-- container (landing page - welcome or Questionaire) -->
               <div class='questionaire_container' style='height:900px;width:100%;     margin-top: 100px;'>
-                <div class="slideanim">
-                  <div class="">
-                    <div class="panel  text-center">
-                      <div class="panel-body">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:860px;'>
-                          <!-- Indicators -->
-                          <ol class="carousel-indicators">
-                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                          </ol>
-
-                          <!-- Wrapper for slides -->
-                          <div class="carousel-inner" role="listbox">
-                              <div class="item active">
-                                  <img src="{{ asset('img/the_science_of_feeling_great.jpg') }}" alt="">
-                                  <div class="carousel-caption">
-                                      <!-- <h1>Carousel in a container</h1>
-                                      <p>This is a demo for the Bootstrap Carousel Guide.</p> -->
-                                  </div>
+                <div class='purchase_container' style='height:400px;'>
+                  <div class="row slideanim">
+                    <div class="col-md-12">
+                      <div class="panel panel-default text-center">
+                        <!-- <div class="panel-heading">
+                          <h1>We want to know about you</h1>
+                        </div> -->
+                        <div class="panel-body">
+                          <div id="pricing" class="container-fluid">
+                            <div class="text-center">
+                              <div class="" style=min-height:400px;background-image:url('{{asset('/img/background.png')}}')>
+                                <a style='margin-top:200px; border-radius: 20px;width:300px;height:60px'href='https://nell.co.uk/products/genetic-test' type='button' class='btn btn-default btn-rounded'>
+                                  <span style='position:relative;top:10px;margin-top:20px;font-size:20px;font-family:waltham'>Take Genetic Test</span></a>
+                                <!-- <h2>Pricing</h2>
+                                <h4>Choose a Health plan that works for you</h4> -->
                               </div>
-                              <div class="item">
-                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/leafImage.jpg?1179625118197023529.jpg" alt="">
-                              </div>
-
+                            </div>
                           </div>
-
-                          <!-- Controls -->
-                          <a style='background: none;'class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                          </a>
-                          <a style='background: none;'class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                          </a>
-                      </div>
+                        </div>
+                        <!-- <div class="panel-footer">
+                          <a style='background-color: orange;'class="btn btn-lg"href='index.html#pricing'>Next Step</a>
+                        </div> -->
                       </div>
                     </div>
                   </div>
@@ -394,7 +379,7 @@
                 </div>
               </div>
               <div class='bubblesanimation_container' style='height:300px;'>
-                <div class="row slideanim">
+                <!-- <div class="row slideanim">
                   <div class="col-md-12">
                     <div class="panel panel-default text-center">
                       <div class="">
@@ -419,10 +404,10 @@
 
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class='bubblesanimation_container' style='height:300px;'>
-                <div class="row slideanim">
+                <!-- <div class="row slideanim">
                   <div class="col-md-12">
                     <div class='col-md-6'>
                         <img style='height:100%;width:100%;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/pineapple.JPG?1179625118197023529'>
@@ -437,7 +422,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <!-- <div class='bubblesanimation_container' style='height:300px;'>
                 <div class="row slideanim">
@@ -449,117 +434,7 @@
                 <!-- </div>
               </div> -->
               <!-- Container (Pricing Options) -->
-              <div class='pricing_container' style='height:1000px;'>
-                <div class="row slideanim">
-                <div id="services" class="container-fluid text-center">
-                  <!-- <h2>Find your Perfect Fit</h2>
-                  <p>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
-                  <br> -->
-                    <!-- <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'> -->
-                      <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
-                      <img alt='product' style='height:500px;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529.png'></img>
-                      <h3></h3>
-                      <p>
-                      </p>
-                        <!-- </div> -->
-                        <!-- <div class="col-sm-6"> -->
-                          <a class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop All</a>
-                          <!-- <table class="table table-bordered" style='margin-left:200px'>
-                             <thead>
-                               <tr>
-                                 <th>Supplement</th>
-                                 <th>per 100ml</th>
-                                 <th>% of RDA</th>
-                               </tr>
-                             </thead>
-                             <tbody>
-                               <tr>
-                                 <td>Vitamin D</td>
-                                 <td>5µg</td>
-                                 <td>100%</td>
-                               </tr>
-                               <tr>
-                                 <td>Vitamin E</td>
-                                 <td>72mg</td>
-                                 <td>603%</td>
-                               </tr>
-                               <tr>
-                                 <td>Vitamin C</td>
-                                 <td>86mg</td>
-                                 <td>108%</td>
-                               </tr>
-                               <tr>
-                                 <td>Thiamin</td>
-                                 <td>2.4mg</td>
-                                 <td>222%</td>
-                               </tr>
-                               <tr>
-                                 <td>Riboflavin</td>
-                                 <td>2.4mg</td>
-                                 <td>175%</td>
-                               </tr>
-                               <tr>
-                                 <td>Vitamin B6</td>
-                                 <td>16.1mg</td>
-                                 <td>1150%</td>
-                               </tr>
-                               <tr>
-                                 <td>Folic Acid</td>
-                                 <td>364µg</td>
-                                 <td>182%</td>
-                               </tr>
-                               <tr>
-                                 <td>Vitamin A</td>
-                                 <td>341µg</td>
-                                 <td>43%</td>
-                               </tr>
-                               <tr>
-                                 <td>Iron</td>
-                                 <td>15.6mg</td>
-                                 <td>111%</td>
-                               </tr>
-                               <tr>
-                                 <td>Zinc</td>
-                                 <td>6.3mg</td>
-                                 <td>63%</td>
-                               </tr>
-                               <tr>
-                                 <td>Selenium</td>
-                                 <td>56.3µg</td>
-                                 <td>102%</td>
-                               </tr>
-                             </tbody>
-                           </table> -->
-                        <!-- </div> -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class='purchase_container' style='height:400px;'>
-                    <div class="row slideanim">
-                      <div class="col-md-12">
-                        <div class="panel panel-default text-center">
-                          <!-- <div class="panel-heading">
-                            <h1>We want to know about you</h1>
-                          </div> -->
-                          <div class="panel-body">
-                            <div id="pricing" class="container-fluid">
-                              <div class="text-center">
-                                <div class="" style=min-height:400px;background-image:url('background.png')>
-                                  <a style='margin-top:200px; border-radius: 20px;width:300px;height:60px'href='https://nell.co.uk/products/genetic-test' type='button' class='btn btn-default btn-rounded'>
-                                    <span style='position:relative;top:10px;margin-top:20px;font-size:20px;font-family:waltham'>Take Genetic Test</span></a>
-                                  <!-- <h2>Pricing</h2>
-                                  <h4>Choose a Health plan that works for you</h4> -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="panel-footer">
-                            <a style='background-color: orange;'class="btn btn-lg"href='index.html#pricing'>Next Step</a>
-                          </div> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                   <!-- <div class='motivation_container' style='height:600px;'>
                     <div class='row'>
                     <div id="pricing" class="container-fluid">
@@ -629,7 +504,7 @@
                     </div>
                   </div>
                   <div class='row'>
-                  <div id="pricing" class="container-fluid">
+                  <!-- <div id="pricing" class="container-fluid">
                     <div class="text-center">
                       <div class="jumbotron">
                         <h2>Pricing</h2>
@@ -698,7 +573,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 </div>
               </div>

@@ -419,7 +419,7 @@
                     </div>
                     <div class='col-md-6'>
                       <div class="card" style='height:420px;margin-top:-20px;width:100%'>
-                        <div class="card-block">
+                        <div class="card-block text-center">
                           <h3 class="card-title"style='font-size:100px;'>02</h3>
                           <h4 class="card-text">Designed for your life </h4>
                           <p class='card-text' style='font-size:12px;'> We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. </p>
@@ -442,9 +442,13 @@
               <div class='pricing_container' style='height:1000px;'>
                 <div class="row slideanim">
                 <div id="services" class="container-fluid text-center">
-                  <!-- <h2>Find your Perfect Fit</h2>
-                  <p>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
-                  <br> -->
+                  <div class='panel'>
+                    <div class='panel-header'>
+                      <h2>Find your Perfect Fit</h2>
+                      <p>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
+                      <br>
+                    </div>
+                    <div class='panel-body'>
                     <!-- <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'> -->
                       <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
                       <img alt='product' style='height:500px;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529.png'></img>
@@ -453,7 +457,9 @@
                       </p>
                         <!-- </div> -->
                         <!-- <div class="col-sm-6"> -->
-                          <a class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop All</a>
+                        <div class='text-center'>
+                          <a style='margin-left:400px;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop All</a>
+                            </div>
                           <!-- <table class="table table-bordered" style='margin-left:200px'>
                              <thead>
                                <tr>
@@ -521,35 +527,12 @@
                              </tbody>
                            </table> -->
                         <!-- </div> -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class='purchase_container' style='height:400px;'>
-                    <div class="row slideanim">
-                      <div class="col-md-12">
-                        <div class="panel panel-default text-center">
-                          <!-- <div class="panel-heading">
-                            <h1>We want to know about you</h1>
-                          </div> -->
-                          <div class="panel-body">
-                            <div id="pricing" class="container-fluid">
-                              <div class="text-center">
-                                <div class="" style=min-height:400px;background-image:url('background.png')>
-                                  <a style='margin-top:200px; border-radius: 20px;width:300px;height:60px'href='https://nell.co.uk/products/genetic-test' type='button' class='btn btn-default btn-rounded'>
-                                    <span style='position:relative;top:10px;margin-top:20px;font-size:20px;font-family:waltham'>Take Genetic Test</span></a>
-                                  <!-- <h2>Pricing</h2>
-                                  <h4>Choose a Health plan that works for you</h4> -->
-                                </div>
-                              </div>
-                            </div>
                           </div>
-                          <!-- <div class="panel-footer">
-                            <a style='background-color: orange;'class="btn btn-lg"href='index.html#pricing'>Next Step</a>
-                          </div> -->
                         </div>
                       </div>
                     </div>
                   </div>
+                  
                   <!-- <div class='motivation_container' style='height:600px;'>
                     <div class='row'>
                     <div id="pricing" class="container-fluid">
