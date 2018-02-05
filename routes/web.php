@@ -50,5 +50,8 @@ Route::get('/products', function () {
 Route::get('/ingredients', function () {
     return view('ingredients');
 });
+Route::get('/questionaire', function () {
+    return view('questionaire');
+});
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');

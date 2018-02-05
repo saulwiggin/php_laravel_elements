@@ -114,34 +114,48 @@
 
 
             <!-- container (chart - welcome) -->
+          </div>
+              <div class='dashboard_container' style='height:300px;'>
+                <div class="row slideanim">
+                    <div class='col-md-6'>
+                      <div class=" text-center">
 
-              <div class='bubblesanimation_container' style='height:300px;'>
-                <!-- <div class="row slideanim">
-                  <div class="col-md-12">
-                    <div class="panel panel-default text-center">
-                      <div class="">
-
-                      </div>
-                      <div class="panel-body">
-                        <div class='col-md-6'>
-                          <div class="card" style='height:380px;margin-top:-20px;width:100%'>
-                            <div class="card-block">
-                              <h3 class="card-title"style='font-size:100px;'>01</h3>
-                              <h4 class="card-text">Your Stories </h4>
-                              <p class='card-text' style='font-size:12px;'> Personal accounts of those who have had the personal experience of the goods and nutrients Nell has to offer </p>
+                        <div class="">
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Your Reports</h5>
+                              <p class="card-text">View your Reports.</p>
+                              <a href="/reports" style='margin:10px;'class="btn btn-primary">Reports</a>
                             </div>
                           </div>
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Your Health</h5>
+                              <p class="card-text">Your Health Questionaire Results.</p>
+                              <a href="/questionaire" style='margin:10px;'class="btn btn-primary">Questions</a>
+                            </div>
+                          </div>
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">My Products</h5>
+                              <p class="card-text">View your Products.</p>
+                              <a href="/products" style='margin:10px;'class="btn btn-primary">Products</a>
+                            </div>
+                          </div>
+                          </div>
                         </div>
-
+                      </div>
                         <div class='col-md-6'>
-                          <img style='width:100%;height:100%;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/girlImage.png?1179625118197023529'>
                         </div>
 
                       </div>
 
                     </div>
                   </div>
-                </div> -->
+                </div>
               </div>
               <div class='bubblesanimation_container' style='height:300px;'>
                 <!-- <div class="row slideanim">
