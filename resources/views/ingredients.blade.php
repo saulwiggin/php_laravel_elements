@@ -74,7 +74,7 @@
                   <div class='links' style='float:right;    margin-left: 470px;
     margin-top: 20px;'>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="https://nell.co.uk/collections/all">Shop</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Ingredients</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="/ingredients">Ingredients</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Who We Are</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="{{ url('login') }}">Login</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
@@ -104,40 +104,73 @@
                   <div class="col-md-12">
                     <div class="panel  text-center">
                       <div class="panel-body">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:860px;'>
-                          <!-- Indicators -->
-                          <ol class="carousel-indicators">
-                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                          </ol>
-
-                          <!-- Wrapper for slides -->
-                          <div class="carousel-inner" role="listbox">
-                              <div class="item active">
-                                  <img src="{{ asset('img/the_science_of_feeling_great.jpg') }}" alt="">
-                                  <div class="carousel-caption">
-                                      <!-- <h1>Carousel in a container</h1>
-                                      <p>This is a demo for the Bootstrap Carousel Guide.</p> -->
-                                  </div>
-                              </div>
-                              <div class="item">
-                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/leafImage.jpg?1179625118197023529.jpg" alt="">
-                              </div>
-                              <div class="item">
-                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/Natural_Nutrition.jpg?8441759937524908230" alt="">
-                              </div>
-                          </div>
-
-                          <!-- Controls -->
-                          <a style='background: none;'class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                          </a>
-                          <a style='background: none;'class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                          </a>
+                        <!-- <img src=''> -->
+                        <table class="table table-bordered" style='margin-left:200px'>
+                           <thead>
+                             <tr>
+                               <th>Supplement</th>
+                               <th>per 100ml</th>
+                               <th>% of RDA</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>Vitamin D</td>
+                               <td>5µg</td>
+                               <td>100%</td>
+                             </tr>
+                             <tr>
+                               <td>Vitamin E</td>
+                               <td>72mg</td>
+                               <td>603%</td>
+                             </tr>
+                             <tr>
+                               <td>Vitamin C</td>
+                               <td>86mg</td>
+                               <td>108%</td>
+                             </tr>
+                             <tr>
+                               <td>Thiamin</td>
+                               <td>2.4mg</td>
+                               <td>222%</td>
+                             </tr>
+                             <tr>
+                               <td>Riboflavin</td>
+                               <td>2.4mg</td>
+                               <td>175%</td>
+                             </tr>
+                             <tr>
+                               <td>Vitamin B6</td>
+                               <td>16.1mg</td>
+                               <td>1150%</td>
+                             </tr>
+                             <tr>
+                               <td>Folic Acid</td>
+                               <td>364µg</td>
+                               <td>182%</td>
+                             </tr>
+                             <tr>
+                               <td>Vitamin A</td>
+                               <td>341µg</td>
+                               <td>43%</td>
+                             </tr>
+                             <tr>
+                               <td>Iron</td>
+                               <td>15.6mg</td>
+                               <td>111%</td>
+                             </tr>
+                             <tr>
+                               <td>Zinc</td>
+                               <td>6.3mg</td>
+                               <td>63%</td>
+                             </tr>
+                             <tr>
+                               <td>Selenium</td>
+                               <td>56.3µg</td>
+                               <td>102%</td>
+                             </tr>
+                           </tbody>
+                         </table>
                       </div>
                       </div>
                     </div>
