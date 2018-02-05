@@ -73,7 +73,7 @@
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
                   <div class='links' style='float:right;    margin-left: 470px;
     margin-top: 20px;'>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Shop</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="https://nell.co.uk/collections/all">Shop</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Ingredients</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Who We Are</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="{{ url('login') }}">Login</a>
@@ -99,9 +99,9 @@
 
             <div class='page_content_wrapper' style='margin-top:70px;'>
               <!-- container (landing page - welcome or Questionaire) -->
-              <div class='questionaire_container' style='height:900px;width:100%;     margin-top: 100px;'>
-                <div class="slideanim">
-                  <div class="">
+              <div class='questionaire_container' style='height:600px;width:100%;     margin-top: 100px;'>
+                <div class="slideanim row">
+                  <div class="col-md-12">
                     <div class="panel  text-center">
                       <div class="panel-body">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:860px;'>
@@ -124,7 +124,9 @@
                               <div class="item">
                                   <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/leafImage.jpg?1179625118197023529.jpg" alt="">
                               </div>
-
+                              <div class="item">
+                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/Natural_Nutrition.jpg?8441759937524908230" alt="">
+                              </div>
                           </div>
 
                           <!-- Controls -->
@@ -139,6 +141,9 @@
                       </div>
                       </div>
                     </div>
+                  </div>
+                  <div class='col-md-12'>
+                    <a style='margin-top:-200px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a>
                   </div>
                 </div>
               </div>
@@ -395,8 +400,8 @@
                           <div class="card" style='height:380px;margin-top:-20px;width:100%'>
                             <div class="card-block">
                               <h3 class="card-title"style='font-size:100px;'>01</h3>
-                              <h4 class="card-text">Your Stories </h4>
-                              <p class='card-text' style='font-size:12px;'> Personal accounts of those who have had the personal experience of the goods and nutrients Nell has to offer </p>
+                              <h4 class="card-text">Your Story </h4>
+                              <p class='card-text' style='font-size:12px;'> “I want to know as much as I can about my body and health because I don’t trust the generic advice that is out there” </p>
                             </div>
                           </div>
                         </div>
@@ -439,7 +444,7 @@
                 <!-- </div>
               </div> -->
               <!-- Container (Pricing Options) -->
-              <div class='pricing_container' style='height:1000px;'>
+              <div class='pricing_container' style='height:1200px;'>
                 <div class="row slideanim">
                 <div id="services" class="container-fluid text-center">
                   <div class='panel'>
@@ -457,9 +462,9 @@
                       </p>
                         <!-- </div> -->
                         <!-- <div class="col-sm-6"> -->
-                        <div class='text-center'>
+                        <!-- <div class='text-center'>
                           <a style='margin-left:400px;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop All</a>
-                            </div>
+                            </div> -->
                           <!-- <table class="table table-bordered" style='margin-left:200px'>
                              <thead>
                                <tr>
@@ -532,7 +537,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <!-- <div class='motivation_container' style='height:600px;'>
                     <div class='row'>
                     <div id="pricing" class="container-fluid">
@@ -541,32 +546,32 @@
                           <h2>Pricing</h2>
                           <h4>Choose a Health plan that works for you</h4>
                         </div>
-                      </div>
+                      </div> -->
                       <div class="row slideanim">
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='images/heart.png'>
+                            <img style='height:120px;'src='{{asset('img/heart.png')}}'>
                             <p>We welcome you to a world of vital knowledge, centered on a network of professionals</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='images/brain.png'>
+                            <img style='height:120px;'src='{{asset('img/brain.png')}}'>
                             <p>We all need a unique blend of elements and nourishment to flourish and thrive</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='images/leaves.png'>
+                            <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
                             <p>We make getting the bet of natures ingredients simple</p>
                           </div>
                           </div>
                         </div>
-                      </div>
+                      <!-- </div>
                     </div>
-                  </div> -->
+                  </div>  -->
                   <div class='motivation_container' style='height:300px;'>
                     <div class='row'>
                     <div id="pricing" class="container-fluid">
@@ -701,7 +706,7 @@
                     <div class="col-md-4">
                         <!-- <h5 class="title">Nell Natural Elements</h5>
                     </div> -->
-                    <img style='width:350px;    margin-left: 30px;  margin-top: -30px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'>
+                    <img style='width:350px; margin-top: -30px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'>
                   </div>
                     <!--Second column-->
                     <div class="col-md-4">

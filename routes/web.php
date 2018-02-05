@@ -35,3 +35,17 @@ Route::get('/product2', function () {
 Route::get('/product3', function () {
     return view('product3');
 });
+Route::get('/upload', function () {
+    return view('upload');
+});
+Route::get('/data', function () {
+    return view('data');
+});
+Route::get('/reports', function () {
+    return view('reports');
+});
+Route::get('/products', function () {
+    return view('products');
+});
+Route::get('s3-upload','S3Controller@imageUpload');
+Route::post('s3-upload','S3Controller@imageUploadPost');

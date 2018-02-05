@@ -70,15 +70,27 @@
             <nav class="navbar navbar-fixed-top ">
               <div class="container-fluid header"style='background-color: white;'>
                 <div class="navbar-header ">
-                  <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
+                  <a href='http://www.nellnaturalelements.com'><img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}></a>
                   <div class='links' style='float:right;    margin-left: 320px;
     margin-top: 20px;'>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Health Questionaire</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Blood Results</a>
+                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My DNA Results</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Products</a> -->
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Settings</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Logout</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a>
+                    <div class="dropdown">
+                      <!-- <button class="dropbtn">Dropdown 
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                      </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
