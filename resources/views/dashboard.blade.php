@@ -149,6 +149,39 @@
                         </div>
                       </div>
                         <div class='col-md-6'>
+                          <div class='panel'>
+                            <div class='panel-header'>
+                              <h2>  </h2>
+                            </div>
+                            <div class='panel-body'>
+
+                              <div class="">
+                                <div class="">
+                                  <h4 class="">The Wake Up Call</h5>
+                                  <h5 class="card-subtitle mb-2 text-muted">"Carpe Diem"</h6>
+                                  <p class="card-text">After a serious wake up call you are awakened to Nell's Non-toxic Product Range.
+                                  When people wake up they start to focus on there health and nutrition and consider the following generation.
+                                You are able to plan for the future and your good health is part of that. </p>
+                                  <h6 class='card-subtitle mb-1'> Your Recommendations </h6>
+                                  <ul>
+                                  <li>
+                                    <img style='height:50px;'src='{{asset('/img/products/water_activation.jpeg')}}'>
+                                    <p class='product description'>Water Activation at home greatly enhances your mineral intake in shot form which remains fresh for longer. Shake the bottle at home to get the most from your vitamin baggy.</p>
+                                  <a href="/products/functional_waters" class="card-link">Water Activation at Home</a>
+                                </li>
+                                <li>
+                                  <!-- <img style='height:50px;'class='thumbnail' src='{{asset('/img/products/mineral_haircare.jpg')}}'>
+                                  <a href="/products/microbiome_skincare" class="card-link">Microbiome Skincare</a> -->
+                                </li>
+                                <li>
+                                  <img style='margin-top:10px;height:50px;'src='{{asset('img/products/antioxidants.jpeg')}}'>
+                                  <p class='product description'>Anti-oxidants promote stress relief. They are common in berrys such as blueberrys and other superfruits. </p>
+                                  <a href="/products/microbiome_skincare" class="card-link">Anti-oxidant radical fighting</a>
+                                </li>
+                                </div>
+                              </div>
+                            </div>
+
                         </div>
 
                       </div>
