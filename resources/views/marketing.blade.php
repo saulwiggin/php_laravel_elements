@@ -71,14 +71,14 @@
               <div class="container-fluid header"style='background-color: white;'>
                 <div class="navbar-header ">
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
-                  <div class='links' style='float:right;    margin-left: 470px;
+                  <div class='links' style='float:right;    margin-left: 650px;
     margin-top: 20px;'>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="https://nell.co.uk/collections/all">Shop</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Ingredients</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Who We Are</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="{{url('theScience')}}">The Science</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="https://nell.co.uk/pages/community">Who We Are</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="{{ url('login') }}">Login</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a>
+                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a> -->
                   </div>
                 </div>
               </div>
