@@ -104,7 +104,7 @@
                   <div class="col-md-12">
                     <div class="panel  text-center">
                       <div class="panel-body">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:860px;'>
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:600px;'>
                           <!-- Indicators -->
                           <ol class="carousel-indicators">
                               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -147,247 +147,7 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class='bubbles_container'>
-                <div class="row slideanim" style='float:left'>
-                  <div class="col-md-12">
-                    <div class="panel panel-default text-center">
-                      <div class="panel-body">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:860px;'>
-                          <ol class="carousel-indicators">
-                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                          </ol>
 
-                          <div class="carousel-inner" role="listbox">
-                              <div class="item active">
-                                  <img src="https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529" alt="">
-                                  <div class="carousel-caption">
-
-                                  </div>
-                              </div>
-
-
-                          </div>
-
-                          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                          </a>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- container (chart - welcome) -->
-            <!-- <div class='body_reports' style='height:700px;'>
-              <div class='row'>
-                <div class='col-md-4'>
-                  <div class="container">
-                    <div id="weight" class="collapse">
-                      <h2> Weight Report </h2>
-                      <script type="text/javascript">
-                        google.charts.load('current', {'packages':['table']});
-                        google.charts.setOnLoadCallback(drawTable1);
-
-                        function drawTable1() {
-                          var data = new google.visualization.DataTable();
-                          data.addColumn('string', 'Vitamin');
-                          data.addColumn('string', 'Gene');
-                          data.addColumn('string', 'Genotype');
-                          data.addColumn('string', 'Description');
-                          data.addRows([
-                            ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-                            ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                            ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                            ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                            ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                            ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                            ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
-
-                          ]);
-
-                          var table = new google.visualization.Table(document.getElementById('table_div_weight'));
-
-                          table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
-                        }
-                      </script>
-                      <div id="table_div_weight"></div>
-                    </div>
-                    <div id="sleep" class="collapse">
-                      <h2> Sleep Report </h2>
-                      <script type="text/javascript">
-                        google.charts.load('current', {'packages':['table']});
-                        google.charts.setOnLoadCallback(drawTable2);
-
-                        function drawTable2() {
-                          var data = new google.visualization.DataTable();
-                          data.addColumn('string', 'Vitamin');
-                          data.addColumn('string', 'Gene');
-                          data.addColumn('string', 'Genotype');
-                          data.addColumn('string', 'Description');
-                          data.addRows([
-                            ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-                            ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                            ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                            ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                            ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                            ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                            ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
-
-                          ]);
-
-                          var table = new google.visualization.Table(document.getElementById('table_div_sleep'));
-
-                          table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
-                        }
-                      </script>
-                      <div id="table_div_sleep"></div>
-                    </div>
-                    <div id="energy" class="collapse">
-                      <h2> Energy Report </h2>
-                      <script type="text/javascript">
-                        google.charts.load('current', {'packages':['table']});
-                        google.charts.setOnLoadCallback(drawTable3);
-
-                        function drawTable3() {
-                          var data = new google.visualization.DataTable();
-                          data.addColumn('string', 'Vitamin');
-                          data.addColumn('string', 'Gene');
-                          data.addColumn('string', 'Genotype');
-                          data.addColumn('string', 'Description');
-                          data.addRows([
-                            ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-                            ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                            ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                            ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                            ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                            ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                            ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                            ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
-
-                          ]);
-
-                          var table = new google.visualization.Table(document.getElementById('table_div_energy'));
-
-                          table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
-                        }
-                      </script>
-                      <div id="table_div_energy"></div>
-                    </div>
-                  </div>
-                </div>
-
-                  <div class='col-md-4'>
-                    <div class='circle' id="circle-demo trigger"></div>
-                    <script>
-                    $( "#trigger" ).click(function() {
-                      document.getElementById("path_to_weight").beginElement();
-                    });
-                    </script>
-                    <div id="circle-intellegence"></div>
-                    <div id="circle-sleep"></div>
-                    <div id="circle-energy"></div>
-                    <div id="circle-weight"></div>
-                    <h3> Click Your Body To Discover Your Vitals </h3>
-                     <img src="{{ asset('img/human_profile.png') }}" usemap="#shapes"
-                          alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
-                     <map name="shapes">
-                       <area class='area' shape=circle href="#demo" coords="200,75,50" data-toggle="collapse" alt="Green circle.">
-                       <area class='area' shape=poly coords="325,25,262,125,388,125" data-toggle="collapse"  href="#intellegence" alt="Blue triangle.">
-                       <area class='area' shape=circle coords="260, 200, 50"
-                             href="#sleep" alt="gut" data-toggle="collapse" >
-                      <area class='area' shape=circle href ='#energy' data-toggle="collapse" alt='hand' coords="360,270,50">
-                      <area class='area' shape=circle coords="290,400,50" href="#weight"  alt="leg" data-toggle="collapse">
-                     </map>
-                    </p>
-                  </div>
-                  <script>
-                  $('.area').click( function(e) {
-                      $('.collapse').collapse('hide');
-                  });
-                  </script>
-                  <div class='col-md-4'>
-                    <div class="container">
-
-                      <div id="intellegence" class="collapse">
-                        <h2> Intellegence Report </h2>
-                        <script type="text/javascript">
-                          google.charts.load('current', {'packages':['table']});
-                          google.charts.setOnLoadCallback(drawTable4);
-
-                          function drawTable4() {
-                            var data = new google.visualization.DataTable();
-                            data.addColumn('string', 'Vitamin');
-                            data.addColumn('string', 'Gene');
-                            data.addColumn('string', 'Genotype');
-                            data.addColumn('string', 'Description');
-                            data.addRows([
-                              ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-                              ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                              ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                              ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                              ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                              ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                              ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                              ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                              ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
-
-                            ]);
-
-                            var table = new google.visualization.Table(document.getElementById('table_div_intellegence'));
-
-                            table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
-                          }
-                        </script>
-                        <div id="table_div_intellegence"></div>
-                      </div>
-                      <div id="demo" class="collapse">
-                        <h2> Nutrition Report </h2>
-                        <script type="text/javascript">
-                          google.charts.load('current', {'packages':['table']});
-                          google.charts.setOnLoadCallback(drawTable6);
-
-                          function drawTable6() {
-                            var data = new google.visualization.DataTable();
-                            data.addColumn('string', 'Vitamin');
-                            data.addColumn('string', 'Gene');
-                            data.addColumn('string', 'Genotype');
-                            data.addColumn('string', 'Description');
-                            data.addRows([
-                              ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-                              ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                              ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                              ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                              ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                              ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                              ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                              ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                              ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
-
-                            ]);
-
-                            var table = new google.visualization.Table(document.getElementById('table_div_nutrition'));
-
-                            table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
-                          }
-                        </script>
-                        <div id="table_div_nutrition"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class='bubblesanimation_container' style='height:300px;'>
                 <div class="row slideanim">
                   <div class="col-md-12">
@@ -399,9 +159,13 @@
                         <div class='col-md-6'>
                           <div class="card" style='height:380px;margin-top:-20px;width:100%'>
                             <div class="card-block">
-                              <h3 class="card-title"style='font-size:100px;'>01</h3>
-                              <h4 class="card-text">Your Story </h4>
-                              <p class='card-text' style='font-size:12px;'> “I want to know as much as I can about my body and health because I don’t trust the generic advice that is out there” </p>
+                              <h3 class="card-title"style='font-size:300px;float:left'>01</h3>
+                              <h4 class="card-text" style='    position: relative;
+    top: 80px;'>Your Story </h4>
+                              <p class='card-text' style='    font-size: 22px;
+    position: relative;
+    margin-top: 100px;
+    font-family:Walsheim;'> “I want to know as much as I can about my body and health because I don’t trust the generic advice that is out there” </p>
                             </div>
                           </div>
                         </div>
@@ -425,9 +189,9 @@
                     <div class='col-md-6'>
                       <div class="card" style='height:420px;margin-top:-20px;width:100%'>
                         <div class="card-block text-center">
-                          <h3 class="card-title"style='font-size:100px;'>02</h3>
-                          <h4 class="card-text">Designed for your life </h4>
-                          <p class='card-text' style='font-size:12px;'> We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. </p>
+                          <h3 class="card-title"style='font-size:300px;float:right'>02</h3>
+                          <h4 class="card-text"style='position:relative;top:90px;font-size:22px'>Designed for your life </h4>
+                          <p class='card-text' style='font-size:20px;font-family:Walsheim;margin-top:100px;'> We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information. </p>
                         </div>
                       </div>
                     </div>
@@ -446,11 +210,15 @@
               <!-- Container (Pricing Options) -->
               <div class='pricing_container' style='height:1200px;'>
                 <div class="row slideanim">
-                <div id="services" class="container-fluid text-center">
+                <div id="services" class="col-md-12 text-center">
                   <div class='panel'>
                     <div class='panel-header'>
-                      <h2>Find your Perfect Fit</h2>
-                      <p>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
+                      <h2 style='    position: relative;
+    top: 50px;'>Find your Perfect Fit</h2>
+                      <p style='font-size: 18px;
+    font-family: walsheim;
+    position: relative;
+    top: 50px;'>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
                       <br>
                     </div>
                     <div class='panel-body'>
@@ -471,6 +239,11 @@
                         </div>
                       </div>
                     </div>
+                    <div class='row'>
+                    <div class='col-md-12'>
+                      <a style='margin-top:-160px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='#pricing'>Sign Up</a>
+                    </div>
+                  </div>
                   </div>
 
                   <!-- <div class='motivation_container' style='height:600px;'>
@@ -482,25 +255,25 @@
                           <h4>Choose a Health plan that works for you</h4>
                         </div>
                       </div> -->
-                      <div class="row slideanim">
+                      <div class="row slideanim" style='margin-top:-200px;'>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/heart.png')}}'>
-                            <p>We welcome you to a world of vital knowledge, centered on a network of professionals</p>
+                            <p style='font-size:22px'>We welcome you to a world of vital knowledge, centered on a network of professionals</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/brain.png')}}'>
-                            <p>We all need a unique blend of elements and nourishment to flourish and thrive</p>
+                            <p style='font-size:22px'>We all need a unique blend of elements and nourishment to flourish and thrive</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
-                            <p>We make getting the bet of natures ingredients simple</p>
+                            <p style='font-size:22px'>We make getting the bet of natures ingredients simple</p>
                           </div>
                           </div>
                         </div>
@@ -520,21 +293,21 @@
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/bottle.png')}}'>
-                            <p>We create little shots of natural goodness. Uniquely designed for your needs.</p>
+                            <p style='font-size:22px'>We create little shots of natural goodness. Uniquely designed for your needs.</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/letter.png')}}'>
-                            <p>Devliered to your door, we bring you what you need for a healthy living.</p>
+                            <p style='font-size:22px'>Devliered to your door, we bring you what you need for a healthy living.</p>
 
                           </div>
                         </div>
                           <div class="col-sm-4 col-xs-12">
                             <div class="panel panel-default text-center">
                             <img style='height:120px;'src='{{asset('img/bubbles.png')}}'>
-                            <p>We guide our community day by day, shot by shot, towards a healthier future.</p>
+                            <p style='font-size:22px'>We guide our community day by day, shot by shot, towards a healthier future.</p>
                           </div>
                           </div>
                         </div>
