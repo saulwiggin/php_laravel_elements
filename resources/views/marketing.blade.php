@@ -143,7 +143,7 @@
                     </div>
                   </div>
                   <div class='col-md-12'>
-                    <a style='margin-top:-200px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a>
+                    <a style='margin-top:-100px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a>
                   </div>
                 </div>
               </div>
@@ -328,7 +328,7 @@
                           <div class="panel-heading">
                             <h1>Basic</h1>
                           </div>
-                          <div class="panel-body" style='font-family:GTWalshamRegular'>
+                          <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
                             <p><strong>1</strong> Questionaire</p>
                             <p><strong>1</strong> Connection to 23andme </p>
                             <p><strong>20</strong> Nutritional Genes Analysed</p>
@@ -348,7 +348,7 @@
                           <div class="panel-heading">
                             <h1>Medium</h1>
                           </div>
-                          <div class="panel-body">
+                          <div class="panel-body"  style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
                             <p><strong>1</strong> Genetic Test</p>
                             <p><strong>1</strong> Blood Test </p>
                             <p><strong>20</strong> Personal Recommendations </p>
@@ -368,7 +368,7 @@
                           <div class="panel-heading">
                             <h1>Full Bio-hack</h1>
                           </div>
-                          <div class="panel-body">
+                          <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
                             <p><strong>1</strong> Intra-Veinous Injections</p>
                             <p><strong>1</strong> Reporting </p>
                             <p><strong>20</strong> Gold Membership </p>

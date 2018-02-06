@@ -59,6 +59,12 @@ Route::get('/geneticAgeCalculatorContainer', function () {
 Route::get('/adviceForGeneticAge', function () {
     return view('genetic_age_information');
 });
+Route::get('/receive', function () {
+    return view('receive');
+});
+Route::get('/upload', function () {
+    return view('upload');
+});
 Route::get('/theScience', function () {
     return view('encyclopedia');
 });
