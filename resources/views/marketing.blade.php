@@ -191,7 +191,7 @@
                         <div class="card-block text-center">
                           <h3 class="card-title"style='font-size:300px;float:right'>02</h3>
                           <h4 class="card-text"style='position:relative;top:90px;font-size:22px'>Designed for your life </h4>
-                          <p class='card-text' style='font-size:20px;font-family:Walsheim;margin-top:100px;'> We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information. </p>
+                          <p class='card-text' style='font-size:20px;font-family:Walsheim;margin-top:100px;'> "We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information." </p>
                         </div>
                       </div>
                     </div>
@@ -264,14 +264,14 @@
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center">
+                          <div class="panel panel-default text-center" style='height: 225px;'>
                             <img style='height:120px;'src='{{asset('img/brain.png')}}'>
                             <p style='font-size:22px'>We all need a unique blend of elements and nourishment to flourish and thrive</p>
 
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center">
+                          <div class="panel panel-default text-center" style='height: 225px;'>
                             <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
                             <p style='font-size:22px'>We make getting the bet of natures ingredients simple</p>
                           </div>
@@ -298,9 +298,9 @@
                           </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center">
+                          <div class="panel panel-default text-center" style='height: 225px;'>
                             <img style='height:120px;'src='{{asset('img/letter.png')}}'>
-                            <p style='font-size:22px'>Devliered to your door, we bring you what you need for a healthy living.</p>
+                            <p style='font-size:22px'>Delivered to your door, we bring you what you need for a healthy living.</p>
 
                           </div>
                         </div>
