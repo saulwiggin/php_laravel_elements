@@ -53,5 +53,11 @@ Route::get('/ingredients', function () {
 Route::get('/questionaire', function () {
     return view('questionaire');
 });
+Route::get('/geneticAgeCalculatorContainer', function () {
+    return view('genetic_age');
+});
+Route::get('/adviceForGeneticAge', function () {
+    return view('genetic_age_information');
+});
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');

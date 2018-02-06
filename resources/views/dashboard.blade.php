@@ -71,12 +71,12 @@
               <div class="container-fluid header"style='background-color: white;'>
                 <div class="navbar-header ">
                   <a href='http://www.nellnaturalelements.com'><img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}></a>
-                  <div class='links' style='float:right;    margin-left: 320px;
+                  <div class='links' style='float:right;    margin-left: 700px;
     margin-top: 20px;'>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Health Questionaire</a>
+                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Health Questionaire</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Blood Results</a>
-                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My DNA Results</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Products</a> -->
+                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My DNA Results</a> -->
+                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Products</a> --> -->
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Settings</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Logout</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
@@ -115,21 +115,21 @@
 
             <!-- container (chart - welcome) -->
           </div>
-              <div class='dashboard_container' style='height:300px;'>
+              <div class='dashboard_container' style="height:300px;background-image:url('{{asset('img/background_dashboard_small.jpg')}}')" >
                 <div class="row slideanim">
-                    <div class='col-md-6'>
+                    <div class='col-md-4'>
                       <div class=" text-center">
 
                         <div class="">
-                          <div class="card" style="width: 18rem;">
+                          <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Your Reports</h5>
-                              <p class="card-text">View your Reports.</p>
+                              <p class="card-text">View your Reports. DNA, Bloods and Microbiome.</p>
                               <a href="/reports" style='margin:10px;'class="btn btn-primary">Reports</a>
                             </div>
                           </div>
-                          <div class="card" style="width: 18rem;">
+                          <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Your Health</h5>
@@ -137,47 +137,54 @@
                               <a href="/questionaire" style='margin:10px;'class="btn btn-primary">Questions</a>
                             </div>
                           </div>
-                          <div class="card" style="width: 18rem;">
+                          <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">My Products</h5>
-                              <p class="card-text">View your Products.</p>
-                              <a href="/products" style='margin:10px;'class="btn btn-primary">Products</a>
+                              <h5 class="card-title">Biological Age Test</h5>
+                              <p class="card-text"> Test how different your real age is to your biological age?</p>
+                              <a href="/geneticAgeCalculatorContainer" style='margin:10px;'class="btn btn-primary">Genetic Age</a>
                             </div>
                           </div>
                           </div>
                         </div>
                       </div>
-                        <div class='col-md-6'>
-                          <div class='panel'>
+                        <div class='col-md-8'>
+                          <div class='panel panel-default' style='margin-top:20px;'>
                             <div class='panel-header'>
-                              <h2>  </h2>
+                              <h4 class="">
+                              <img style='height:50px;'src='{{asset('img/wake_the_fuck_up.png')}}'>The Wake Up Call</h5>
                             </div>
                             <div class='panel-body'>
 
                               <div class="">
                                 <div class="">
-                                  <h4 class="">The Wake Up Call</h5>
                                   <h5 class="card-subtitle mb-2 text-muted">"Carpe Diem"</h6>
                                   <p class="card-text">After a serious wake up call you are awakened to Nell's Non-toxic Product Range.
                                   When people wake up they start to focus on there health and nutrition and consider the following generation.
                                 You are able to plan for the future and your good health is part of that. </p>
-                                  <h6 class='card-subtitle mb-1'> Your Recommendations </h6>
+                                  <h4 class='card-subtitle mb-1'> Your Recommendations </h4>
                                   <ul>
                                   <li>
-                                    <img style='height:50px;'src='{{asset('/img/products/water_activation.jpeg')}}'>
-                                    <p class='product description'>Water Activation at home greatly enhances your mineral intake in shot form which remains fresh for longer. Shake the bottle at home to get the most from your vitamin baggy.</p>
-                                  <a href="/products/functional_waters" class="card-link">Water Activation at Home</a>
-                                </li>
+                                    <div class="card" style="margin-top:10px;margin:10px;">
+                                      <img class="card-img-top" style='height:80px;'src="https://cdn.shopify.com/s/files/1/2258/8035/files/Bottle-Purple_1ef956f3-0748-41f4-afa5-84ef2a6748d8.png?8441759937524908230" alt="Card image cap">
+                                      <div class="card-body"style='margin:10px;'>
+                                        <h5 class="card-title">Water Activation at Home</h5>
+                                        <p class="card-text">Water Activation at home greatly enhances your mineral intake in shot form which remains fresh for longer. Shake the bottle at home to get the most from your vitamin baggy.</p>
+                                        <a style='margin:10px;'href="https://nell.co.uk/products/essentials" class="btn btn-primary">Go To Product</a>
+                                      </div>
+                                    </div>
+                                  </li>
+
                                 <li>
-                                  <!-- <img style='height:50px;'class='thumbnail' src='{{asset('/img/products/mineral_haircare.jpg')}}'>
-                                  <a href="/products/microbiome_skincare" class="card-link">Microbiome Skincare</a> -->
-                                </li>
-                                <li>
-                                  <img style='margin-top:10px;height:50px;'src='{{asset('img/products/antioxidants.jpeg')}}'>
-                                  <p class='product description'>Anti-oxidants promote stress relief. They are common in berrys such as blueberrys and other superfruits. </p>
-                                  <a href="/products/microbiome_skincare" class="card-link">Anti-oxidant radical fighting</a>
-                                </li>
+                                  <div class="card" style="margin:10px;">
+                                    <img class="card-img-top" style='margin-top:10px;height:80px;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/Bottle-Green_177a79cf-5aba-4b89-8354-657eef469d91.png?8441759937524908230' alt="Card image cap">
+                                    <div class="card-body"style='margin:10px;'>
+                                      <h5 class="card-title">Antioxidants</h5>
+                                      <p class='product description card-text'>Anti-oxidants promote stress relief. They are common in berrys such as blueberrys and other superfruits. </p>
+                                      <a style='margin:10px;' href="https://nell.co.uk/products/body-cleanser" class="btn btn-primary">Go To Product</a>
+                                    </div>
+                                  </div>
+                                  </li>
                                 </div>
                               </div>
                             </div>

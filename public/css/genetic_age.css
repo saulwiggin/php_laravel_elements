@@ -1,0 +1,42 @@
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+    width: 50px;
+    height: 50px;
+    background: #FDDA24;
+    border: 3px solid #FFA300;
+}
+.type2 {
+    width: 25px;
+    height: 25px;
+    background: #FDDA24;
+    border: 3px solid #FFA300;
+}
+.type3 {
+    width: 250px;
+    height: 250px;
+    background: #FDDA24;
+    border: 30px solid #FFA300;
+}
+
+.type4 {
+    width: 50px;
+    height: 50px;
+    background: #6CC24A;
+    border: 3px solid #009A44;
+}
+.type5 {
+    width: 25px;
+    height: 25px;
+    background: #6CC24A;
+    border: 3px solid #009A44;
+}
+.type6 {
+    width: 250px;
+    height: 250px;
+    background: #9B3259;
+    border: 30px solid #6A3460;
+}
