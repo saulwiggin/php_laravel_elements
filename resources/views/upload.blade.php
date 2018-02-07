@@ -25,9 +25,25 @@
         </div>
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
-              <h5 style='margin:5px;'> Please attach your name so we know who you are </h5>
+            <div class='form-group'>
+              <label style='margin:5px;'> Already have your Genetic Information? </label><br>
+              <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">
+            </div>
+            <hr>
+            <div class='form-group form-inline'>
+              <label style='margin:5px;'> Connect With your 23andme Data </label>
+              <a class='btn btn-default' style=' margin-bottom:5px'
+                  href="https://api.23andme.com/authorize/?redirect_uri=http://aws-website-myelements-pm46o.s3-website-us-east-1.amazonaws.com/&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic rs123">
+                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
+            </div>
+            <hr>
+            <br>
+            <div class='form-group form-inline'>
+              <label style='margin:5px;'> Early sign up to Nell DNA Test </label>
+              <a class='btn btn-default' href='http://eepurl.com/djZ_tn'>Sign Up Nell Test</a>
+            </div>
           </form>
         </div>
       </div>
@@ -37,6 +53,6 @@
 <script>
       $('input[type="file"]').prettyFile();
 </script>
-
+<!-- <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"ee313111737481449bdf5d96a","lid":"ca936b3d30"}) })</script> -->
 </body>
 </html>
