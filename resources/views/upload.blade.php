@@ -38,7 +38,7 @@
               <label style='margin:5px;'> Connect With your 23andme Data </label>
               <a class='btn btn-default' style=' margin-bottom:5px'
                   href="https://api.23andme.com/authorize/?redirect_uri=www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all">
-                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
+                <img style='height:25px;'src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
             </div>
             <hr>
             <br>
