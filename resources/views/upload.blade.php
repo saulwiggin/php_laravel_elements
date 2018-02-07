@@ -30,7 +30,8 @@
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
-              <a href='http://genomeanalyse.com' class='btn btn-default'>Upload genome</a>
+              <a href='http://genomeanalyse.com' class='btn btn-default' style='float: right;
+    margin-top: -30px;'>Upload genome</a>
             </div>
             <hr>
             <div class='form-group form-inline'>
@@ -43,7 +44,7 @@
             <br>
             <div class='form-group form-inline'>
               <label style='margin:5px;'> Early sign up to Nell DNA Test </label>
-              <a class='btn btn-default' href='http://eepurl.com/djZ_tn'>Sign Up Nell Test</a>
+              <a class='btn btn-default' style="float:right"href='http://eepurl.com/djZ_tn'>Sign Up Nell Test</a>
             </div>
           </form>
         </div>
