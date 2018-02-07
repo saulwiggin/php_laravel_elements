@@ -10,6 +10,7 @@ class Receive extends Controller
   {
       $dna_token = $_GET['code'];
 
+      // get access code
       $client = new \GuzzleHttp\Client();
       $result = $client->post('https://api.23andme.com/token/', [
         'headers' => [
@@ -28,7 +29,51 @@ class Receive extends Controller
     $contents = $result->getBody()->getContents();
     $contents = json_decode($contents);
 
-    var_dump($contents);
+    $access_token = $contents->access_token;
+
+    //This session is valid for 10 minutes
+    //access_code = $contents["access_token"];
+
+    // get user genome information
+    $client = new \GuzzleHttp\Client();
+    $result = $client->post('https://api.23andme.com/3/account', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $accounts = $result->getBody()->getContents();
+    $accounts = json_decode($accounts);
+    var_dump($accounts);
+    $id = $accounts->data['id'];
+
+
+    // get profiles
+    $client = new \GuzzleHttp\Client();
+    $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $profile = $result->getBody()->getContents();
+    $profile = json_decode($profile);
+    $profile_id = $profile->id;
+
+    //var_dump($profile);
+
+    // get marker
+    $client = new \GuzzleHttp\Client();
+    $result = $client->post('https://api.23andme.com/3/profile/'.$profile_id.'/marker', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $marker = $result->getBody()->getContents();
+    $marker = json_decode($marker);
+
+    //var_dump($marker);
 
     //return to DatabaseServiceProvider
 
