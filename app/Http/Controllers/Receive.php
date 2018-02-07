@@ -11,7 +11,7 @@ class Receive extends Controller
       $dna_token = $_GET['code'];
 
       $client = new \GuzzleHttp\Client();
-      $result = $client->get('https://api.23andme.com/3/account/', [
+      $result = $client->post('https://api.23andme.com/token/', [
         'headers' => [
             'Authorization' => 'Bearer demo_oauth_token'
           ],
@@ -20,7 +20,7 @@ class Receive extends Controller
           'client_secret' => '3f7fd6d92dc8286b5704103870419be1',
           'grant_type' => 'authorization_code',
           'code' => $dna_token,
-          'redirect_uri' => 'http://localhost:8000/receive/',
+          'redirect_uri' => 'http://localhost:8000/receive',
           'scope' => 'basic names email'
         ]
       ]);
