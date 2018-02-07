@@ -28,6 +28,7 @@ class Receive extends Controller
 
     $contents = $result->getBody()->getContents();
     $contents = json_decode($contents);
+    //var_dump($contents);
 
     $access_token = $contents->access_token;
 
@@ -42,10 +43,11 @@ class Receive extends Controller
         ]
     ]);
 
+
     $accounts = $result->getBody()->getContents();
     $accounts = json_decode($accounts);
-    var_dump($accounts);
-    $id = $accounts->data['id'];
+    $id = $accounts->data[0]->id;
+    //var_dump($accounts);
 
 
     // get profiles
@@ -58,23 +60,118 @@ class Receive extends Controller
 
     $profile = $result->getBody()->getContents();
     $profile = json_decode($profile);
-    $profile_id = $profile->id;
 
+    $profile_id = $profile->data[0]->id;
     //var_dump($profile);
 
-    // get marker
+    // get marker for gene rs10195681
     $client = new \GuzzleHttp\Client();
-    $result = $client->post('https://api.23andme.com/3/profile/'.$profile_id.'/marker', [
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs1801131/', [
       'headers' => [
           'Authorization' => 'Bearer ' . $access_token
         ]
     ]);
 
-    $marker = $result->getBody()->getContents();
-    $marker = json_decode($marker);
+    $B9 = $result->getBody()->getContents();
+    $B9 = json_decode($B9);
+    //var_dump($B9);
 
-    //var_dump($marker);
 
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs429358/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $vitaminB6 = $result->getBody()->getContents();
+    $vitaminB6 = json_decode($vitaminB6);
+
+    //var_dump($vitaminB6);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs12794714/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $vitaminD = $result->getBody()->getContents();
+    $vitaminD = json_decode($vitaminD);
+
+    //var_dump($vitaminD);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs7501331/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $vitaminA = $result->getBody()->getContents();
+    $vitaminA = json_decode($vitaminA);
+
+    //var_dump($vitaminA);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs602662/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $vitaminB12 = $result->getBody()->getContents();
+    $vitaminB12 = json_decode($vitaminB12);
+
+    //var_dump($vitaminB12);
+
+    // $client = new \GuzzleHttp\Client();
+    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs267606683/', [
+    //   'headers' => [
+    //       'Authorization' => 'Bearer ' . $access_token
+    //     ]
+    // ]);
+    //
+    // $riboflavin = $result->getBody()->getContents();
+    // $riboflavin = json_decode($riboflavin);
+    //
+    // //var_dump($riboflavin);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs4988235/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $folic_acid = $result->getBody()->getContents();
+    $folic_acid = json_decode($folic_acid);
+
+    //var_dump($folic_acid);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs855791/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $iron = $result->getBody()->getContents();
+    $iron = json_decode($iron);
+
+    //var_dump($iron);
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $report = $result->getBody()->getContents();
+    $report = json_decode($report);
+
+    var_dump($report);
     //return to DatabaseServiceProvider
 
       //return view('marketing');
