@@ -70,3 +70,4 @@ Route::get('/theScience', function () {
 });
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');
+Route::get('/receive', 'Receive@index');
