@@ -16,8 +16,8 @@
     margin-top: -100px;
     margin-left: -100px;'></img>
 <div class='background-image' >
-  <div class='row' style='margin:40px; margin-left: 450px;   position: absolute;
-    top: 10;'>
+  <div class='row' style='margin:40px;  position: absolute;
+    margin-top: 200px;'>
     <div class='col'>
       <div class="panel panel-default" style='width: 335;margin-top:-800px;'>
         <div class='panel panel-header'>
@@ -26,10 +26,11 @@
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
-              <label style='margin:5px;'> Already have your Genetic Information? </label><br>
-              <label style='margin:5px;'> Please attach your name so we know who you are </label>
+             <label style='margin:5px;'> Already have your Genetic Information? </label><br>
+              <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
-              <input style='margin:10px;'type="submit" value="Upload" name="submit">
+              <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
+              <a href='http://genomeanalyse.com' class='btn btn-default'>Upload genome</a>
             </div>
             <hr>
             <div class='form-group form-inline'>
