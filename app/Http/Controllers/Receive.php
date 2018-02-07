@@ -422,6 +422,6 @@ class Receive extends Controller
 
     mysqli_close($conn);
 
-    //return
+    return view('marketing');
   }
 }
