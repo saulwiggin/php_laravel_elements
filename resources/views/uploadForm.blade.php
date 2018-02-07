@@ -7,12 +7,12 @@
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script> -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<link src="{{asset('css/bootstrap.css')}}" rel="stylesheet">
-<script src="{{asset('bootstrap-prettyfile.js')}}"></script>
+<link src="bootstrap.css" rel="stylesheet">
+<script src="bootstrap-prettyfile.js"></script>
 
 </header>
 <body>
-  <img src='{{asset('img/parts_of_nell.jpg')}}' style='    width: 100%;
+  <img src='parts_of_nell.jpg' style='    width: 100%;
     margin-top: -100px;
     margin-left: -100px;'></img>
 <div class='background-image' >
@@ -21,7 +21,7 @@
     <div class='col'>
       <div class="panel panel-default" style='width: 335;margin-top:-800px;'>
         <div class='panel panel-header'>
-          <h2 style='font-family:GTWalsham_med;margin-left:12px'>  Nell </h2>
+          <h2 style='font-family:GTWalsham_med;margin-left:12px'>  Upload Your Genome </h2>
         </div>
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">

@@ -77,7 +77,7 @@
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Blood Results</a>
                     <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My DNA Results</a> -->
                     <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Products</a> --> -->
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Settings</a>
+                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="/upload">Settings</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Logout</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a>
