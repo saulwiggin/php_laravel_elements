@@ -56,7 +56,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'nell.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'myelements'),
+            'database' => env('DB_DATABASE', 'my_elements'),
             'username' => env('DB_USERNAME', 'drsaulwiggin'),
             'password' => env('DB_PASSWORD', 'Mbcx5sw40!'),
             'charset' => 'utf8',
