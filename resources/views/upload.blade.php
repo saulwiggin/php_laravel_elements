@@ -30,7 +30,7 @@
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
-              <a href='http://genomeanalyse.com' class='btn btn-default' style='float: right;
+              <a href='http://77.68.72.205/' class='btn btn-default' style='float: right;
     margin-top: -30px;'>Upload genome</a>
             </div>
             <hr>
