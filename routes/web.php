@@ -71,4 +71,5 @@ Route::get('/theScience', function () {
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');
-Route::get('/stripe', 'stripe@index');
+Route::post('/medium', 'stripe@medium');
+Route::get('/stripe/full', 'stripe@full');

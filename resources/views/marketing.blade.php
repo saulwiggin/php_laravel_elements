@@ -336,7 +336,7 @@
                           </div>
                           <div class="panel-footer">
                             <h3>Free</h3>
-                            <a style='background-color: orange; margin-top:10px;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
+                            <a style='background-color: orange; margin-top:10px;margin-bottom:10px;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
                           </div>
                         </div>
                       </div>
@@ -356,7 +356,9 @@
                           <div class="panel-footer">
                             <h3>£25</h3>
                             <h4>per month</h4>
-                            <form action="/stripe/medium" method="POST">
+                            <form action="/medium" method="POST">
+                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                               <script
                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="pk_test_3nUr5h2yoTpdKcphemA1wcMv"
