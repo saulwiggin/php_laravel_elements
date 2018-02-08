@@ -143,7 +143,7 @@
                     </div>
                   </div>
                   <div class='col-md-12'>
-                    <a style='margin-top:-100px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a>
+                    <!-- <a style='margin-top:-100px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a> -->
                   </div>
                 </div>
               </div>
@@ -190,8 +190,8 @@
                       <div class="card" style='height:420px;margin-top:-20px;width:100%'>
                         <div class="card-block text-center">
                           <h3 class="card-title"style='font-size:300px;float:right'>02</h3>
-                          <h4 class="card-text"style='position:relative;top:90px;font-size:22px'>Designed for your life </h4>
-                          <p class='card-text' style='font-size:20px;font-family:Walsheim;margin-top:100px;'> "We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information." </p>
+                          <!-- <h4 class="card-text"style='position:relative;top:90px;font-size:22px'>Designed for your life </h4> -->
+                          <p class='card-text' style='font-size:20px;font-family:Walsheim;position:relative;top:100px;'> "We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information." </p>
                         </div>
                       </div>
                     </div>
@@ -213,8 +213,8 @@
                 <div id="services" class="col-md-12 text-center">
                   <div class='panel'>
                     <div class='panel-header'>
-                      <h2 style='    position: relative;
-    top: 50px;'>Find your Perfect Fit</h2>
+                      <!-- <h2 style='    position: relative;
+    top: 50px;'>Find your Perfect Fit</h2> -->
                       <p style='font-size: 18px;
     font-family: walsheim;
     position: relative;
