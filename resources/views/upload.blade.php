@@ -12,14 +12,14 @@
 
 </header>
 <body>
-  <img src='{{asset('img/parts_of_nell.jpg')}}' style='    width: 100%;
+  <img src='{{asset('img/parts_of_nell.png')}}' style='    width: 100%;
     margin-top: -100px;
     margin-left: -100px;'></img>
 <div class='background-image' >
   <div class='row' style='margin:40px;  position: absolute;
-    margin-top: 200px;'>
+    margin-top: 20px;'>
     <div class='col'>
-      <div class="panel panel-default" style='width: 335;margin-top:-800px;'>
+      <div class="panel panel-default" style='width: 335;margin-top:-800px;margin-left:400px;'>
         <div class='panel panel-header'>
           <h2 style='font-family:GTWalsham_med;margin-left:12px'>  Nell </h2>
         </div>
@@ -37,7 +37,7 @@
             <div class='form-group form-inline'>
               <label style='margin:5px;'> Connect With your 23andme Data </label>
               <a class='btn btn-default' style=' margin-bottom:5px'
-                  href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all">
+                  href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:8000/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all">
                 <img style='height:25px;'src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
             </div>
             <hr>

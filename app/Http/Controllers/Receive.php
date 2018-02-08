@@ -391,15 +391,15 @@ class Receive extends Controller
 
     //var_dump($iron);
     //get reports
-    $client = new \GuzzleHttp\Client();
-    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
-      'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
-        ]
-    ]);
-
-    $report = $result->getBody()->getContents();
-    $report = json_decode($report);
+    // $client = new \GuzzleHttp\Client();
+    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
+    //   'headers' => [
+    //       'Authorization' => 'Bearer ' . $access_token
+    //     ]
+    // ]);
+    //
+    // $report = $result->getBody()->getContents();
+    // $report = json_decode($report);
 
     //var_dump($report);
 
