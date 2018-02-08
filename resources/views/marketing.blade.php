@@ -326,20 +326,17 @@
                       <div class="col-sm-4 col-xs-12">
                         <div class="panel panel-default text-center">
                           <div class="panel-heading">
-                            <h1>Basic</h1>
+                            <h1>Free</h1>
                           </div>
                           <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
                             <p><strong>1</strong> Questionaire</p>
                             <p><strong>1</strong> Connection to 23andme </p>
-                            <p><strong>20</strong> Nutritional Genes Analysed</p>
-                            <p><strong>1000's</strong> Of Products Recommended</p>
-                            <p><strong>1</strong> Report from AI Doctor </p>
-                            <p><strong>Total</strong> Understanding of your Nutritional Needs</p>
+                            <p><strong>loads of </strong> Products Recommended</p>
+                            <p><strong> 3 </strong> Professional members of staff to take your questions</p>
                           </div>
                           <div class="panel-footer">
-                            <h3>£12</h3>
-                            <h4>per month</h4>
-                            <a style='background-color: orange;'class="btn btn-lg"href='https://nell.co.uk/collections/all'>Sign Up</a>
+                            <h3>Free</h3>
+                            <a style='background-color: orange;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
                           </div>
                         </div>
                       </div>
@@ -349,17 +346,28 @@
                             <h1>Medium</h1>
                           </div>
                           <div class="panel-body"  style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
-                            <p><strong>1</strong> Genetic Test</p>
-                            <p><strong>1</strong> Blood Test </p>
-                            <p><strong>20</strong> Personal Recommendations </p>
-                            <p><strong>1000's</strong> Community members to connect with</p>
-                            <p><strong>1</strong> Monthly appointment with personal fitness </p>
-                            <p><strong>Complete</strong> Zen With Your Bodily Functions</p>
+                            <p><strong>1</strong> Upload Your Genome</p>
+                            <p><strong>20</strong> Recommendations based on your body </p>
+                            <p><strong>1000's</strong> Community members to connect with about your data</p>
+                            <p><strong></strong> Personalised Supplements</p>
+                            <p><strong></strong> Extended Nell Product Ra</p>
+                            <p><strong>Complete</strong> Zen With Your Body</p>
                           </div>
                           <div class="panel-footer">
-                            <h3>£15</h3>
+                            <h3>£25</h3>
                             <h4>per month</h4>
-                            <a style='background-color: orange;'class="btn btn-lg"href='https://nell.co.uk/collections/all'>Sign Up</a>
+                            <form action="/stripe" method="POST">
+                              <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_DcsFIYQ9hFp0CLKgxNxy9xzH"
+                                data-amount="25"
+                                data-name="nell"
+                                data-description="Widget"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                data-locale="auto"
+                                data-currency="gbp">
+                              </script>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -371,16 +379,27 @@
                           <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
                             <p><strong>1</strong> Intra-Veinous Injections</p>
                             <p><strong>1</strong> Reporting </p>
+                            <p><strong>1</strong> Genetic Test</p>
                             <p><strong>20</strong> Gold Membership </p>
                             <p><strong>1000's</strong> Social Influencers </p>
                             <p><strong>1</strong> Personal Meditation Kit </p>
                             <p><strong>Endless</strong> Access to your health data</p>
                           </div>
                           <div class="panel-footer">
-                            <h3>£25+</h3>
+                            <h3>£50</h3>
                             <h4>per month</h4>
-                            <a style='background-color: orange;'class="btn btn-lg"href='https://nell.co.uk/collections/all'>Sign Up</a>
-                          </div>
+                            <form action="/stripe" method="POST">
+                              <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_DcsFIYQ9hFp0CLKgxNxy9xzH"
+                                data-amount="50"
+                                data-name="nell"
+                                data-description="Widget"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                data-locale="auto"
+                                data-currency="gbp">
+                              </script>
+                            </form>                          </div>
                         </div>
                       </div>
                     </div>
