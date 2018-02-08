@@ -336,7 +336,7 @@
                           </div>
                           <div class="panel-footer">
                             <h3>Free</h3>
-                            <a style='background-color: orange;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
+                            <a style='background-color: orange; margin-top:10px;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
                           </div>
                         </div>
                       </div>
@@ -356,13 +356,13 @@
                           <div class="panel-footer">
                             <h3>£25</h3>
                             <h4>per month</h4>
-                            <form action="/stripe" method="POST">
+                            <form action="/stripe/medium" method="POST">
                               <script
                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                data-key="pk_test_DcsFIYQ9hFp0CLKgxNxy9xzH"
-                                data-amount="25"
+                                data-key="pk_test_3nUr5h2yoTpdKcphemA1wcMv"
+                                data-amount="2500"
                                 data-name="nell"
-                                data-description="Widget"
+                                data-description="Membership"
                                 data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                                 data-locale="auto"
                                 data-currency="gbp">
@@ -388,13 +388,13 @@
                           <div class="panel-footer">
                             <h3>£50</h3>
                             <h4>per month</h4>
-                            <form action="/stripe" method="POST">
+                            <form action="/stripe/full" method="POST">
                               <script
                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="pk_test_DcsFIYQ9hFp0CLKgxNxy9xzH"
-                                data-amount="50"
+                                data-amount="5000"
                                 data-name="nell"
-                                data-description="Widget"
+                                data-description="Full Membership"
                                 data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                                 data-locale="auto"
                                 data-currency="gbp">
