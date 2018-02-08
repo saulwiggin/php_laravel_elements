@@ -56,14 +56,16 @@
 <!-- sheetjs for excel reporting-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.11.3/xlsx.full.min.js"></script>
 
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- --><!--[if lt IE 9]>
-	<script src="../../assets/js/html5shiv.js"</script>
-		<script src="../../assets/js/respond.min.js"></script>
-<![endif]-->
+<link src='{{asset('css/dashboard.css')}}' rel="stylesheet">
+
 </head>
-<body ng-app='app' style='width:100%' class='container'>
-  <div id="wrapper" class='toggled' style='width:100%'>
+<script>
+.dashboard{
+  background-image: url('{{asset('img/background_dashboard_small.jpg')}}');
+}
+</script>
+<body ng-app='app' id='dashboard' class='container' style="width:100%;background-image:url('{{asset('img/background_dashboard_small.jpg')}}')">
+  <div id="wrapper" class='toggled' style='width:100%' >
         <!-- Navigation -->
         <div class='row'>
           <div class='col-md-12'>
@@ -109,18 +111,13 @@
         </script>
             <!-- Page Content -->
 
-            <div class='page_content_wrapper' style='margin-top:70px;'>
-              <!-- container (landing page - welcome or Questionaire) -->
-
-
-            <!-- container (chart - welcome) -->
-          </div>
-              <div class='dashboard_container' style="height:300px;background-image:url('{{asset('img/background_dashboard_small.jpg')}}')" >
-                <div class="row slideanim">
+            <div class='page_content_wrapper' style='margin-top:70px;'  >
+              <div class='dashboard_container' >
+                <div class="row slideanim" style='margin-top:100px;'>
                       <div class=" text-center">
                         <div class="">
                           <div class='col-md-4'>
-                          <div class="card" style="">
+                          <div class="card" style="height:500px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Your Health</h5>
@@ -130,8 +127,7 @@
                           </div>
                         </div>
                         <div class='col-md-4'>
-
-                          <div class="card" style="">
+                          <div class="card" style="height:500px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Your Reports</h5>
@@ -141,16 +137,15 @@
                           </div>
                           </div>
                           <div class='col-md-4'>
-
-                          <div class="card" style="">
-                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Full Medical Check</h5>
-                              <p class="card-text"> DNA Test</p>
-                              <a href="/geneticAgeCalculatorContainer" style='margin:10px;'class="btn btn-primary">Enter</a>
+                            <div class="card" style="height:500px;">
+                              <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Full Medical Check</h5>
+                                <p class="card-text"> DNA Test from Nell. Sign Up As An Early Adopter.</p>
+                                <a href="/geneticAgeCalculatorContainer" style='margin:10px;'class="btn btn-primary">Enter</a>
+                              </div>
                             </div>
                           </div>
-                        </div>
                           </div>
                         </div>
                       </div>
