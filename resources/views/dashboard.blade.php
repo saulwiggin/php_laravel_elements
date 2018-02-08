@@ -142,7 +142,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Full Medical Check</h5>
                                 <p class="card-text"> DNA Test from Nell. Sign Up As An Early Adopter.</p>
-                                <a href="/geneticAgeCalculatorContainer" style='margin:10px;'class="btn btn-primary">Enter</a>
+                                <a href="http://eepurl.com/djZ_tn" style='margin:10px;'class="btn btn-primary">Enter</a>
                               </div>
                             </div>
                           </div>
