@@ -117,10 +117,9 @@
           </div>
               <div class='dashboard_container' style="height:300px;background-image:url('{{asset('img/background_dashboard_small.jpg')}}')" >
                 <div class="row slideanim">
-                    <div class='col-md-12'>
                       <div class=" text-center">
-
                         <div class="">
+                          <div class='col-md-4'>
                           <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
@@ -129,6 +128,9 @@
                               <a href="/questionaire" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
+                        </div>
+                        <div class='col-md-4'>
+
                           <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
                             <div class="card-body">
@@ -137,6 +139,9 @@
                               <a href="/reports" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
+                          </div>
+                          <div class='col-md-4'>
+
                           <div class="card" style="">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
                             <div class="card-body">
@@ -145,6 +150,7 @@
                               <a href="/geneticAgeCalculatorContainer" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
+                        </div>
                           </div>
                         </div>
                       </div>
