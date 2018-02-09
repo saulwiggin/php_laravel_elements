@@ -71,6 +71,12 @@ Route::get('/theScience', function () {
 Route::get('/static', function () {
     return view('static');
 });
+Route::get('/table', function () {
+    return view('table');
+});
+Route::get('/mymarketing', function () {
+    return view('my_marketing');
+});
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');
