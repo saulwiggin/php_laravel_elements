@@ -82,3 +82,7 @@ Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');
 Route::post('/medium', 'stripe@medium');
 Route::get('/stripe/full', 'stripe@full');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
