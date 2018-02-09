@@ -61,16 +61,21 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('css/vicons-font.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('css/base.css')}}" /> -->
-<link rel="stylesheet" type="text/css" href="{{asset('css/buttons.css')}}" />
+<!-- <link rel="stylesheet" type="text/css" href="{{asset('css/buttons.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('css/component.css')}}" />
-
+<link rel="stylesheet" type="text/css" href="{{asset('semanticUI/dist/semantic.min.css')}}"> -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="{{asset('semanticUI/dist/semantic.min.js')}}"></script> -->
 </head>
 <body ng-app='app' style='width:100%' class='container'>
   <div id="wrapper" class='toggled' style='width:100%'>
         <!-- Navigation -->
         <div class='row'>
           <div class='col-md-12'>
-            <nav class="navbar navbar-fixed-top w3-container white">
+            <nav class="navbar navbar-fixed-top w3-container white" style='height:90px;'>
               <div class="container-fluid header white">
                 <div class="navbar-header ">
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
@@ -125,10 +130,10 @@
                                   </div>
                               </div>
                               <div class="item">
-                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/leafImage.jpg?1179625118197023529.jpg" alt="">
+                                  <img style='height:860px'src="{{asset('img/leafimage.jpg')}}" alt="">
                               </div>
                               <div class="item">
-                                  <img style='height:860px'src="https://cdn.shopify.com/s/files/1/2258/8035/files/Natural_Nutrition.jpg?8441759937524908230" alt="">
+                                  <img style='height:860px'src="{{asset('img/healthy_greens.jpg')}}" alt="">
                               </div>
                           </div>
 
@@ -145,35 +150,73 @@
                       </div>
                     </div>
                   </div>
-                  <div class='col-md-12'>
-                    <div style='width:100%;' href='#knowledge_bomb_container'>
-                      <button style='position:relative;top:-400px;width:100%'class=""><span style='position:relative;top:-43px;font-color:black;color: black;
-    font-family: wal;
-    font-size: 15px;'><img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-19.png')}}'><span>The Elements Effect Your Anatomy</span><img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-05.png')}}'></span></button>
+                  <!-- <div class='col-md-12' >
+                    <div style='width:100%;height:0px' href='#knowledge_bomb_container' >-->
+                      <div class="panel panel-default text-center" style='position:relative;top:200px;height:100px;'>
+                        <div class="panel-body">
+
+                          <!-- <div style=''>
+                          <a href='#knowledge_bomb_container' class=' btn btn-block' style='height:70px;' >
+                            <div class='form-inline'>
+                           <img id='img1'style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-19.png')}}'>
+                              <div class="label" id='button_content' style='font-size:2vw;font-family:GTWalsham_med;position:relative;top:5px;'>The Elements Effect Your Anatomy</div>
+                         <img id='img2'style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-05.png')}}'>
+                            </span>
+                          </div>
+                        </a>
+                        </div> -->
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  <!-- </div>
+                </div> -->
               </div>
             </div>
-
-              <div id='knowledge_bomb_container'class='knowledge_bomb_container' style='height:600px;width:100%;     margin-top: 100px;'>
+              <div id='knowledge_bomb_container'class='knowledge_bomb_container' style='height:600px;width:100%;     margin-top: -100px;'>
                 <div class="slideanim row">
-                  <div class="col-md-4">
-                    <div class='row'>
-                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-06.png')}}'>
-                    </div>
-                    <div class='row'>
-                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-07.png')}}'>
-                    </div>
-                    <div class='row'>
-                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-08.png')}}'>
-                    </div>
-                    <div class='row'>
-                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-11.png')}}'>
+                  <div class="col-md-2">
+                    <div class='panel panel-default text-center'>
+                      <div class='panel-body'>
+                        <div class='row'>
+                          <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-06.png')}}'>
+                        </div>
+                        <div class='row'>
+                          <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-07.png')}}'>
+                        </div>
+                        <div class='row'>
+                          <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-08.png')}}'>
+                        </div>
+                        <div class='row'>
+                          <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-11.png')}}'>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class='col-md-8'>
-                    <h3> Nell uses only Non-Toxic Ingredients. </h3>
+                    <div class="panel panel-default text-center">
+                      <div class="panel-header">
+                        <h3> Nell uses only Non-Toxic Ingredients. </h3>
+
+                      </div>
+                      <div class="panel-body">
+                        <ul class="featureList">
+                          <li class="tick">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                          <li class="tick">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos at dolorem qui minima quo earum a minus blanditiis magnam quisquam voluptatem illo eum harum alias deleniti enim sint reiciendis nemo.
+                            <ul>
+                              <li class="cross">Lorem ipsum dolor sit amet.</li>
+                              <li class="tick">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos at dolorem qui minima quo earum a minus blanditiis magnam quisquam voluptatem illo eum harum alias deleniti enim sint reiciendis nemo!.</li>
+                              <li class="cross">Vestibulum auctor dapibus neque.</li>
+                            </ul>
+                          </li>
+                          <li class="cross">Vestibulum auctor dapibus neque.</li>
+                        </ul>
+                        <table>
+                          <tr>
+                          <td></td><td></td>
+                        </tr>
+                        </table>
+                      </div>
+
+                    </div>
                   </div>
                   <div class='col-md-12'>
                     <!-- <a style='margin-top:-100px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a> -->
@@ -306,7 +349,7 @@
                         <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center" style='height: 225px;'>
                             <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
-                            <p style='font-size:22px'>We make getting the bet of natures ingredients simple</p>
+                            <p style='font-size:22px'>We make getting the best of natures ingredients simple</p>
                           </div>
                           </div>
                         </div>

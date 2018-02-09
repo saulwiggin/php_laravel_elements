@@ -30,3 +30,54 @@ a.button2:active{
   margin:0.4em auto;
  }
 }
+/* for tablets and smartphones, remove the floats above */
+
+@media (max-width: 790px){
+#button_content{
+width:100%;
+float:inherit;
+}
+#img1{
+  height:30px;
+}
+#img2{
+  height:30px;
+}
+#attensions{
+width:100%
+float:inherit;
+}
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  padding: 0 2em;
+  font-size: 1.3em;
+  font-family: 'Roboto', 'sans-serif';
+  color: white;
+  background: black;
+  input-placeholder: red;
+}
+h1 { color: papayawhip }
+
+
+/* List styling */
+.featureList, .featureList ul {
+  margin-top: 0;
+  padding-left: 2em;
+  list-style-type: none;
+}
+.featureList li:before {
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: bold;
+}
+.featureList li.tick:before {
+  content: "\2713";
+  color: darkgreen;
+}
+.featureList li.cross:before {
+  content: "\2717";
+  color: crimson;
+}
