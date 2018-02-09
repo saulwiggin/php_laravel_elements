@@ -93,9 +93,9 @@ class Receive extends Controller
     VALUES ('".$first_name."', '".$last_name."', '".$is_genotyped."')";
 
     if (mysqli_query($conn, $sql)) {
-      //  echo "New record created successfully";
+        echo "New record created successfully";
     } else {
-    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
   //   // get marker for gene rs10195681
