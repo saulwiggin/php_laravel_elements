@@ -10,10 +10,10 @@
 <body>
   <div class-'container'>
     <div class="page-header" style='margin-left:10'>
-      <h1> <img style='height:100; margin-top:-20px;' src='images/Nell_Logo_Alone_CMYK.png'> Vitamins </h1>
-      <h4> To supplement your DNA building blocks </h4>
+      <h1> <img style='height:100; margin-top:-20px;' src='{{asset('img/Nell_Logo_Alone_CMYK.png')}}'>  </h1>
+      <h4> The Building Blocks </h4>
     </div>
-    <!-- <div class="navbar navbar-inverse navbar-fixed-left">
+    <div class="navbar navbar-inverse navbar-fixed-left">
       <navbar class='navbar-fixed-left'>
           <ul class="nav navbar-nav">
             <li> <a href='#b6'>Vitamin B6</a></li>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </navbar>
-    </div> -->
+    </div>
     <div class='row'>
       <div class='col-md-5' style='margin-right: auto;margin-left: auto;'>
         <div class="panel-group" id="accordion">
