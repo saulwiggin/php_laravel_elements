@@ -63,23 +63,13 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/component.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('semanticUI/dist/semantic.min.css')}}">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="{{asset('semanticUI/dist/semantic.min.js')}}"></script> -->
 </head>
 <body ng-app='app' style='width:100%' class='container'>
   <div id="wrapper" class='toggled' style='width:100%'>
         <!-- Navigation -->
         <div class='row'>
           <div class='col-md-12'>
-            <nav class="navbar navbar-fixed-top container-fluid white" style='height:100%;'>
+            <nav class="navbar navbar-fixed-top container-fluid white" style='height:inherit;'>
               <div class=" header white">
                 <div class="navbar-header ">
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
@@ -115,8 +105,8 @@
                   <div class="col-md-12">
                     <div class="panel  text-center">
                       <div class="panel-body">
-                        <!-- <div class="overlay"><h1>Overlay Text</h1></div> -->
-                        <!-- <a href='#knowledge_bomb_container' style='position:relative;top:300px;margin-left:500px' class="button button--tamaya button--round-l button--text-thick button--border-medium button--text-upper button--size-s button--inverted" data-text="Enter"><span>Enter</span></a> -->
+                        <div class="overlay"style='z-index:-11;position:relative;top:200px;width:10%'><h1>Overlay Text</h1></div>
+                        <a href='#knowledge_bomb_container' style='position:relative;top:300px;margin-left:500px' class="button button--tamaya button--round-l button--text-thick button--border-medium button--text-upper button--size-s button--inverted" data-text="Enter"><span>Enter</span></a>
 
                         <div id="carousel-example-generic w3-container" class="carousel slide" data-ride="carousel" style='height:600px;'>
                           <!-- Indicators -->
@@ -130,10 +120,7 @@
                           <div class="carousel-inner" role="listbox">
                               <div class="item active">
                                   <img style='width:100%' src="{{ asset('img/the_science_of_feeling_great.jpg') }}" alt="">
-                                  <div class="carousel-caption">
-                                      <!-- <h1>Carousel in a container</h1>
-                                      <p>This is a demo for the Bootstrap Carousel Guide.</p> -->
-                                  </div>
+
                               </div>
                               <div class="item">
                                   <img style='width:100%'src="{{asset('img/leafimage.jpg')}}" alt="">
@@ -178,248 +165,109 @@
               </div>
             </div>
             <div id='knowledge_bomb_container'class='knowledge_bomb_container fluid-container' style='height:600px;width:100%;     margin-top: -10px;'>
-              <div class='panel panel-default'>
-                <div class='panel-heading white'>
-                  <h1 style='font-family:Walsheim'>Nell Only Use Non-Toxic Ingredients</h1>
-                </div>
-                <div class="row">
-                  <div class="col-4">
-                    <div class="list-group" id="list-tab" role="tablist">
-                      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><img style='width:100%'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-06.png')}}'></a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><img style='width:100%'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-07.png')}}'></a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><img style='width:100%'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-08.png')}}'></a>
-                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><img style='width:100%'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-11.png')}}'></a>
-                      <!-- <a class="list-group-item list-group-item-action" id="list-mail-list" data-toggle="list" href="#list-mail" role="tab" aria-controls="settings"><img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-11.png')}}'></a> -->
+                <div class="row slideanim" style='margin-top:-200px;'>
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center"  style='height: 225px;'   >
+                      <img style='height:120px;'src='{{asset('img/brain.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>We welcome you to a world of vital knowledge, centered on a network of professionals.</p>
+
                     </div>
                   </div>
-                  <div class="col-8">
-                    <div class='panel panel-default'>
-                      <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><h1 style='font-family:Walsheim'>We search the Four Corners of the Earth to Bring you Back the Finiest Ingredients.</h1></div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><h1 style='font-family:Walsheim'>Personalised to Your Lifestyle and Your Bodys Need's.</h1></div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><h1 style='font-family:Walsheim'>Join a Network of Like-Minded Professionals.</h1></div>
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><h1 style='font-family:Walsheim'>Delivered in a Personalised Box Straight to Your Door.</h1></div>
-                        <!-- <div class="tab-pane fade" id="list-mail" role="tabpanel" aria-labelledby="list-mail-list">Access to Experts to Help you Develop Your Goals.</div> -->
-                      </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style='height: 225px;'>
+                      <img style='height:120px;'src='{{asset('img/icons/Orange/Nell_Icons_Orange_CMYK-06.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>We all need a unique blend of elements and nourishment to flourish and thrive.</p>
+
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style='height: 225px;'>
+                      <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>We make getting the best of natures ingredients simple.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row slideanim">
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style='height: 225px;'>
+                      <img style='height:120px;'src='{{asset('img/bottle.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>We create little shots of natural goodness. Uniquely designed for your needs.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="panel panel-default text-center" style='height: 225px;'>
+                      <img style='height:120px;'src='{{asset('img/letter.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>Delivered to your door, we bring you what you need for a healthy living.</p>
+
+                    </div>
+                  </div>
+                    <div class="col-sm-4 col-xs-12">
+                      <div class="panel panel-default text-center" style='height: 225px;'>
+                      <img style='height:120px;'src='{{asset('img/bubbles.png')}}'>
+                      <p style='font-size:22px;font-family:walsheim'>We guide our community day by day, shot by shot, towards a healthier future.</p>
+                    </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-
-
-              <div class='bubblesanimation_container' style='height:300px;'>
-                <div class="row slideanim">
-                  <div class="col-md-12">
-                    <div class="panel panel-default text-center">
-                      <div class="">
-
-                      </div>
-                      <div class="panel-body">
-                        <div class='col-md-6'>
-                          <div class="card" style='height:380px;margin-top:-20px;width:100%'>
-                            <div class="card-block">
-                              <h3 class="card-title"style='font-size:300px;float:left'>01</h3>
-                              <h4 class="card-text" style='    position: relative;
-    top: 80px;'>Your Story </h4>
-                              <p class='card-text' style='    font-size: 22px;
-    position: relative;
-    margin-top: 100px;
-    font-family:Walsheim;'> “I want to know as much as I can about my body and health because I don’t trust the generic advice that is out there” </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class='col-md-6'>
-                          <img style='width:100%;height:100%;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/girlImage.png?1179625118197023529'>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class='bubblesanimation_container' style='height:300px;'>
-                <div class="row slideanim">
-                  <div class="col-md-12">
-                    <div class='col-md-6'>
-                        <img style='height:100%;width:100%;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/pineapple.JPG?1179625118197023529'>
-                    </div>
-                    <div class='col-md-6'>
-                      <div class="card" style='height:420px;margin-top:-20px;width:100%'>
-                        <div class="card-block text-center">
-                          <h3 class="card-title"style='font-size:300px;float:right'>02</h3>
-                          <!-- <h4 class="card-text"style='position:relative;top:90px;font-size:22px'>Designed for your life </h4> -->
-                          <p class='card-text' style='font-size:20px;font-family:Walsheim;position:relative;top:100px;'> "We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. Personalised to your Health information." </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class='bubblesanimation_container' style='height:300px;'>
-                <div class="row slideanim">
-                  <div class="col-md-12">
-                    <h2>The shot shaped around you </h2>
-                  </div>
-                </div>
-              </div> -->
-                <!-- </div>
-              </div> -->
-              <!-- Container (Pricing Options) -->
-              <div class='pricing_container' style='height:1200px;'>
-                <div class="row slideanim">
-                <div id="services" class="col-md-12 text-center">
-                  <div class='panel'>
-                    <div class='panel-header'>
-                      <!-- <h2 style='    position: relative;
-    top: 50px;'>Find your Perfect Fit</h2> -->
-                      <p style='font-size: 18px;
-    font-family: walsheim;
-    position: relative;
-    top: 50px;'>We create little shots of natural goodness. Uniquely designed for your body's needs delivered to your door. </p>
-                      <br>
-                    </div>
-                    <div class='panel-body'>
-                    <!-- <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'> -->
-                      <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
-                      <img alt='product' style='height:500px;width:100%'src='https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529.png'></img>
-                      <h3></h3>
-                      <p>
-                      </p>
-                        <!-- </div> -->
-                        <!-- <div class="col-sm-6"> -->
-                        <!-- <div class='text-center'>
-                          <a style='margin-left:400px;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop All</a>
-                            </div> -->
-
-                        <!-- </div> -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class='row'>
-                    <div class='col-md-12'>
-                      <a style='margin-top:-160px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='#pricing'>Sign Up</a>
-                    </div>
-                  </div>
-                  </div>
-
-                  <!-- <div class='motivation_container' style='height:600px;'>
-                    <div class='row'>
-                    <div id="pricing" class="container-fluid">
-                      <! <div class="text-center">
-                        <div class="jumbotron">
-                          <h2>Pricing</h2>
-                          <h4>Choose a Health plan that works for you</h4>
-                        </div>
-                      </div> -->
-                      <div class="row slideanim" style='margin-top:-200px;'>
-                        <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='{{asset('img/heart.png')}}'>
-                            <p style='font-size:22px'>We welcome you to a world of vital knowledge, centered on a network of professionals</p>
-
-                          </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center" style='height: 225px;'>
-                            <img style='height:120px;'src='{{asset('img/brain.png')}}'>
-                            <p style='font-size:22px'>We all need a unique blend of elements and nourishment to flourish and thrive</p>
-
-                          </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center" style='height: 225px;'>
-                            <img style='height:120px;'src='{{asset('img/leaves.png')}}'>
-                            <p style='font-size:22px'>We make getting the best of natures ingredients simple</p>
-                          </div>
-                          </div>
-                        </div>
-                      <!-- </div>
-                    </div>
-                  </div>  -->
-                  <div class='motivation_container' style='height:300px;'>
-                    <div class='row'>
-                    <div id="pricing" class="container-fluid">
-                      <!-- <div class="text-center">
-                        <div class="jumbotron">
-                          <h2>Pricing</h2>
-                          <h4>Choose a Health plan that works for you</h4>
-                        </div>
-                      </div> -->
-                      <div class="row slideanim">
-                        <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='{{asset('img/bottle.png')}}'>
-                            <p style='font-size:22px'>We create little shots of natural goodness. Uniquely designed for your needs.</p>
-
-                          </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                          <div class="panel panel-default text-center" style='height: 225px;'>
-                            <img style='height:120px;'src='{{asset('img/letter.png')}}'>
-                            <p style='font-size:22px'>Delivered to your door, we bring you what you need for a healthy living.</p>
-
-                          </div>
-                        </div>
-                          <div class="col-sm-4 col-xs-12">
-                            <div class="panel panel-default text-center">
-                            <img style='height:120px;'src='{{asset('img/bubbles.png')}}'>
-                            <p style='font-size:22px'>We guide our community day by day, shot by shot, towards a healthier future.</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class='row'>
+                <div class='row'>
                   <div id="pricing" class="container-fluid">
                     <div class="text-center">
-                      <div class="jumbotron">
-                        <h2>Pricing</h2>
-                        <h4>Choose a Health plan that works for you</h4>
+                      <div class="jumbotron white">
+                        <h1>Pricing</h1>
+                        <h3>Choose a Health plan that works for you</h3>
                       </div>
                     </div>
                     <div class="row slideanim">
                       <div class="col-sm-4 col-xs-12">
                         <div class="panel panel-default text-center">
-                          <div class="panel-heading">
+                          <div class="panel-heading white">
                             <h1>Free</h1>
                           </div>
                           <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
-                            <p><strong>1</strong> Questionaire</p>
-                            <p><strong>1</strong> Connection to 23andme </p>
-                            <p><strong>loads of </strong> Products Recommended</p>
-                            <p><strong> 3 </strong> Professional members of staff to take your questions</p>
+                            <p> A Full Health Questionaire </p>
+                            <p> Option to Purchase a Nell Health Test </p>
+                            <p> Access to Nell Advisors </p>
+                            <p> Sign Up For the Beta Test </p>
+                            <p> Enter the Nell Ecosystem </p>
                           </div>
-                          <div class="panel-footer">
+                          <div class="panel-footer white">
                             <h3>Free</h3>
-                            <a style='background-color: orange; margin-top:10px;margin-bottom:10px;'class="btn btn-lg"href='http://www.nellnaturalelements.com/dashboard'>Login</a>
+                            <h4>For You</h4>
+                            <form action="/dashboard" method="POST">
+                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                              <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_3nUr5h2yoTpdKcphemA1wcMv"
+                                data-amount="0"
+                                data-name="nell"
+                                data-description="Membership"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                data-locale="auto"
+                                data-currency="gbp">
+                              </script>
+                            </form>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4 col-xs-12">
                         <div class="panel panel-default text-center">
-                          <div class="panel-heading">
-                            <h1>Medium</h1>
+                          <div class="panel-heading white">
+                            <h1> Standard </h1>
                           </div>
                           <div class="panel-body"  style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
-                            <p><strong>1</strong> Upload Your Genome</p>
-                            <p><strong>20</strong> Recommendations based on your body </p>
-                            <p><strong>1000's</strong> Community members to connect with about your data</p>
-                            <p><strong></strong> Personalised Supplements</p>
-                            <p><strong></strong> Extended Nell Product Ra</p>
-                            <p><strong>Complete</strong> Zen With Your Body</p>
+                            <p><strong>1</strong> Upload Your Genome Using 23andme. </p>
+                            <p> A Nutrition Report Based on Your Genetic Analysis. </p>
+                            <p> Connect with Other Devices. </p>
+                            <p> Store Your Data At Our Central Repository. </p>
+                            <p> Have A Personalised Product Assigned To You. </p>
                           </div>
-                          <div class="panel-footer">
+                          <div class="panel-footer white">
                             <h3>£25</h3>
                             <h4>per month</h4>
                             <form action="/medium" method="POST">
                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
                               <script
                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="pk_test_3nUr5h2yoTpdKcphemA1wcMv"
@@ -436,19 +284,17 @@
                       </div>
                       <div class="col-sm-4 col-xs-12">
                         <div class="panel panel-default text-center">
-                          <div class="panel-heading">
+                          <div class="panel-heading white">
                             <h1>Full Bio-hack</h1>
                           </div>
                           <div class="panel-body" style='font-family:GTWalshamRegular;font-size:22px;height:400px'>
-                            <p><strong>1</strong> Intra-Veinous Injections</p>
-                            <p><strong>1</strong> Reporting </p>
-                            <p><strong>1</strong> Genetic Test</p>
-                            <p><strong>20</strong> Gold Membership </p>
-                            <p><strong>1000's</strong> Social Influencers </p>
-                            <p><strong>1</strong> Personal Meditation Kit </p>
-                            <p><strong>Endless</strong> Access to your health data</p>
+                            <p> Intra-Veinous Injections. </p>
+                            <p> Gold Membership. </p>
+                            <p> Social Influencers </p>
+                            <p> Personal Meditation Kit. </p>
+                            <p> The AI Brain will analyse your data to glean insights on your record. </p>
                           </div>
-                          <div class="panel-footer">
+                          <div class="panel-footer white">
                             <h3>£50</h3>
                             <h4>per month</h4>
                             <form action="/stripe/full" method="POST">
@@ -462,7 +308,8 @@
                                 data-locale="auto"
                                 data-currency="gbp">
                               </script>
-                            </form>                          </div>
+                            </form>
+                           </div>
                         </div>
                       </div>
                     </div>

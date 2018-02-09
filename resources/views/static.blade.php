@@ -153,7 +153,7 @@
                       <div class="col-md-12">
                         <div class="panel  text-center">
                           <div class="panel-body">
-                            <button class='btn btn-default'> Click Me </button>
+                            <!-- <button class='btn btn-default'> Click Me </button> -->
                             <div id="carousel-example-generic w3-container" class="carousel slide" data-ride="carousel" style='height:600px;'>
                               <!-- Indicators -->
                               <ol class="carousel-indicators">
@@ -167,8 +167,12 @@
                                   <div class="item active">
                                       <img src="{{ asset('img/the_science_of_feeling_great.jpg') }}" alt="">
                                       <div class="carousel-caption">
-                                          <!-- <h1>Carousel in a container</h1>
-                                          <p>This is a demo for the Bootstrap Carousel Guide.</p> -->
+                                        <div class="carousel-caption">
+                                          <div class="carousel-caption">
+                                            <h3>header</h3>
+                                            <p>Details of Slide 3. Lorem Ipsum Blah Blah Blah....</p>
+                                        </div>
+                                        </div>
                                       </div>
                                   </div>
                                   <div class="item">
@@ -192,54 +196,26 @@
                           </div>
                         </div>
                       </div>
-
-                      <!-- intoduction message -->
-                        <!-- <div style=''>
-                        <a href='#knowledge_bomb_container' class=' btn btn-block' style='height:70px;' >
-                          <div class='form-inline'>
-                         <img id='img1'style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-19.png')}}'>
-                            <div class="label" id='button_content' style='font-size:2vw;font-family:GTWalsham_med;position:relative;top:5px;'>The Elements Effect Your Anatomy</div>
-                       <img id='img2'style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-05.png')}}'>
-                          </span>
-                        </div>
-                      </a>
-                      </div> -->
+                    </div>
                   </div>
                 </div>
-                  </div>
-                </div>
-                <!-- container nutritional report -->
-                <div class='chart_container'>
-                  <div class="row slideanim">
-                    <div class="">
-                      <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                          <h1></h1>
-                        </div>
-                        <div class="panel-body">
-                          <img src='images/human_profile.png' class="dropdown-toggle" data-toggle="dropdown">
-                          <!-- <iframe width="1110" height="740" src="https://www.zygotebody.com" frameborder="0" ></iframe> -->
-                            <!-- <script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
-                            <h2>Data for User - 23andme</h2
-                            <div id="wrapper"><img src='snptable.png'</div>
-                            <script>
-                                window.onload = function () {
-                                    var ttam = TTAM('123456789abcdef0123456789abcdef0');
-                                    ttam.snpTable('wrapper', 'rs2476601', {
-                                        AA: 'Moderately higher odds of developing hypothyroidism.',
-                                        AG: 'Slightly higher odds of developing hypothyroidism.',
-                                        GG: 'Typical odds of developing hypothyroidism.',
-                                        order: 'AA,AG,GG'
-                                    }, {
-                                        width: 450
-                                    });
-                                };
-                            </script> -->
-                          </div>
-                        </div>
+              </div>
+              <!-- container nutritional report -->
+              <div class='knowledge_bomb_container'>
+                <div class="row slideanim fluid-container">
+                  <div class="">
+                    <div class="panel panel-default text-center">
+                      <div class="panel-heading">
+                        <h1></h1>
+                      </div>
+                      <div class="panel-body">
+                        <ul>
+                          </ul>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
               <!-- Container (Pricing Options) -->
               <div class='pricing_container' style='background-color:#FFA300'>
               <div class='row'>
