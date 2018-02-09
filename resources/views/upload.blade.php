@@ -12,7 +12,7 @@
 
 </header>
 <body>
-  <img src='{{asset('img/parts_of_nell.png')}}' style='    width: 100%;
+  <img src='{{asset('img/background_subpage.jpg')}}' style=' margin-bottom:-60px;   width: 100%;
     margin-top: -100px;
     margin-left: -100px;'></img>
 <div class='background-image' >
@@ -21,12 +21,16 @@
     <div class='col'>
       <div class="panel panel-default" style='width: 335;margin-top:-800px;margin-left:400px;'>
         <div class='panel panel-header'>
-          <h2 style='font-family:GTWalsham_med;margin-left:12px'>  Nell </h2>
+          <h2 style='font-family:GTWalsham_med;margin-left:12px'>  <img style='    height: 150px;
+    margin: -40px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'> </h2>
         </div>
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
              <label style='margin:5px;'> Already have your Genetic Information? </label><br>
+             <label style='margin:5px;    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: -10px;'> Upload Your Genome Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
@@ -35,16 +39,16 @@
             </div>
             <hr>
             <div class='form-group form-inline'>
-              <label style='margin:5px;'> Connect With your 23andme Data </label>
-              <a class='btn btn-default' style=' margin-bottom:5px'
+              <label style='margin:5px;'> Connect With your 23andme Data: </label>
+              <a class='' style=' margin-bottom:5px'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:8000/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all">
-                <img style='height:25px;'src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
+                <img style='height:40px;'src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
             </div>
             <hr>
             <br>
             <div class='form-group form-inline'>
-              <label style='margin:5px;'> Early sign up to Nell DNA Test </label>
-              <a class='btn btn-default' style="float:right"href='http://eepurl.com/djZ_tn'>Sign Up Nell Test</a>
+              <label style='margin:5px;'> Early Membership Sign Up - Nell DNA Test: </label>
+              <a class='btn btn-default' style="float:right"href='http://eepurl.com/djZ_tn'>Sign Up</a>
             </div>
           </form>
         </div>

@@ -1,9 +1,11 @@
-<!DOCTYPE html>
 <html>
 <head>
   <title>My Elements</title>
   <meta charset="utf-8">
+  <!-- responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -55,23 +57,24 @@
 
 <!-- sheetjs for excel reporting-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.11.3/xlsx.full.min.js"></script>
+<!--
+<link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/vicons-font.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/base.css')}}" /> -->
+<link rel="stylesheet" type="text/css" href="{{asset('css/buttons.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/component.css')}}" />
 
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- --><!--[if lt IE 9]>
-	<script src="../../assets/js/html5shiv.js"</script>
-		<script src="../../assets/js/respond.min.js"></script>
-<![endif]-->
 </head>
 <body ng-app='app' style='width:100%' class='container'>
   <div id="wrapper" class='toggled' style='width:100%'>
         <!-- Navigation -->
         <div class='row'>
           <div class='col-md-12'>
-            <nav class="navbar navbar-fixed-top ">
-              <div class="container-fluid header"style='background-color: white;'>
+            <nav class="navbar navbar-fixed-top w3-container white">
+              <div class="container-fluid header white">
                 <div class="navbar-header ">
                   <img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}>
-                  <div class='links' style='float:right;    margin-left: 650px;
+                  <div class='links' style='float:right;
     margin-top: 20px;'>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="https://nell.co.uk/collections/all">Shop</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="{{url('theScience')}}">The Science</a>
@@ -99,12 +102,12 @@
 
             <div class='page_content_wrapper' style='margin-top:70px;'>
               <!-- container (landing page - welcome or Questionaire) -->
-              <div class='questionaire_container' style='height:600px;width:100%;     margin-top: 100px;'>
+              <div class='mission_statement_container w3-container' style='width:100%;     margin-top: 100px;'>
                 <div class="slideanim row">
                   <div class="col-md-12">
                     <div class="panel  text-center">
                       <div class="panel-body">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='height:600px;'>
+                        <div id="carousel-example-generic w3-container" class="carousel slide" data-ride="carousel" style='height:600px;'>
                           <!-- Indicators -->
                           <ol class="carousel-indicators">
                               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -141,6 +144,36 @@
                       </div>
                       </div>
                     </div>
+                  </div>
+                  <div class='col-md-12'>
+                    <div style='width:100%;' href='#knowledge_bomb_container'>
+                      <button style='position:relative;top:-400px;width:100%'class=""><span style='position:relative;top:-43px;font-color:black;color: black;
+    font-family: wal;
+    font-size: 15px;'><img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-19.png')}}'><span>The Elements Effect Your Anatomy</span><img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-05.png')}}'></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div id='knowledge_bomb_container'class='knowledge_bomb_container' style='height:600px;width:100%;     margin-top: 100px;'>
+                <div class="slideanim row">
+                  <div class="col-md-4">
+                    <div class='row'>
+                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-06.png')}}'>
+                    </div>
+                    <div class='row'>
+                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-07.png')}}'>
+                    </div>
+                    <div class='row'>
+                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-08.png')}}'>
+                    </div>
+                    <div class='row'>
+                      <img style='height:90px'src='{{asset('img/icons/Yellow/Nell_Icons_Yellow_CMYK-11.png')}}'>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <h3> Nell uses only Non-Toxic Ingredients. </h3>
                   </div>
                   <div class='col-md-12'>
                     <!-- <a style='margin-top:-100px;margin-left:auto;margin-right:auto;width:350px;'class='btn btn-default btn-block' href='https://nell.co.uk/collections/all'>Shop</a> -->
@@ -224,7 +257,7 @@
                     <div class='panel-body'>
                     <!-- <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'> -->
                       <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
-                      <img alt='product' style='height:500px;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529.png'></img>
+                      <img alt='product' style='height:500px;width:100%'src='https://cdn.shopify.com/s/files/1/2258/8035/files/bottols.jpg?1179625118197023529.png'></img>
                       <h3></h3>
                       <p>
                       </p>
@@ -408,13 +441,8 @@
                   </div>
                 </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <!-- close page content -->
 
-      </div>
+          <!-- close page content -->
       <!-- /#wrapper -->
       <!--Footer-->
       <div class='row'>
@@ -466,11 +494,8 @@
     </div>
       <!--/.Footer-->
 
+</div>
 
-      <!--close page wrapper -->
-      </div>
-      <!-- close page content -->
-    </div>
     <!-- /#wrapper -->
     <script>
 //get access code

@@ -11,10 +11,10 @@ class Receive extends Controller
   {
       $dna_token = $_GET['code'];
 
-      $servername = "nell-eu-west-2b.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com";
+      $servername = "mysql7.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com";
       $username = "drsaulwiggin";
       $password = "Mbcx5sw40!";
-      $dbname = "my_elements";
+      $dbname = "innodb";
 
       $conn = mysqli_connect($servername, $username, $password, $dbname);
       // Check connection

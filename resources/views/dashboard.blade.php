@@ -57,6 +57,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.11.3/xlsx.full.min.js"></script>
 
 <link src='{{asset('css/dashboard.css')}}' rel="stylesheet">
+<script src='{{asset('js/jquery.colorbox-min.js')}}'></script>
 
 </head>
 <script>
@@ -132,10 +133,30 @@
                             <div class="card-body">
                               <h5 class="card-title">Your Reports</h5>
                               <p class="card-text">View your Reports. DNA, Bloods and Microbiome.</p>
-                              <a href="/reports" style='margin:10px;'class="btn btn-primary">Enter</a>
+                              <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
                             </div>
                           </div>
+                            <div id="GSCCModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                             <div class="modal-dialog" style='width:100%'>
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <a href='/upload' class='btn btn-default'>Upload Your Genome</a>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
+                          <script>
+                            jQuery('a.gallery').colorbox();
+                          </script>
                           <div class='col-md-4'>
                             <div class="card" style="height:500px;">
                               <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
