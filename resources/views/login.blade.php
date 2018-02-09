@@ -23,7 +23,7 @@
               <hr>
               <div class="form-group form-inline">
                  <!-- <label style='font-family:GTWalsham_reg;margin-top:20px;font-size:15'>  </label> -->
-                <a href='{{url('dashboard')}}' class='btn btn-default' style='width:304;float:left;margin-top:4;height:42;margin-bottom:10px;'> <span style='float:left;margin-top:5px;margin-left:13px;margin-bottom:10px;font-family: GTWalsham_med;
+                <a href='{{url('home')}}' class='btn btn-default' style='width:304;float:left;margin-top:4;height:42;margin-bottom:10px;'> <span style='float:left;margin-top:5px;margin-left:13px;margin-bottom:10px;font-family: GTWalsham_med;
 style: bold;'> Become A Member</span> <img style='height:36;margin-top:-4;position:relative;left:12px;margin-left:25'src='{{asset('img/Nell_Icons_Yellow_CMYK-23.png')}}'></a>
               </div>
               <div id='23andme_button' class="form-group form-inline">
