@@ -55,7 +55,6 @@ class Receive extends Controller
         ]
     ]);
 
-
     $accounts = $result->getBody()->getContents();
     $accounts = json_decode($accounts);
     $id = $accounts->data[0]->id;
@@ -63,42 +62,42 @@ class Receive extends Controller
     $last_name = $accounts->data[0]->last_name;
     $email = $accounts->data[0]->email;
 
-    $sql = "INSERT INTO account (id, first_name, last_name, email)
-    VALUES ('".$id."''".$first_name."', '".$last_name."', '".$email."')";
+    $sql = "INSERT INTO account (first_name, last_name, email)
+    VALUES ('".$first_name."', '".$last_name."', '".$email."')";
 
     if (mysqli_query($conn, $sql)) {
       //  echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     // get profiles
-  //   $client = new \GuzzleHttp\Client();
-  //   $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
-  //     'headers' => [
-  //         'Authorization' => 'Bearer ' . $access_token
-  //       ]
-  //   ]);
-  //
-  //   $profile = $result->getBody()->getContents();
-  //   $profile = json_decode($profile);
-  //
-  //   $profile_id = $profile->data[0]->id;
-  //   $first_name = $profile->data[0]->first_name;
-  //   $last_name = $profile->data[0]->last_name;
-  //   $is_genotyped = $profile->data[0]->is_genotyped;
-  //
-  //   //var_dump($profile);
-  //
-  //   $sql = "INSERT INTO profile (first_name, last_name, is_genotyped)
-  //   VALUES ('".$first_name."', '".$last_name."', '".$is_genotyped."')";
-  //
-  //   if (mysqli_query($conn, $sql)) {
-  //     //  echo "New record created successfully";
-  //   } else {
-  //   //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  //   }
-  //
+    $client = new \GuzzleHttp\Client();
+    $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
+
+    $profile = $result->getBody()->getContents();
+    $profile = json_decode($profile);
+
+    $profile_id = $profile->data[0]->id;
+    $first_name = $profile->data[0]->first_name;
+    $last_name = $profile->data[0]->last_name;
+    $is_genotyped = $profile->data[0]->is_genotyped;
+
+    //var_dump($profile);
+
+    $sql = "INSERT INTO profile (first_name, last_name, is_genotyped)
+    VALUES ('".$first_name."', '".$last_name."', '".$is_genotyped."')";
+
+    if (mysqli_query($conn, $sql)) {
+      //  echo "New record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
   //   // get marker for gene rs10195681
   //   $client = new \GuzzleHttp\Client();
   //   $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs1801131/', [
