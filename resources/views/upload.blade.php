@@ -11,7 +11,8 @@
 <script src="{{asset('bootstrap-prettyfile.js')}}"></script>
 
 </header>
-<body>
+<body style='    font-size: 12px;
+    font-family: sans-serif;'>
   <img src='{{asset('img/background_subpage.jpg')}}' style=' margin-bottom:-60px;   width: 100%;
     margin-top: -100px;
     margin-left: -100px;'></img>
@@ -27,28 +28,34 @@
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
-             <label style='margin:5px;'> Already have your Genetic Information? </label><br>
+             <label style='margin:5px;font-size: 12px;
+                 font-family: sans-serif;'> Already have your Genetic Information? </label><br>
              <label style='margin:5px;    margin-top: 5px;
     margin-left: 5px;
-    margin-bottom: -10px;'> Upload Your Txt File Here: </label><br>
+    margin-bottom: -10px;font-size: 12px;
+        font-family: sans-serif;'> Upload Your Txt File Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
               <a href='http://77.68.72.205/' class='btn btn-default' style='float: right;
-    margin-top: -30px;'>Upload genome</a>
+    margin-top: -30px;font-size: 12px;
+        font-family: sans-serif;'>Upload genome</a>
             </div>
             <hr>
             <div class='form-group form-inline'>
-              <label style='margin:5px;'> Connect With your 23andme Data: </label>
-              <a class='btn btn-default' style=' margin-bottom:5px'
+              <label style='margin:5px;font-size: 12px;
+                  font-family: sans-serif;'> Connect With your 23andme Data: </label>
+              <a class='btn btn-default' style=' margin-bottom:5px;width:200px;'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
-                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
+                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"style='width:180px'></a>
             </div>
             <hr>
             <br>
             <div class='form-group form-inline'>
-              <label style='margin:5px;'> Early Membership Sign Up - Nell DNA Test: </label>
-              <a class='btn btn-default' style="float:right"href='http://eepurl.com/djZ_tn'>Sign Up</a>
+              <label style='margin:5px;font-size: 12px;
+                  font-family: sans-serif;'> Early Membership Sign Up - Nell DNA Test: </label>
+              <a class='btn btn-default' style="float:right;font-size: 12px;
+                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'>Sign Up</a>
             </div>
           </form>
         </div>
