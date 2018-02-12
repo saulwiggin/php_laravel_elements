@@ -189,9 +189,9 @@ class Receive extends Controller
       VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-          echo "New record created successfully";
+      //    echo "New record created successfully";
       } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
     $client = new \GuzzleHttp\Client();
@@ -248,7 +248,7 @@ class Receive extends Controller
       $is_no_call = $api->is_no_call;
 
 
-      $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+      $sql = "INSERT INTO marker (profile_id,gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
       VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
@@ -274,18 +274,19 @@ class Receive extends Controller
       $accession_id = $api->accession_id;
       $start = $api->start;
       $end = $api->end;
+      $variants = $api->variants;
       $is_genotyped = $api->is_genotyped;
       $is_assayed = $api->is_assayed;
       $is_no_call = $api->is_no_call;
 
 
-      $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+      $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,variants,is_genotyped,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$variants."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+          echo "New record created successfully";
       } else {
-        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
     $client = new \GuzzleHttp\Client();
