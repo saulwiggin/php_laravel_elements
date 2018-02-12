@@ -106,45 +106,31 @@ class Receive extends Controller
         ]
     ]);
 
-    $api = $result->getBody()->getContents();
-    $api = json_decode($api,true);
+    $result = $result->getBody()->getContents();
+    $result = json_decode($result);
 
-    $gene_names = $api['gene_names'][0];
-    $accession_id = $api['accession_id'];
-    $start = $api['start'];
-    $end = $api['end'];
-    $is_genotyped = $api['is_genotyped'];
-    $is_assayed = $api['is_assayed'];
-    $is_no_call = $api['is_no_call'];
+  //  var_dump($result);
+
+  //  $alternate_ids = $result->alternate_ids[0];
+    $gene_names = $result->gene_names[0];
+    $accession_id = $result->accession_id;
+    $start = $result->start;
+    $end = $result->end;
+    $is_genotyped = $result->is_genotyped;
+    $is_assayed = $result->is_assayed;
+    $is_no_call = $result->is_no_call;
 
 
-    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
     if (mysqli_query($conn, $sql)) {
-    //    echo "Marker record created successfully";
+    //    echo "New record created successfully";
     } else {
-    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    $variants = $api['variants'];
-    //loop through multiple variants;
-    foreach($variants as $key => $value){
-      $start = $variants[$key]['start'];
-      $allele = $variants[$key]['allele'];
-      $dosage = $variants[$key]['dosage'];
-      $is_assayed = $variants[$key]['is_assayed'];
-      $is_no_call = $variants[$key]['is_no_call'];
 
-      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
-      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
-
-      if (mysqli_query($conn, $sql)) {
-        //  echo "Variant record created successfully";
-      } else {
-      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
-    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs429358/', [
@@ -428,34 +414,34 @@ class Receive extends Controller
     }
 
     //get reports
-    $client = new \GuzzleHttp\Client();
-    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
-      'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
-        ]
-    ]);
-
-    $report = $result->getBody()->getContents();
-    $report = json_decode($report);
-
-    var_dump($report);
-
-    $id = $report->id;
-    $report_id = $report->report_id;
-    $report_type = $report->report_type;
-    $title = $report->title;
-    $details = $report->details;
-    $summary = $report->summary;
-
-
-      $sql = "INSERT INTO report (id, report_id, report_type,title,details,summary)
-      VALUES ('".$id."', '".$report_id."','".$report_type."','".$title."','".$details."','".$summary."')";
-
-      if (mysqli_query($conn, $sql)) {
-          echo "New report created successfully";
-      } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
+    // $client = new \GuzzleHttp\Client();
+    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
+    //   'headers' => [
+    //       'Authorization' => 'Bearer ' . $access_token
+    //     ]
+    // ]);
+    //
+    // $report = $result->getBody()->getContents();
+    // $report = json_decode($report);
+    //
+    // var_dump($report);
+    //
+    // $id = $report->id;
+    // $report_id = $report->report_id;
+    // $report_type = $report->report_type;
+    // $title = $report->title;
+    // $details = $report->details;
+    // $summary = $report->summary;
+    //
+    //
+    //   $sql = "INSERT INTO report (id, report_id, report_type,title,details,summary)
+    //   VALUES ('".$id."', '".$report_id."','".$report_type."','".$title."','".$details."','".$summary."')";
+    //
+    //   if (mysqli_query($conn, $sql)) {
+    //       echo "New report created successfully";
+    //   } else {
+    //       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    //   }
 
     mysqli_close($conn);
 
