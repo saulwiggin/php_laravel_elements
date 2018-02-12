@@ -34,24 +34,21 @@ class Receive extends Controller
           'grant_type' => 'authorization_code',
           'code' => $dna_token,
           'redirect_uri' => 'http://localhost:8000/receive',
-          'scope' => 'basic names email'
+          'scope' => 'basic names email genomes report:all rs1801131'
         ]
       ]);
 
     $contents = $result->getBody()->getContents();
     $contents = json_decode($contents);
-    //var_dump($contents);
 
     $access_token = $contents->access_token;
 
-    //This session is valid for 10 minutes
-    //access_code = $contents["access_token"];
-
-    // get user genome information
+    // get accounts genome information
     $client = new \GuzzleHttp\Client();
     $result = $client->post('https://api.23andme.com/3/account', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+          //'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -66,16 +63,17 @@ class Receive extends Controller
     VALUES ('".$first_name."', '".$last_name."', '".$email."')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+      //  echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     // get profiles
     $client = new \GuzzleHttp\Client();
-    $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
+    $result = $client->post('https://api.23andme.com/3/profile?account_id=demo_account_id', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+        //'Authorization' => 'Bearer ' . $access_token
+        'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -98,44 +96,59 @@ class Receive extends Controller
       //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    // get marker for gene rs10195681
-    $client = new \GuzzleHttp\Client();
-    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs1801131/', [
-      'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
-        ]
-    ]);
-
-    $result = $result->getBody()->getContents();
-    $result = json_decode($result);
-
-  //  var_dump($result);
-
-  //  $alternate_ids = $result->alternate_ids[0];
-    $gene_names = $result->gene_names[0];
-    $accession_id = $result->accession_id;
-    $start = $result->start;
-    $end = $result->end;
-    $is_genotyped = $result->is_genotyped;
-    $is_assayed = $result->is_assayed;
-    $is_no_call = $result->is_no_call;
-
-
-    $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-    VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
-
-    if (mysqli_query($conn, $sql)) {
-    //    echo "New record created successfully";
-    } else {
-      //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-
-
+    // $client = new \GuzzleHttp\Client();
+    // $result = $client->post('https://api.23andme.com/3/profile/demo_account_id/marker/rs1801131/', [
+    //   'headers' => [
+    //     //'Authorization' => 'Bearer ' . $access_token
+    //     'Authorization' => 'Bearer demo_oauth_token'
+    //     ]
+    // ]);
+    //
+    // $api = $result->getBody()->getContents();
+    // $api = json_decode($api,true);
+    //
+    // $gene_names = $api['gene_names'][0];
+    // $accession_id = $api['accession_id'];
+    // $start = $api['start'];
+    // $end = $api['end'];
+    // $is_genotyped = $api['is_genotyped'];
+    // $is_assayed = $api['is_assayed'];
+    // $is_no_call = $api['is_no_call'];
+    //
+    //
+    // $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    // VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    //
+    // if (mysqli_query($conn, $sql)) {
+    //     echo "Marker record created successfully";
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // }
+    //
+    // $variants = $api['variants'];
+    // //loop through multiple variants;
+    // foreach($variants as $key => $value){
+    //   $start = $variants[$key]['start'];
+    //   $allele = $variants[$key]['allele'];
+    //   $dosage = $variants[$key]['dosage'];
+    //   $is_assayed = $variants[$key]['is_assayed'];
+    //   $is_no_call = $variants[$key]['is_no_call'];
+    //
+    //   $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+    //   VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
+    //
+    //   if (mysqli_query($conn, $sql)) {
+    //       echo "Variant record created successfully";
+    //   } else {
+    //       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    //   }
+    // }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs429358/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+          // 'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -182,7 +195,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs12794714/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+          // 'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -229,7 +243,9 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs7501331/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
+
         ]
     ]);
 
@@ -276,7 +292,9 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs602662/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
+
         ]
     ]);
 
@@ -323,7 +341,9 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs4988235/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer ' . $access_token
+          'Authorization' => 'Bearer demo_oauth_token'
+
         ]
     ]);
 
@@ -369,7 +389,9 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs855791/', [
       'headers' => [
-          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer ' . $access_token
+        'Authorization' => 'Bearer demo_oauth_token'
+
         ]
     ]);
 
@@ -417,31 +439,47 @@ class Receive extends Controller
     // $client = new \GuzzleHttp\Client();
     // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
     //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
+    //     //  'Authorization' => 'Bearer ' . $access_token
+    //       'Authorization' => 'Bearer demo_oauth_token'
+    //
     //     ]
     // ]);
     //
-    // $report = $result->getBody()->getContents();
-    // $report = json_decode($report);
+    // $api = $result->getBody()->getContents();
+    // $api = json_decode($api,true);
     //
-    // var_dump($report);
+    // var_dump($api);
     //
-    // $id = $report->id;
-    // $report_id = $report->report_id;
-    // $report_type = $report->report_type;
-    // $title = $report->title;
-    // $details = $report->details;
-    // $summary = $report->summary;
+    // $reports = $api['data'];
+    // //loop through multiple variants;
+    // if ($reports){
     //
+    // }
+    // foreach($reports as $key => $value){
+    //   $report_id = $reports[$key]['report_id'];
+    //   $report_type = $reports[$key]['report_type'];
+    //   $title = $reports[$key]['title'];
     //
-    //   $sql = "INSERT INTO report (id, report_id, report_type,title,details,summary)
-    //   VALUES ('".$id."', '".$report_id."','".$report_type."','".$title."','".$details."','".$summary."')";
+    //   $sql = "INSERT INTO report (profile_id, report_id, report_type)
+    //   VALUES ('".$profile_id."', '".$report_id."', '".$report_type."')";
     //
     //   if (mysqli_query($conn, $sql)) {
-    //       echo "New report created successfully";
+    //     //  echo "Variant record created successfully";
     //   } else {
-    //       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    //   //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     //   }
+    // }
+
+    // add specific details of 8 reports by 23andme Here:
+    // genetic_weight
+    // wellness.alcohol_flush_reaction
+    // wellness.caffeine_consumption
+    // wellness.deep_sleep
+    // wellness.lactose
+    // wellness.muscle_composition
+    // wellness.saturated_fat_and_weight
+    // wellness.sleep_movement
+
 
     mysqli_close($conn);
 
