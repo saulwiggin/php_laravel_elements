@@ -274,17 +274,31 @@ class Receive extends Controller
       $accession_id = $api->accession_id;
       $start = $api->start;
       $end = $api->end;
-      $variants = $api->variants;
       $is_genotyped = $api->is_genotyped;
       $is_assayed = $api->is_assayed;
       $is_no_call = $api->is_no_call;
 
+      $variants = $api->variants;
+      $start = $variants->start;
+      $allele = $variants->allele;
+      $dosage = $variants->dosage;
+      $is_assayed = $variants->is_assayed;
+      $is_no_call = $variants->is_no_call;
 
-      $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,variants,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$variants."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+      $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-          echo "New record created successfully";
+          echo "Marker record created successfully";
+      } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
+
+      if (mysqli_query($conn, $sql)) {
+          echo "Variant record created successfully";
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
