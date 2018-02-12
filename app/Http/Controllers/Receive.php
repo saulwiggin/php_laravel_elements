@@ -11,7 +11,7 @@ class Receive extends Controller
   {
       $dna_token = $_GET['code'];
 
-      $servername = "mysql7.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com";
+      $servername = "twentythreeandmedata.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com";
       $username = "drsaulwiggin";
       $password = "Mbcx5sw40!";
       $dbname = "innodb";
@@ -93,9 +93,9 @@ class Receive extends Controller
     VALUES ('".$first_name."', '".$last_name."', '".$is_genotyped."')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        //echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     // get marker for gene rs10195681
@@ -189,9 +189,9 @@ class Receive extends Controller
       VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+          echo "New record created successfully";
       } else {
-        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
     $client = new \GuzzleHttp\Client();
