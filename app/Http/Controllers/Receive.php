@@ -34,7 +34,7 @@ class Receive extends Controller
           'client_secret' => '3f7fd6d92dc8286b5704103870419be1',
           'grant_type' => 'authorization_code',
           'code' => $dna_token,
-          'redirect_uri' => 'http://localhost:8000/receive',
+          'redirect_uri' => 'http://www.nellnaturalelements.com/receive',
           'scope' => 'basic names email genomes report:all rs1801131'
         ]
       ]);
