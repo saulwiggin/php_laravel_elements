@@ -279,11 +279,11 @@ class Receive extends Controller
       $is_no_call = $api->is_no_call;
 
       $variants = $api->variants;
-      $start = $variants->start;
-      $allele = $variants->allele;
-      $dosage = $variants->dosage;
-      $is_assayed = $variants->is_assayed;
-      $is_no_call = $variants->is_no_call;
+      $start = $variants['start'];
+      $allele = $variants['allele'];
+      $dosage = $variants['dosage'];
+      $is_assayed = $variants['is_assayed'];
+      $is_no_call = $variants['is_no_call'];
 
       $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
       VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
