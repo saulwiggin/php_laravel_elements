@@ -30,7 +30,7 @@
              <label style='margin:5px;'> Already have your Genetic Information? </label><br>
              <label style='margin:5px;    margin-top: 5px;
     margin-left: 5px;
-    margin-bottom: -10px;'> Upload Your Genome Here: </label><br>
+    margin-bottom: -10px;'> Upload Your Txt File Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
@@ -40,9 +40,9 @@
             <hr>
             <div class='form-group form-inline'>
               <label style='margin:5px;'> Connect With your 23andme Data: </label>
-              <a class='' style=' margin-bottom:5px'
-                  href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:8000/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
-                <img style='height:40px;'src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
+              <a class='btn btn-default' style=' margin-bottom:5px'
+                  href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
+                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"></a>
             </div>
             <hr>
             <br>
