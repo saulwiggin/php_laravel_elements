@@ -106,31 +106,45 @@ class Receive extends Controller
         ]
     ]);
 
-    $result = $result->getBody()->getContents();
-    $result = json_decode($result);
+    $api = $result->getBody()->getContents();
+    $api = json_decode($api,true);
 
-  //  var_dump($result);
-
-  //  $alternate_ids = $result->alternate_ids[0];
-    $gene_names = $result->gene_names[0];
-    $accession_id = $result->accession_id;
-    $start = $result->start;
-    $end = $result->end;
-    $is_genotyped = $result->is_genotyped;
-    $is_assayed = $result->is_assayed;
-    $is_no_call = $result->is_no_call;
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
 
-    $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-    VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
     if (mysqli_query($conn, $sql)) {
-    //    echo "New record created successfully";
+    //    echo "Marker record created successfully";
     } else {
-      //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
 
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
+
+      if (mysqli_query($conn, $sql)) {
+        //  echo "Variant record created successfully";
+      } else {
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs429358/', [
@@ -140,28 +154,44 @@ class Receive extends Controller
     ]);
 
     $api = $result->getBody()->getContents();
-    $api = json_decode($api);
+    $api = json_decode($api,true);
 
-    //  var_dump($result);
-
-    //  $alternate_ids = $result->alternate_ids[0];
-      $gene_names = $api->gene_names[0];
-      $accession_id = $api->accession_id;
-      $start = $api->start;
-      $end = $api->end;
-      $is_genotyped = $api->is_genotyped;
-      $is_assayed = $api->is_assayed;
-      $is_no_call = $api->is_no_call;
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
 
-      $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+        //  echo "Variant record created successfully";
       } else {
-        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs12794714/', [
@@ -171,28 +201,44 @@ class Receive extends Controller
     ]);
 
     $api = $result->getBody()->getContents();
-    $api = json_decode($api);
+    $api = json_decode($api,true);
 
-    //var_dump($vitaminD);
-
-    //  $alternate_ids = $result->alternate_ids[0];
-      $gene_names = $api->gene_names[0];
-      $accession_id = $api->accession_id;
-      $start = $api->start;
-      $end = $api->end;
-      $is_genotyped = $api->is_genotyped;
-      $is_assayed = $api->is_assayed;
-      $is_no_call = $api->is_no_call;
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
 
-      $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+        //  echo "Variant record created successfully";
       } else {
       //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs7501331/', [
@@ -202,28 +248,44 @@ class Receive extends Controller
     ]);
 
     $api = $result->getBody()->getContents();
-    $api = json_decode($api);
+    $api = json_decode($api,true);
 
-    //var_dump($vitaminA);
-
-    //  $alternate_ids = $result->alternate_ids[0];
-      $gene_names = $api->gene_names[0];
-      $accession_id = $api->accession_id;
-      $start = $api->start;
-      $end = $api->end;
-      $is_genotyped = $api->is_genotyped;
-      $is_assayed = $api->is_assayed;
-      $is_no_call = $api->is_no_call;
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
 
-      $sql = "INSERT INTO marker (gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+        //  echo "Variant record created successfully";
       } else {
-        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs602662/', [
@@ -233,29 +295,44 @@ class Receive extends Controller
     ]);
 
     $api = $result->getBody()->getContents();
-    $api = json_decode($api);
+    $api = json_decode($api,true);
 
-    //var_dump($vitaminB12);
-    //var_dump($vitaminA);
-
-    //  $alternate_ids = $result->alternate_ids[0];
-      $gene_names = $api->gene_names[0];
-      $accession_id = $api->accession_id;
-      $start = $api->start;
-      $end = $api->end;
-      $is_genotyped = $api->is_genotyped;
-      $is_assayed = $api->is_assayed;
-      $is_no_call = $api->is_no_call;
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
 
-      $sql = "INSERT INTO marker (profile_id,gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-      //    echo "New record created successfully";
+        //  echo "Variant record created successfully";
       } else {
-        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs4988235/', [
@@ -267,44 +344,41 @@ class Receive extends Controller
     $api = $result->getBody()->getContents();
     $api = json_decode($api,true);
 
-    var_dump($api);
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
-      $gene_names = $api['gene_names'][0];
-      $accession_id = $api['accession_id'];
-      $start = $api['start'];
-      $end = $api['end'];
-      $is_genotyped = $api['is_genotyped'];
-      $is_assayed = $api['is_assayed'];
-      $is_no_call = $ap['is_no_call'];
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
 
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 
-      $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
-      VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
 
       if (mysqli_query($conn, $sql)) {
-          echo "Marker record created successfully";
+        //  echo "Variant record created successfully";
       } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
-
-      $variants = $api['variants'];
-      //loop through multiple variants;
-      foreach($variants as $key => $value){
-        $start = $variants[$key]['start'];
-        $allele = $variants[$key]['allele'];
-        $dosage = $variants[$key]['dosage'];
-        $is_assayed = $variants[$key]['is_assayed'];
-        $is_no_call = $variants[$key]['is_no_call'];
-
-        $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
-        VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
-
-        if (mysqli_query($conn, $sql)) {
-            echo "Variant record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-      }
+    }
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs855791/', [
@@ -313,100 +387,45 @@ class Receive extends Controller
         ]
     ]);
 
-    $iron = $result->getBody()->getContents();
-    $iron = json_decode($iron);
+    $api = $result->getBody()->getContents();
+    $api = json_decode($api,true);
 
-    //var_dump($iron);
-    //
-    // //get VARIANTS
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs855791', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer demo_oauth_token'
-    //     ]
-    // ]);
-    //
-    // $api = $result->getBody()->getContents();
-    // $api = json_decode($api);
-    //
-    // var_dump($api);
-    //
-    // $accession_id = $api->data[0]->accession_id;
-    // $start = $api->data[0]->start;
-    // $end = $api->data[0]->end;
-    // $allele = $api->data[0]->allele;
-    // $dosage = $api->data[0]->dosage;
-    // $is_assayed = $api->data[0]->is_assayed;
-    // $is_no_call = $api->data[0]->is_no_call;
-    //
-    // $sql = "INSERT INTO variants (accession_id, start,end,allele,dosage,is_assayed,is_no_call)
-    // VALUES ('".$accession_id."','".$start."','".$end."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
-    //
-    // if (mysqli_query($conn, $sql)) {
-    //     echo "New record created successfully";
-    // } else {
-    //     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    // }
-    //
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs12794714', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $vitaminD = $result->getBody()->getContents();
-    // $vitaminD = json_decode($vitaminD);
-    //
-    // //var_dump($vitaminD);
-    //
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs7501331', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $vitaminA = $result->getBody()->getContents();
-    // $vitaminA = json_decode($vitaminA);
-    //
-    // //var_dump($vitaminA);
-    //
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs602662', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $vitaminB12 = $result->getBody()->getContents();
-    // $vitaminB12 = json_decode($vitaminB12);
-    //
-    // //var_dump($vitaminB12);
-    //
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs4988235/', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $folic_acid = $result->getBody()->getContents();
-    // $folic_acid = json_decode($folic_acid);
-    //
-    // //var_dump($folic_acid);
-    //
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/variant/?gene_name=rs855791/', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $iron = $result->getBody()->getContents();
-    // $iron = json_decode($iron);
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
 
-    //var_dump($iron);
+
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
+
+      if (mysqli_query($conn, $sql)) {
+        //  echo "Variant record created successfully";
+      } else {
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
 
     //get reports
     $client = new \GuzzleHttp\Client();
