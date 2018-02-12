@@ -269,7 +269,7 @@ class Receive extends Controller
 
     var_dump($api);
 
-      $gene_names = $api-['gene_names'][0];
+      $gene_names = $api['gene_names'][0];
       $accession_id = $api['accession_id'];
       $start = $api['start'];
       $end = $api['end'];
