@@ -289,7 +289,7 @@ class Receive extends Controller
 
       $variants = $api['variants'];
       //loop through multiple variants;
-      for($variants as $key => $value){
+      foreach($variants as $key => $value){
         $start = $variants[$key]['start'];
         $allele = $variants[$key]['allele'];
         $dosage = $variants[$key]['dosage'];
@@ -407,35 +407,36 @@ class Receive extends Controller
     // $iron = json_decode($iron);
 
     //var_dump($iron);
+
     //get reports
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
-    //   'headers' => [
-    //       'Authorization' => 'Bearer ' . $access_token
-    //     ]
-    // ]);
-    //
-    // $report = $result->getBody()->getContents();
-    // $report = json_decode($report);
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
+      'headers' => [
+          'Authorization' => 'Bearer ' . $access_token
+        ]
+    ]);
 
-    //var_dump($report);
+    $report = $result->getBody()->getContents();
+    $report = json_decode($report);
 
-    // $id = $report->id;
-    // $report_id = $report->report_id;
-    // $report_type = $report->report_type;
-    // $title = $report->title;
-    // $details = $report->details;
-    // $summary = $report->summary;
-    //
-    //
-    //   $sql = "INSERT INTO report (id, report_id, report_type,title,details,summary)
-    //   VALUES ('".$id."', '".$report_id."','".$report_type."','".$title."','".$details."','".$summary."')";
-    //
-    //   if (mysqli_query($conn, $sql)) {
-    //       echo "New record created successfully";
-    //   } else {
-    //       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    //   }
+    var_dump($report);
+
+    $id = $report->id;
+    $report_id = $report->report_id;
+    $report_type = $report->report_type;
+    $title = $report->title;
+    $details = $report->details;
+    $summary = $report->summary;
+
+
+      $sql = "INSERT INTO report (id, report_id, report_type,title,details,summary)
+      VALUES ('".$id."', '".$report_id."','".$report_type."','".$title."','".$details."','".$summary."')";
+
+      if (mysqli_query($conn, $sql)) {
+          echo "New report created successfully";
+      } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
 
     mysqli_close($conn);
 
