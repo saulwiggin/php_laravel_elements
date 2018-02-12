@@ -70,7 +70,7 @@ class Receive extends Controller
 
     // get profiles
     $client = new \GuzzleHttp\Client();
-    $result = $client->post('https://api.23andme.com/3/profile?account_id=demo_account_id', [
+    $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
       'headers' => [
         //'Authorization' => 'Bearer ' . $access_token
         'Authorization' => 'Bearer demo_oauth_token'
