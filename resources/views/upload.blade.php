@@ -28,22 +28,22 @@
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
-             <label style='margin:5px;font-size: 12px;
-                 font-family: sans-serif;'> Already have your Genetic Information? </label><br>
-             <label style='margin:5px;    margin-top: 5px;
+             <label style='margin:5px;font-size: 18px; margin-top:-40px;
+                 font-family: walsheim;'> Already have your Genetic Information? </label><br>
+             <label style='margin:5px;    margin-top: 25px;
     margin-left: 5px;
-    margin-bottom: -10px;font-size: 12px;
+    margin-bottom: -10px;font-size: 15px;
         font-family: sans-serif;'> Upload Your Txt File Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
               <a href='http://77.68.72.205/' class='btn btn-default' style='float: right;
-    margin-top: -30px;font-size: 12px;
+    margin-top: -30px;font-size: 15px; position:relative;width:200px;
         font-family: sans-serif;'>Upload genome</a>
             </div>
             <hr>
             <div class='form-group form-inline'>
-              <label style='margin:5px;font-size: 12px;
+              <label style='margin:5px;font-size: 15px;
                   font-family: sans-serif;'> Connect With your 23andme Data: </label>
               <a class='btn btn-default' style=' margin-bottom:5px;width:200px;'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
@@ -52,9 +52,9 @@
             <hr>
             <br>
             <div class='form-group form-inline'>
-              <label style='margin:5px;font-size: 12px;
-                  font-family: sans-serif;'> Early Membership Sign Up - Nell DNA Test: </label>
-              <a class='btn btn-default' style="float:right;font-size: 12px;
+              <label style='margin:5px;font-size: 15px;
+                  font-family: sans-serif;'> <i> Or </i> Early Membership Sign Up: </label>
+              <a class='btn btn-default' style="float:right;font-size: 15px; width:200px;
                   font-family: sans-serif;"href='http://eepurl.com/djZ_tn'>Sign Up</a>
             </div>
           </form>
