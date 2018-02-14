@@ -32,14 +32,14 @@
                  font-family: walsheim;'> Already have your Genetic Information? </label><br>
              <label style='margin:5px;    margin-top: 25px;
     margin-left: 5px;
-    margin-bottom: -10px;font-size: 15px;
+    margin-bottom: -10px;font-size: 15px; position:relative; top:-8px;
         font-family: sans-serif;'> Upload Your Txt File Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
-              <a href='/genome_upload' class='btn btn-default' style='float: right;
-    margin-top: -30px;font-size: 15px; position:relative;width:200px;
-        font-family: sans-serif;'>Upload genome</a>
+              <a href='/my_genetics' class='btn btn-default' style='float: right;
+    margin-top: -50px;font-size: 15px; position:relative;width:200px;
+        font-family: sans-serif;'>Upload Genome<img style='height:50px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-01.png')}}'></a>
             </div>
             <hr>
             <div class='form-group form-inline'>
@@ -51,11 +51,11 @@
             </div>
             <hr>
             <br>
-            <div class='form-group form-inline'>
-              <label style='margin:5px;font-size: 15px;
+            <div class='form-group form-inline' style='margin-top:-30px;'>
+              <label style='margin:5px;font-size: 15px;  margin-top:20px;
                   font-family: sans-serif;'> <i> Or </i> Early Membership Sign Up: </label>
               <a class='btn btn-default' style="float:right;font-size: 15px; width:200px;
-                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'>Sign Up</a>
+                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'>Sign Up<img style='height:50px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-27.png')}}'></a>
             </div>
           </form>
         </div>

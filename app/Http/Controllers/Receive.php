@@ -484,6 +484,7 @@ class Receive extends Controller
 
     mysqli_close($conn);
 
-    return view('success');
+    $url = 'http://www.nell.co.uk'
+    return Redirect::to($url);
   }
 }

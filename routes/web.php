@@ -74,8 +74,11 @@ Route::get('/static', function () {
 Route::get('/table', function () {
     return view('table');
 });
-Route::get('/genome_upload', function () {
+Route::get('/my_genetics', function () {
     return view('genome_upload');
+});
+Route::get('/info', function () {
+    return view('info');
 });
 Route::get('/mymarketing', function () {
     return view('my_marketing');
@@ -85,6 +88,7 @@ Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');
 Route::post('/medium', 'stripe@medium');
 Route::get('/stripe/full', 'stripe@full');
+Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
 
 Auth::routes();
 
