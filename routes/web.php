@@ -74,6 +74,9 @@ Route::get('/static', function () {
 Route::get('/table', function () {
     return view('table');
 });
+Route::get('/genome_upload', function () {
+    return view('genome_upload');
+});
 Route::get('/mymarketing', function () {
     return view('my_marketing');
 });
