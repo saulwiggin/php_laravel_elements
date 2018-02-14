@@ -17,8 +17,8 @@
           <h2 style='font-family:GTWalsham_med;margin-left:12'>  Success! You have Uploaded your Data</h2>
         </div>
         <div class="panel-body">
-          <a href='http://www.nell.co.uk' class='btn btn-default'> Take a look at our current products </a>
-          <a href='http://www.nellnaturalelements.com' class='btn btn-default' style='margin-top:10px;'> Subscribe to our health plan </a>
+          <!-- <a href='http://www.nell.co.uk' class='btn btn-default'> Take a look at our current products </a>
+          <a href='http://www.nellnaturalelements.com' class='btn btn-default' style='margin-top:10px;'> Subscribe to our health plan </a> -->
         </div>
       </div>
     </div>
