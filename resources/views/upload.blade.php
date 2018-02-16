@@ -37,28 +37,26 @@
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
-              <a href='/my_genetics' class='btn btn-default' style='font-size: 15px; position:relative;width:200px;
+              <a href='/my_genetics' class='btn btn-default' style='font-size: 15px; position:relative;width:200px;margin-left:10px;
         font-family: sans-serif;height:40'><span style='position:relative;left:-10px;'><img style='height:30px;margin-top:-2px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-01.png')}}'>Upload Genome</span></a>
             </div>
             <hr>
             <div class='form-group 'style='margin-top:-10px;'>
-              <label style='margin:5px;font-size: 18px;
+              <label style='margin:5px;font-size: 25px;
                   font-family: GTWalsham_reg;'> Connect With 23&Me: </label><br>
-              <a class='btn btn-default' style=' width:200px;'
+              <a class='btn btn-default' style=' width:200px;margin-left:10px;'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
                 <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"style='width:180px'></a>
             </div>
             <hr>
             <br>
             <div class='form-group form-inline' style='margin-top:-40px;'>
-              <label style='margin:5px;font-size: 25px;
+              <label style='margin-left:5px;font-size: 25px; margin-top:20px;
                   font-family: GTWalsham_reg;'> Havn't Done A Test?</label><br>
-              <label style='margin:5px;font-size: 18px;
-                  font-family: GTWalsham_reg;'> Sign Up To Our New Membership.</label><br>
-                  <label style='margin:5px;font-size: 18px;
-                      font-family: GTWalsham_reg;'> Early Access To Our Genetic Test:</label><br>
-              <a class='btn btn-default' style="font-size: 15px; width:200px;height:40px; margin-top:5px;
-                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'><span style='position:relative;left:-40px;'><img style='height:30px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-27.png')}}'><span style=''>Sign Up</span></span></a>
+              <label style='margin-left:5px;font-size: 18px;
+                  font-family: GTWalsham_reg;'> Sign Up To Our New Membership Now For <br>Early Access To Our Genetic Test:</label><br>
+              <a class='btn btn-default' style="font-size: 15px; width:200px;height:40px; margin-top:5px;margin-left:10px;
+                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'><span style='position:relative;left:-40px;top:-2px;'><img style='height:30px;margin-bottom:5px;margin-left:40px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-27.png')}}'><span style='margin-left:20px;'>Sign Up</span></span></a>
             </div>
           </form>
         </div>
