@@ -21,7 +21,7 @@
   <div class='row' style='margin:40px;  position: absolute;
     margin-top: 20px;'>
     <div class='col'>
-      <div class="panel panel-default" style='width: 335;margin-top:-800px;margin-left:400px;'>
+      <div class="panel panel-default" style='width: 600px;margin-top:-800px;margin-left:400px;'>
         <div class='panel panel-header'>
           <h2 style='margin-left:12px'>  <img style='    height: 150px;
     margin: -40px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'> </h2>
