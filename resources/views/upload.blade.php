@@ -28,34 +28,37 @@
         <div class="panel-body">
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
-             <label style='margin:5px;font-size: 18px; margin-top:-40px;
-                 font-family: walsheim;'> Already have your Genetic Information? </label><br>
-             <label style='margin:5px;    margin-top: 25px;
+             <label style='margin:5px;font-size: 25px; margin-top:-40px;
+                 font-family: GTWalsham_med;'> Already have your Genetic Information? </label><br>
+             <label style='margin:5px;
     margin-left: 5px;
-    margin-bottom: -10px;font-size: 15px; position:relative; top:-8px;
-        font-family: sans-serif;'> Upload Your Txt File Here: </label><br>
+    font-size: 18px; position:relative; top:-8px;
+        font-family: GTWalsham_reg;'> Upload Your Txt File Here: </label><br>
               <!-- <label style='margin:5px;'> Please attach your name so we know who you are </label>
               <input style='margin:10px;'type="file" name="fileToUpload" id="fileToUpload">
               <input style='margin:10px;'type="submit" value="Upload" name="submit">  -->
-              <a href='/my_genetics' class='btn btn-default' style='float: right;
-    margin-top: -50px;font-size: 15px; position:relative;width:200px;
-        font-family: sans-serif;'>Upload Genome<img style='height:50px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-01.png')}}'></a>
+              <a href='/my_genetics' class='btn btn-default' style='font-size: 15px; position:relative;width:200px;
+        font-family: sans-serif;height:40'><span style='position:relative;left:-10px;'><img style='height:30px;margin-top:-2px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-01.png')}}'>Upload Genome</span></a>
             </div>
             <hr>
-            <div class='form-group form-inline'>
-              <label style='margin:5px;font-size: 15px;
-                  font-family: sans-serif;'> Connect With your 23andme Data: </label>
-              <a class='btn btn-default' style=' margin-bottom:5px;width:200px;'
+            <div class='form-group 'style='margin-top:-10px;'>
+              <label style='margin:5px;font-size: 18px;
+                  font-family: GTWalsham_reg;'> Connect With 23&Me: </label><br>
+              <a class='btn btn-default' style=' width:200px;'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://www.nellnaturalelements.com/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all rs1801131">
                 <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"style='width:180px'></a>
             </div>
             <hr>
             <br>
-            <div class='form-group form-inline' style='margin-top:-30px;'>
-              <label style='margin:5px;font-size: 15px;  margin-top:20px;
-                  font-family: sans-serif;'> <i> Or </i> Early Membership Sign Up: </label>
-              <a class='btn btn-default' style="float:right;font-size: 15px; width:200px;
-                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'>Sign Up<img style='height:50px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-27.png')}}'></a>
+            <div class='form-group form-inline' style='margin-top:-40px;'>
+              <label style='margin:5px;font-size: 25px;
+                  font-family: GTWalsham_reg;'> Havn't Done A Test?</label><br>
+              <label style='margin:5px;font-size: 18px;
+                  font-family: GTWalsham_reg;'> Sign Up To Our New Membership.</label><br>
+                  <label style='margin:5px;font-size: 18px;
+                      font-family: GTWalsham_reg;'> Early Access To Our Genetic Test:</label><br>
+              <a class='btn btn-default' style="font-size: 15px; width:200px;height:40px; margin-top:5px;
+                  font-family: sans-serif;"href='http://eepurl.com/djZ_tn'><span style='position:relative;left:-40px;'><img style='height:30px;'src='{{asset('img/icons/Light_Green/Nell_Icons_Light_Green_CMYK-27.png')}}'><span style=''>Sign Up</span></span></a>
             </div>
           </form>
         </div>
