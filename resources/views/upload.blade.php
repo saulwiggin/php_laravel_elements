@@ -29,7 +29,7 @@
           <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class='form-group'>
              <label style='margin:5px;font-size: 25px; margin-top:-40px;
-                 font-family: GTWalsham_med;'> Already have your Genetic Information? </label><br>
+                 font-family: GTWalsham_med;'> Already have your DNA Sequenced? </label><br>
              <label style='margin:5px;
     margin-left: 5px;
     font-size: 18px; position:relative; top:-8px;
