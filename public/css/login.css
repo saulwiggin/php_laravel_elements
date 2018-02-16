@@ -1,11 +1,11 @@
 <style>
 @font-face {
     font-family: GTWalsham_med;
-    src: url("{{asset('fonts/GT-Walsheim-Pro-Trial-Condensed-Medium.woff')}}") format("woff"), url("fonts/GT-Walsheim-Pro-Trial-Condensed-Medium.woff")  format("truetype");
+    src: url("{{asset('fonts/GT-Walsheim-Pro-Trial-Condensed-Medium.otf')}}") format("opentype");
 }
 @font-face {
     font-family: GTWalsham_reg;
-    src: url("{{asset('fonts/GT-Walsheim-Pro-Trial-Condensed-Regular.woff')}}") format("woff"), url("fonts/GT-Walsheim-Pro-Trial-Condensed-Regular.woff")  format("truetype");
+    src: url("{{asset('fonts/GT-Walsheim-Pro-Trial-Condensed-Regular.otf')}}") format("opentype");
 }
 #23andme_button{
   margin-bottom: 15px;
