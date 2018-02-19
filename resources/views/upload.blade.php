@@ -14,6 +14,7 @@
 </header>
 <body style='    font-size: 12px;
     font-family: Walsheim'>
+
   <img src='{{asset('img/background_subpage.jpg')}}' style=' margin-bottom:-60px;   width: 100%;
     margin-top: -100px;
     margin-left: -100px;'></img>
