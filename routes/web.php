@@ -83,6 +83,9 @@ Route::get('/info', function () {
 Route::get('/mymarketing', function () {
     return view('my_marketing');
 });
+Route::get('/select', function () {
+    return view('select');
+});
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');

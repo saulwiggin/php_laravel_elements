@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Redirect;
 
 
 class Receive extends Controller
@@ -36,7 +37,7 @@ class Receive extends Controller
           'client_secret' => '3f7fd6d92dc8286b5704103870419be1',
           'grant_type' => 'authorization_code',
           'code' => $dna_token,
-          'redirect_uri' => 'http://localhost:8000/receive',
+          'redirect_uri' => 'www.nellnaturalelements.com',
           'scope' => 'basic names email genomes report:all rs1801131'
         ]
       ]);
@@ -572,7 +573,7 @@ class Receive extends Controller
 
     mysqli_close($conn);
 
-  //  $url = 'http://www.nell.co.uk'
-  //  return Redirect::to($url);
+    $url = 'http://www.nell.co.uk';
+    return Redirect::to($url);
   }
 }
