@@ -425,9 +425,9 @@ class Receive extends Controller
       $report_type = $reports['report_type'];
       $title = $reports['title'];
 
-      $gene_id = $reports['details']['gene_id'];
-      $chromosome = $reports['details']['chromosome'];
-      $gene_overview = $reports['details']['gene_overview'];
+      $gene_id = $reports['details']['genes']['id'];
+      $chromosome = $reports['details']['genes']['chromosome'];
+      $gene_overview = $reports['details']['genes']['overview'];
 
       $marker_label = $reports['markers']['label'];
       $marker_name = $reports['markers']['gene_name'];

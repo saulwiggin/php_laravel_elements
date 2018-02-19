@@ -46,9 +46,9 @@
             <div class='form-group 'style='margin-top:-10px;'>
               <label style='margin:5px;font-size: 25px;
                   font-family: walsheim;'> Connect With 23&Me: </label><br>
-              <a class='btn btn-default' style=' width:200px;margin-left:10px;'
+              <a class='btn btn-default' style=' width:330px;margin-left:10px;'
                   href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:8000/receive&response_type=code&client_id=a2e401e2dc7aa172df1b466597edcb8b&scope=basic names email genomes report:all">
-                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"style='width:180px'></a>
+                <img src="{{asset('img/23andme_button.png')}}",  alt= "23andme"style='width:300px'></a>
             </div>
             <hr>
             <br>

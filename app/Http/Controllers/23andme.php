@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 class 23andme extends Controller
 {
     //
-    public function index()
+    public function index($report_type)
     {
-    $records = DB::table('record')->get();
-    return view ('Path to your blade template')->with('records',$records);
+
+      $data['report_type'] = $report_type;
+
+      $records = DB::table('reports')->get();
+
+      var_dump($records);
+      //return view ('23andme')->with('records',$records);
     }
 }
