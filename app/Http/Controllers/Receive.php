@@ -416,7 +416,7 @@ class Receive extends Controller
       $api = $result->getBody()->getContents();
       $api = json_decode($api,true);
 
-      var_dump($api);
+      //var_dump($api);
 
       $reports = $api;
       //loop through multiple variants;
@@ -425,85 +425,91 @@ class Receive extends Controller
       $report_type = $reports['report_type'];
       $title = $reports['title'];
 
-      $gene_id = $reports['details']['genes']['id'];
-      $chromosome = $reports['details']['genes']['chromosome'];
-      $gene_overview = $reports['details']['genes']['overview'];
+      $gene_id = $reports['details']['genes'][0]['id'];
+      $chromosome = $reports['details']['genes'][0]['chromosome'];
+      $gene_overview = $reports['details']['genes'][0]['gene_overview'];
 
-      $marker_label = $reports['markers']['label'];
-      $marker_name = $reports['markers']['gene_name'];
-      $marker_mutation_type = $reports['markers']['mutation_type'];
-      $marker_description = $reports['markers']['gene_description'];
-      $marker_accession_id = $reports['markers']['accession_id'];
-      $marker_biological_explanation = $reports['markers']['biological_explaination'];
-      $marker_start = $reports['markers']['start'];
-      $marker_end = $reports['markers']['end'];
-      $is_assayed = $reports['markers']['is_assayed'];
-      $is_genotyped = $reports['markers']['is_genotyped'];
-      $is_determined = $reports['markers']['is_determined'];
-      $is_no_call = $reports['markers']['is_no_call'];
+      $marker_label = $reports['details']['markers'][0]['label'];
+      //$marker_name = $reports['details']['markers'][0]['gene_names'][0];
+      $marker_name = 'test';
+      $marker_mutation_type = $reports['details']['markers'][0]['mutation_type'];
+      $marker_description = $reports['details']['markers'][0]['gene_description'];
+      $marker_accession_id = $reports['details']['markers'][0]['accession_id'];
+      $marker_biological_explanation = $reports['details']['markers'][0]['biological_explanation'];
+      $marker_start = $reports['details']['markers'][0]['start'];
+      $marker_end = $reports['details']['markers'][0]['end'];
+      $marker_is_assayed = $reports['details']['markers'][0]['is_assayed'];
+      $marker_is_genotyped = $reports['details']['markers'][0]['is_genotyped'];
+      $marker_is_determined = $reports['details']['markers'][0]['is_determined'];
+      $marker_is_no_call = $reports['details']['markers'][0]['is_no_call'];
 
       //variant 1 / v1
-      $v1_accession_id = $reports['variants'][0]['accession_id'];
-      $v1_start = $reports['variants'][0]['start'];
-      $v1_end = $reports['variants'][0]['end'];
-      $v1_one_based_start = $reports['variants'][0]['one_based_start'];
-      $v1_one_based_end = $reports['variants'][0]['one_based_end'];
-      $v1_allele = $reports['variants'][0]['allele'];
-      $v1_dosage = $reports['variants'][0]['dosage'];
-      $v1_is_no_call = $reports['variants'][0]['is_no_call'];
-      $v1_is_assayed = $reports['variants'][0]['is_assayed'];
-      $v1_has_effect = $reports['variants'][0]['has_effect'];
+      $v1_accession_id = $reports['details']['markers'][0]['variants'][0]['accession_id'];
+      $v1_start = $reports['details']['markers'][0]['variants'][0]['start'];
+      $v1_end = $reports['details']['markers'][0]['variants'][0]['end'];
+      $v1_one_based_start = $reports['details']['markers'][0]['variants'][0]['one_based_start'];
+      $v1_one_based_end = $reports['details']['markers'][0]['variants'][0]['one_based_end'];
+      $v1_allele = $reports['details']['markers'][0]['variants'][0]['allele'];
+      $v1_dosage = $reports['details']['markers'][0]['variants'][0]['dosage'];
+      $v1_is_no_call = $reports['details']['markers'][0]['variants'][0]['is_no_call'];
+      $v1_is_assayed = $reports['details']['markers'][0]['variants'][0]['is_assayed'];
+      $v1_has_effect = $reports['details']['markers'][0]['variants'][0]['has_effect'];
 
       //variant 2 / v2
-      $v2_accession_id = $reports['markers']['variants'][1]['accession_id'];
-      $v2_start = $reports['markers']['variants'][1]['start'];
-      $v2_end = $reports['markers']['variants'][1]['end'];
-      $v2_one_based_start = $reports['markers']['variants'][1]['one_based_start'];
-      $v2_one_based_end = $reports['markers']['variants'][1]['one_based_end'];
-      $v2_allele = $reports['markers']['variants'][1]['allele'];
-      $v2_dosage = $reports['markers']['variants'][1]['dosage'];
-      $v2_is_no_call = $reports['markers']['variants'][1]['is_no_call'];
-      $v2_is_assayed = $reports['markers']['variants'][1]['is_assayed'];
-      $v2_has_effect = $reports['markers']['variants'][1]['has_effect'];
+      $v2_accession_id = $reports['details']['markers'][0]['variants'][1]['accession_id'];
+      $v2_start = $reports['details']['markers'][0]['variants'][1]['start'];
+      $v2_end = $reports['details']['markers'][0]['variants'][1]['end'];
+      $v2_one_based_start = $reports['details']['markers'][0]['variants'][1]['one_based_start'];
+      $v2_one_based_end = $reports['details']['markers'][0]['variants'][1]['one_based_end'];
+      $v2_allele = $reports['details']['markers'][0]['variants'][1]['allele'];
+      $v2_dosage = $reports['details']['markers'][0]['variants'][1]['dosage'];
+      $v2_is_no_call = $reports['details']['markers'][0]['variants'][1]['is_no_call'];
+      $v2_is_assayed = $reports['details']['markers'][0]['variants'][1]['is_assayed'];
+      $v2_has_effect = $reports['details']['markers'][0]['variants'][1]['has_effect'];
 
-      $effect_allele = $reports['markers']['known_mutations']['effect_allele'];
-      $typical_allele = $reports['markers']['known_mutations']['typical_allele'];
-      $variant_mutation_type = $reports['markers']['known_mutations']['mutation_type'];
+      $effect_allele = $reports['details']['markers'][0]['known_mutations'][0]['effect_allele'];
+      $typical_allele = $reports['details']['markers'][0]['known_mutations'][0]['typical_allele'];
+      $variant_mutation_type = $reports['details']['markers'][0]['known_mutations'][0]['mutation_type'];
 
       $summary_is_determined = $reports['summary']['is_determined'];
       $summary_has_effect = $reports['summary']['has_effect'];
       $summary_effect_allele_count = $reports['summary']['effect_allele_count'];
       $summary_no_call_marker_count = $reports['summary']['no_call_marker_count'];
-      $summary_assesment_id = $reports['summary']['assesment']['id'];
-      $summary_assesment_message = $reports['summary']['assesment']['message'];
+      $summary_assesment_id = $reports['summary']['assessment']['id'];
+      $summary_assesment_message = $reports['summary']['assessment']['message'];
 
-      $sql = "INSERT INTO reports (profile_id, report_id, report_type, title, gene_id,chromosome,gene_overview,
-      marker_label, marker_name, mutation_type, marker_description, marker_accession_id,marker_biological_explaination,
-      marker_start,marker_end,marker_is_assayed, marker_is_genotyped,marker_is_determined,marker_is_no_call,
-      v1_accession_id,v1_start,v1_end,v1_one_based_start,v1_one_based_end,v1_allele,v1_dosage,v1_is_no_call,v1_is_assayed,v1_has_effect,
-      v2_accession_id,v2_start,v2_end,v2_one_based_start,v2_one_based_end,v2_allele,v2_dosage,v2_is_no_call,v2_is_assayed,v2_has_effect,
-      effect_allele,typical_allele,variant_mutation_type, summary_is_determined,summary_has_effect,summary_effect_allele_count,
-      no_call_marker_count,summary_assesment_id,summary_assesment_message;
+      $sql = "INSERT INTO reports (profile_id, report_id, report_type, title,
+      gene_id,chromosome,gene_overview,
+      marker_label, marker_name, mutation_type, marker_description, marker_accession_id,
+      marker_biological_explaination,marker_start,marker_end,marker_is_assayed, marker_is_genotyped,
+      marker_is_determined,marker_is_no_call,
+      v1_accession_id,v1_start,v1_end,v1_one_based_start,v1_one_based_end,
+      v1_allele,v1_dosage,v1_is_no_call,v1_is_assayed,v1_has_effect,
+      v2_accession_id,v2_start,v2_end,v2_one_based_start,v2_one_based_end,
+      v2_allele,v2_dosage,v2_is_no_call,v2_is_assayed,v2_has_effect,
+      effect_allele,typical_allele,variant_mutation_type, summary_is_determined,summary_has_effect,
+      summary_effect_allele_count,
+      no_call_marker_count,summary_assessment_id,summary_assessment_message
 
     )
 
       VALUES ('".$profile_id."', '".$report_id."', '".$report_type."', '".$title."',
       '".$gene_id."', '".$chromosome."', '".$gene_overview."',
       '".$marker_label."', '".$marker_name."', '".$marker_mutation_type."','".$marker_description."', '".$marker_accession_id."',
-      '".$marker_biological_explanation."', '".$marker_start."', '".$marker_end."','".$marker_is_assayed."', '".$marker_is_genotyped."',
+      '".$marker_biological_explanation."', '".$marker_start."', '".$marker_end."','".$marker_is_assayed."',
       '".$marker_is_genotyped."', '".$marker_is_determined."', '".$marker_is_no_call."',
       '".$v1_accession_id."', '".$v1_start."', '".$v1_end."','".$v1_one_based_start."', '".$v1_one_based_end."',
       '".$v1_allele."', '".$v1_dosage."', '".$v1_is_no_call."','".$v1_is_assayed."', '".$v1_has_effect."',
       '".$v2_accession_id."', '".$v2_start."', '".$v2_end."','".$v2_one_based_start."', '".$v2_one_based_end."',
       '".$v2_allele."', '".$v2_dosage."', '".$v2_is_no_call."','".$v2_is_assayed."', '".$v2_has_effect."',
-      '".$effect_allele."', '".$vtypical_allele."', '".$variant_mutation_type."','".$summary_is_determined."', '".$summary_has_effect."',
-      '".$summary_effect_allele_count."', '".$no_call_marker_count."', '".$summary_assesment_id."','".$summary_assesment_message."'
+      '".$effect_allele."', '".$typical_allele."', '".$variant_mutation_type."','".$summary_is_determined."', '".$summary_has_effect."',
+      '".$summary_effect_allele_count."', '".$summary_no_call_marker_count."', '".$summary_assesment_id."','".$summary_assesment_message."'
       )";
 
       if (mysqli_query($conn, $sql)) {
-          echo "report record created successfully";
+      //    echo "report record created successfully";
       } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        //  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
     }
@@ -521,19 +527,18 @@ class Receive extends Controller
     $api = $result->getBody()->getContents();
     $api = json_decode($api,true);
 
-    var_dump($api);
+    //var_dump($api);
 
-
-    $reports = $api['data'];
+    $reports = $api;
     //loop through multiple variants;
     $report_id = $reports['report_id'];
     $report_type = $reports['report_type'];
-    $report_title = $reports['report_title'];
+    $report_title = $reports['title'];
 
     $age = $reports['details']['model_inputs']['age'];
     $sex = $reports['details']['model_inputs']['sex'];
-    $model_ethnicity = $reports['details']['model_inputs']['model_ethinicity'];
-    $given_ethnicity = $reports['details']['model_inputs']['$given_ethnicity'];
+    $model_ethnicity = $reports['details']['model_inputs']['model_ethnicity'];
+    $given_ethnicity = $reports['details']['model_inputs']['given_ethnicity'];
 
     $has_effect = $reports['summary']['has_effect'];
     $is_determined = $reports['summary']['is_determined'];
@@ -545,23 +550,24 @@ class Receive extends Controller
 
     //DB::insert('insert into users (id, name) values (?, ?)', array(1, 'Dayle'));
 
-    $sql = "INSERT INTO genetic_weight_report (profile_id, report_id, report_type, report_title,age,sex,model_ethnicity,given_ethnicity,
+    $sql = "INSERT INTO genetic_weight_report (profile_id, report_id, report_type, report_title,age,
+      sex,model_ethnicity,given_ethnicity,
     has_effect,is_determined,baseline_bmi,predicted_bmi,relative_difference,outcome_id,outcome_text
     )
     VALUES ('".$profile_id."', '".$report_id."', '".$report_type."','".$report_title."','".$age."',
     '".$sex."','".$model_ethnicity."','".$given_ethnicity."',
-    '".$has_effect."', '".$is_determined."', '".$baseline_bmi."','".$relative_difference."','".$outcome_id."',,'".$outcome_text."'
+    '".$has_effect."', '".$is_determined."', '".$baseline_bmi."', '".$predicted_bmi."','".$relative_difference."','".$outcome_id."','".$outcome_text."'
     )";
 
     if (mysqli_query($conn, $sql)) {
-    //    echo "genetic test record created successfully";
+        //echo "genetic test record created successfully";
     } else {
-    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    $encrypted = Crypt::encryptString('Hello world.');
+  //  $encrypted = Crypt::encryptString('Hello world.');
 
-    DB::insert('insert into users (id, name) values (?, ?)', array(1, 'Dayle'));
+  //  DB::insert('insert into users (id, name) values (?, ?)', array(1, 'Dayle'));
 
 
     mysqli_close($conn);
