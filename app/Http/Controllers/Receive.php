@@ -436,55 +436,66 @@ class Receive extends Controller
       }
     }
 
-    //get reports
-    // $client = new \GuzzleHttp\Client();
-    // $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/', [
-    //   'headers' => [
-    //     //  'Authorization' => 'Bearer ' . $access_token
-    //       'Authorization' => 'Bearer demo_oauth_token'
-    //
-    //     ]
-    // ]);
-    //
-    // $api = $result->getBody()->getContents();
-    // $api = json_decode($api,true);
-    //
-    // var_dump($api);
-    //
-    // $reports = $api['data'];
-    // //loop through multiple variants;
-    // if ($reports){
-    //
-    // }
-    // foreach($reports as $key => $value){
-    //   $report_id = $reports[$key]['report_id'];
-    //   $report_type = $reports[$key]['report_type'];
-    //   $title = $reports[$key]['title'];
-    //
-    //   $sql = "INSERT INTO report (profile_id, report_id, report_type)
-    //   VALUES ('".$profile_id."', '".$report_id."', '".$report_type."')";
-    //
-    //   if (mysqli_query($conn, $sql)) {
-    //     //  echo "Variant record created successfully";
-    //   } else {
-    //   //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    //   }
-    // }
-
     // add specific details of 8 reports by 23andme Here:
-    // genetic_weight
-    // wellness.alcohol_flush_reaction
-    // wellness.caffeine_consumption
-    // wellness.deep_sleep
-    // wellness.lactose
-    // wellness.muscle_composition
-    // wellness.saturated_fat_and_weight
-    // wellness.sleep_movement
+    $test = array(
+    'wellness.alcohol_flush_reaction',
+    'wellness.caffeine_consumption',
+    'wellness.deep_sleep',
+    'wellness.lactose',
+    'wellness.muscle_composition',
+    'wellness.saturated_fat_and_weight',
+    'wellness.sleep_movement');
+
+    foreach($test as $test_name){
+      //get reports
+      $client = new \GuzzleHttp\Client();
+      $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/'.$test_name.'/', [
+        'headers' => [
+            'Authorization' => 'Bearer ' . $access_token
+          //  'Authorization' => 'Bearer demo_oauth_token'
+
+          ]
+      ]);
+
+      $api = $result->getBody()->getContents();
+      $api = json_decode($api,true);
+
+      var_dump($api);
+
+      $reports = $api['data'];
+      //loop through multiple variants;
+
+      $report_id = $reports['report_id'];
+      $report_type = $reports['report_type'];
+      $title = $reports['title'];
+
+      // $gene_id = $reports['details']['gene_id'];
+      // $chromosome = $reports['details']['chromosome'];
+      // $gene_overview = $reports['details']['gene_overview'];
+      //
+      // $marker_label = $reports['markers']['label'];
+      // $marker_name = $reports['markers']['gene_name'];
+      // $marker_description = $reports['markers']['gene_description'];
+      // $biological_explanation = $reports['markers']['biological_explaination'];
+
+
+      $sql = "INSERT INTO report (profile_id, report_id, report_type, title)
+      VALUES ('".$profile_id."', '".$report_id."', '".$report_type."', '".$title."')";
+
+      if (mysqli_query($conn, $sql)) {
+          echo "report record created successfully";
+      } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+
+    }
+
+    $test_name = 'genetic_weight';
 
 
     mysqli_close($conn);
 
-    $url = 'http://www.nell.co.uk'
-    return Redirect::to($url);
+  //  $url = 'http://www.nell.co.uk'
+  //  return Redirect::to($url);
   }
 }
