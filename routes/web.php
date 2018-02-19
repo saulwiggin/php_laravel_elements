@@ -89,6 +89,8 @@ Route::get('/receive', 'Receive@index');
 Route::post('/medium', 'stripe@medium');
 Route::get('/stripe/full', 'stripe@full');
 Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
+Route::get('/reports', '23andme@index');
+
 
 Auth::routes();
 

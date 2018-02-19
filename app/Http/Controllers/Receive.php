@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Crypt;
+
 
 class Receive extends Controller
 {
@@ -34,7 +36,7 @@ class Receive extends Controller
           'client_secret' => '3f7fd6d92dc8286b5704103870419be1',
           'grant_type' => 'authorization_code',
           'code' => $dna_token,
-          'redirect_uri' => 'http://www.nellnaturalelements.com/receive',
+          'redirect_uri' => 'http://localhost:8000/receive',
           'scope' => 'basic names email genomes report:all rs1801131'
         ]
       ]);
@@ -416,7 +418,7 @@ class Receive extends Controller
 
       var_dump($api);
 
-      $reports = $api['data'];
+      $reports = $api;
       //loop through multiple variants;
 
       $report_id = $reports['report_id'];
@@ -478,8 +480,8 @@ class Receive extends Controller
       $sql = "INSERT INTO reports (profile_id, report_id, report_type, title, gene_id,chromosome,gene_overview,
       marker_label, marker_name, mutation_type, marker_description, marker_accession_id,marker_biological_explaination,
       marker_start,marker_end,marker_is_assayed, marker_is_genotyped,marker_is_determined,marker_is_no_call,
-      v1_accession_id,v1_start,v1_end,v1_one_based_start,v1_one_based_end,v1_allele$,v1_dosage,v1_is_no_call,v1_is_assayed,v1_has_effect,
-      v2_accession_id,v2_start,v2_end,v2_one_based_start,v2_one_based_end,v2_allele$,v2_dosage,v2_is_no_call,v2_is_assayed,v2_has_effect,
+      v1_accession_id,v1_start,v1_end,v1_one_based_start,v1_one_based_end,v1_allele,v1_dosage,v1_is_no_call,v1_is_assayed,v1_has_effect,
+      v2_accession_id,v2_start,v2_end,v2_one_based_start,v2_one_based_end,v2_allele,v2_dosage,v2_is_no_call,v2_is_assayed,v2_has_effect,
       effect_allele,typical_allele,variant_mutation_type, summary_is_determined,summary_has_effect,summary_effect_allele_count,
       no_call_marker_count,summary_assesment_id,summary_assesment_message;
 
@@ -556,6 +558,11 @@ class Receive extends Controller
     } else {
     //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+
+    $encrypted = Crypt::encryptString('Hello world.');
+
+    DB::insert('insert into users (id, name) values (?, ?)', array(1, 'Dayle'));
+
 
     mysqli_close($conn);
 
