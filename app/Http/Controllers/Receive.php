@@ -51,8 +51,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->post('https://api.23andme.com/3/account', [
       'headers' => [
-          //'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+          'Authorization' => 'Bearer ' . $access_token
+          //'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -76,16 +76,16 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->post('https://api.23andme.com/3/profile?account_id='.$id, [
       'headers' => [
-      //  'Authorization' => 'Bearer ' . $access_token
-        'Authorization' => 'Bearer demo_oauth_token'
+        'Authorization' => 'Bearer ' . $access_token
+      //  'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
     $profile = $result->getBody()->getContents();
     $profile = json_decode($profile);
 
-  //  $profile_id = $profile->data[0]->id;
-    $profile_id = 'demo_profile_id';
+    $profile_id = $profile->data[0]->id;
+  //  $profile_id = 'demo_profile_id';
     $first_name = $profile->data[0]->first_name;
     $last_name = $profile->data[0]->last_name;
     $is_genotyped = $profile->data[0]->is_genotyped;
@@ -105,8 +105,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs429358/', [
       'headers' => [
-          // 'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+           'Authorization' => 'Bearer ' . $access_token
+          //'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -153,8 +153,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs12794714/', [
       'headers' => [
-          // 'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+           'Authorization' => 'Bearer ' . $access_token
+          //'Authorization' => 'Bearer demo_oauth_token'
         ]
     ]);
 
@@ -201,8 +201,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs7501331/', [
       'headers' => [
-        //  'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer demo_oauth_token'
 
         ]
     ]);
@@ -250,8 +250,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs602662/', [
       'headers' => [
-        //  'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer demo_oauth_token'
 
         ]
     ]);
@@ -299,8 +299,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs4988235/', [
       'headers' => [
-        //  'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer demo_oauth_token'
 
         ]
     ]);
@@ -347,8 +347,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs855791/', [
       'headers' => [
-        // 'Authorization' => 'Bearer ' . $access_token
-        'Authorization' => 'Bearer demo_oauth_token'
+         'Authorization' => 'Bearer ' . $access_token
+        //'Authorization' => 'Bearer demo_oauth_token'
 
         ]
     ]);
@@ -408,8 +408,8 @@ class Receive extends Controller
       $client = new \GuzzleHttp\Client();
       $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/'.$test_name.'/', [
         'headers' => [
-          //  'Authorization' => 'Bearer ' . $access_token
-            'Authorization' => 'Bearer demo_oauth_token'
+            'Authorization' => 'Bearer ' . $access_token
+          //  'Authorization' => 'Bearer demo_oauth_token'
 
           ]
       ]);
@@ -519,8 +519,8 @@ class Receive extends Controller
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/report/'.$test_name.'/', [
       'headers' => [
-        //  'Authorization' => 'Bearer ' . $access_token
-          'Authorization' => 'Bearer demo_oauth_token'
+          'Authorization' => 'Bearer ' . $access_token
+        //  'Authorization' => 'Bearer demo_oauth_token'
 
         ]
     ]);
