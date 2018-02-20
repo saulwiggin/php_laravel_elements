@@ -11,6 +11,8 @@
 |
 */
 Auth::routes();
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 Route::get('/', function () {
     return view('marketing');
@@ -21,9 +23,9 @@ Route::get('/foo', function () {
 Route::get('/landing', function () {
     return view('index');
 });
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
@@ -96,3 +98,9 @@ Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
 Route::get('/reports/{report_type}', '23andme@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/brain', 'Brain@index');
+Route::get('/products', 'ProductRecommendation@index');
+Route::get('/data', 'ProductRecommendation@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

@@ -65,10 +65,7 @@
   background-image: url('{{asset('img/background_dashboard_small.jpg')}}');
 }
 </script>
-<body ng-app='app' id='dashboard' class='container'    style=' background-size: 1400px 1200px;
-    background-image: url(img/background_dashboard.jpg);
-    width: 100%;
-    height: 100%;'>
+<body ng-app='app' id='dashboard' class='container' >
   <div id="wrapper" class='toggled' style='width:100%' >
         <!-- Navigation -->
         <div class='row'>
@@ -124,8 +121,8 @@
                           <div class="card" style="height:350px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Your Products</h5>
-                              <p class="card-text">Your Product Recommendations.</p>
+                              <h5 class="card-title">Devices</h5>
+                              <p class="card-text">Integrate Your FitBit, Oura Ring or Ova Ring</p>
                               <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
@@ -134,18 +131,38 @@
                           <div class="card" style="height:350px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Your Bloods</h5>
-                              <p class="card-text">Access Your Blood Data.</p>
+                              <h5 class="card-title">Questionaires</h5>
+                              <p class="card-text">Tell Us More About Yourself To Improve Our Matching.</p>
                               <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
                             </div>
                           </div>
+                            <div id="GSCCModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                             <div class="modal-dialog" style='width:100%'>
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <a href='/upload' class='btn btn-default'>Upload Your Genome</a>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
+                          <script>
+                            jQuery('a.gallery').colorbox();
+                          </script>
                           <div class='col-md-4'>
                             <div class="card" style="height:350px;">
-                              <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-01.png')}}" alt="Card image cap">
+                              <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
                               <div class="card-body">
-                                  <h5 class="card-title">Add Genome Data</h5>
-                                <p class="card-text"> Collect Data From DNA Data. </p>
+                                <h5 class="card-title"> Edit Your Customer Data </h5>
+                                <p class="card-text"> Collect Data From Personal Questionaires, Connected Devices, DNA Data and Bloods. </p>
                                 <a href="/data" style='margin:10px;'class="btn btn-primary">Enter</a>
                               </div>
                             </div>
@@ -153,46 +170,27 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row slideanim">
-                            <div class=" text-center">
-                              <div class="">
-                                <div class='col-md-4'>
-                                <div class="card" style="height:350px;">
-                                  <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-04.png')}}" alt="Card image cap">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Devices</h5>
-                                    <p class="card-text">Integrate Your FitBit, Oura Ring or Ova Ring</p>
-                                    <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class='col-md-4'>
-                                <div class="card" style="height:350px;">
-                                  <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-25.png')}}" alt="Card image cap">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Questionaires</h5>
-                                    <p class="card-text">Tell Us More About Yourself To Improve Our Matching.</p>
-                                    <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
-                                  </div>
-                                </div>
-                                </div>
-                                <div class='col-md-4'>
-                                  <div class="card" style="height:350px;">
-                                    <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-16.png')}}" alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title"> Edit Your Customer Data </h5>
-                                      <p class="card-text"> Collect Data From Personal Questionaires, Connected Devices, DNA Data and Bloods. </p>
-                                      <a href="/data" style='margin:10px;'class="btn btn-primary">Enter</a>
-                                    </div>
-                                  </div>
-                                </div>
-                                </div>
-                              </div>
-                            </div>
-
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class='bubblesanimation_container' style='height:300px;'>
+                <!-- <div class="row slideanim">
+                  <div class="col-md-12">
+                    <div class='col-md-6'>
+                        <img style='height:100%;width:100%;'src='https://cdn.shopify.com/s/files/1/2258/8035/files/pineapple.JPG?1179625118197023529'>
+                    </div>
+                    <div class='col-md-6'>
+                      <div class="card" style='height:420px;margin-top:-20px;width:100%'>
+                        <div class="card-block">
+                          <h3 class="card-title"style='font-size:100px;'>02</h3>
+                          <h4 class="card-text">Designed for your life </h4>
+                          <p class='card-text' style='font-size:12px;'> We all need a unique blend of elements and nourishment to flourish and thirve, wherever we are, whatever the lifestyle. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
               </div>
               <!-- <div class='bubblesanimation_container' style='height:300px;'>
                 <div class="row slideanim">
@@ -215,7 +213,7 @@
                         </div>
                       </div>
                       <div class="row slideanim">
-                        <div class="col-sm-4 col-xs-12" s
+                        <div class="col-sm-4 col-xs-12">
                           <div class="panel panel-default text-center">
                             <img style='height:120px;'src='images/heart.png'>
                             <p>We welcome you to a world of vital knowledge, centered on a network of professionals</p>
@@ -324,7 +322,7 @@
       <!--Footer-->
       <div class='row'>
         <div class='col-md-12'>
-        <footer class="page-footer center-on-small-only" style='background-color:white'>
+        <footer class="page-footer center-on-small-only" style='background-color:#d3d3d3'>
 
             <!--Footer Links-->
             <div class="container-fluid">
@@ -343,9 +341,9 @@
                     <img style='width:350px;    margin-left: 30px;  margin-top: -30px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'>
                   </div>
                     <!--Second column-->
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h5 class="title"></h5>
-                        <ul style='font-color:black;font-family:Walsheim;font-size: 18px;'>
+                        <ul style='font-color:black;font-family:Walsheim;font-size: 22px;'>
                             <li><a style='color:black'class=''href="#!">About Nell</a></li>
                             <li><a style='color:black'href="#!">Customer Reviews</a></li>
                             <li><a style='color:black'href="#!">Vitamin Information</a></li>
@@ -360,7 +358,7 @@
             <!--Copyright-->
             <div class="footer-copyright">
                 <div class="container-fluid">
-                    © 2017 Copyright: <a href="http://www.nell.co.uk"> Nell Natural Elements </a>
+                    © 2015 Copyright: <a href="www.nell.co.uk"> Nell Natural Elements </a>
 
                 </div>
             </div>

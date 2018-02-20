@@ -54,9 +54,9 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'nell.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com'),
+            'host' => env('DB_HOST', 'reportgenerator.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'my_elements'),
+            'database' => env('DB_DATABASE', 'report_generator'),
             'username' => env('DB_USERNAME', 'drsaulwiggin'),
             'password' => env('DB_PASSWORD', 'Mbcx5sw40!'),
             'charset' => 'utf8',
