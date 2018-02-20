@@ -10,6 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return view('marketing');
@@ -93,8 +94,5 @@ Route::post('/medium', 'stripe@medium');
 Route::get('/stripe/full', 'stripe@full');
 Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
 Route::get('/reports/{report_type}', '23andme@index');
-
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+Route::get('/brain', 'Brain@index');
