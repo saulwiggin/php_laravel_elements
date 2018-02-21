@@ -67,12 +67,8 @@
                                 </button>
 
                                 <!-- facebook login -->
-
-                                <fb:login-button
-                                  scope="public_profile,email"
-                                  onlogin="checkLoginState();">
-                                </fb:login-button>
-                                                          </div>
+                                <div class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                            </div>
                         </div>
                     </form>
                 </div>
