@@ -60,7 +60,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style='margin-top:20px;'>
                             <div class="col-md-6 col-md-offset-4">
                                 <button style='height:40px;margin-top:-20px;'ype="submit" class="btn btn-primary">
                                     Register
