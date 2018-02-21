@@ -36,27 +36,27 @@ return [
     ],
 
     'facebook' => [
-      'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
-      'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
-      'redirect' => 'http://your-callback-url',
+      'client_id' => env('168859163742530'),
+      'client_secret' => env('5fd755a63ffc4bd0391c9022773f8c3c'),
+      'redirect' => '/home',
     ],
 
     'twitter' => [
-      'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
-      'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
+      'client_id' => env('GITHUB_CLIENT_ID'),
+      'client_secret' => env('GITHUB_CLIENT_SECRET'),
       'redirect' => 'http://your-callback-url',
     ],
 
     'google' => [
-      'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
-      'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
-      'redirect' => 'http://your-callback-url',
+      'client_id' => env('111105486367-pvoscidc8fkv5pt6q7862q9of232o3tf.apps.googleusercontent.com'),
+      'client_secret' => env('RTUjNqak-cP8EG-21m6-VuaE'),
+      'redirect' => '/home',
     ],
 
     'linkedin' => [
-      'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
-      'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
+      'client_id' => env('GITHUB_CLIENT_ID'),
+      'client_secret' => env('GITHUB_CLIENT_SECRET'),
       'redirect' => 'http://your-callback-url',
-    ],
+    ]
 
 ];

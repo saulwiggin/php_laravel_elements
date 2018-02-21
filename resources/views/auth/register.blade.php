@@ -67,7 +67,13 @@
                                 </button>
 
                                 <!-- facebook login -->
-                            <!-- <div class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                            </div> -->
+                                <div id='facebook' style='margin-top:10px;'>
+                                  <div class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                            </div>
+                                </div>
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <img src="{{asset('img/Sign-in-Small---Default.png')}}"></img>
+                                <img src="{{asset('img/sign-in-with-twitter-gray.png')}}"></img>
+
                         </div>
                     </form>
                 </div>
