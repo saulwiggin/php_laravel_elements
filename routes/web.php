@@ -11,6 +11,7 @@
 |
 */
 Auth::routes();
+
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 
@@ -100,7 +101,5 @@ Route::get('/home', 'HomeController@index');
 Route::get('/brain', 'Brain@index');
 Route::get('/products', 'ProductRecommendation@index');
 Route::get('/data', 'ProductRecommendation@index');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index');

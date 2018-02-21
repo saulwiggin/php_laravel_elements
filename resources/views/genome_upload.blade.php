@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- <link src="bootstrap.css" rel="stylesheet">
-<script src="bootstrap-prettyfile.js"></script> -->
+<link src="{{asset('./css/app.css')}}" rel="stylesheet">
+<script src="{{asset('./js/prettyjs.js')}}" ></script>
 
 </header>
 <body>
@@ -27,9 +27,13 @@
         <div class="panel-body"style='width:400px;'>
           <form style='margin-top:-10px;'action="/uploadTxtFile" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <p>First Name: </p>
+            <p id='genetic_upload_firstname' style='font-family: walsheim;
+            margin-top: 10px;
+            margin-bottom: -10px;'>First Name: </p>
             <input style='margin-top:10px;'type="input" name="first_name" id="first_name">
-            <p> Last Name: </p>
+            <p id='genetic_upload_lastname'style='font-family: walsheim;
+            margin-top: 10px;
+            margin-bottom: -10px;'> Last Name: </p>
             <input style='margin-top:10px;'type="input" name="last_name" id="last_name">
             <input style='margin-top:10px;'type="file" name="file" id="fileToUpload">
             <input class='btn btn-default' style='margin-top:10px;'type="submit" value="Upload" name="submit">
