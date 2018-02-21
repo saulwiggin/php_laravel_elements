@@ -60,19 +60,22 @@
                             </div>
                         </div>
 
-                        <div class="form-group" >
-                            <div class="col-md-6 col-md-offset-4">
+                        <div class="form-group form-inline" >
+                            <div class="col-md-6 col-md-offset-4" style='display:inline-block'>
+                              <!--login-->
                                 <button style='height:40px;'ype="submit" class="btn btn-primary">
                                     Register
                                 </button>
-
                                 <!-- facebook login -->
                                 <div id='facebook' style='margin-top:10px;'>
-                                  <div class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                            </div>
+                                  <div style='display:inline-block'class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                            </div>
                                 </div>
-                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                                <img src="{{asset('img/Sign-in-Small---Default.png')}}"></img>
-                                <img src="{{asset('img/sign-in-with-twitter-gray.png')}}"></img>
+                                <!-- google -->
+                                <div style='display:inline-block'class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <!-- linked in -->
+                                <img style='display:inline-block'src="{{asset('img/Sign-in-Small---Default.png')}}"></img>
+                                <!-- twitter -->
+                                <img style='display:inline-block'src="{{asset('img/sign-in-with-twitter-gray.png')}}"></img>
 
                         </div>
                     </form>
