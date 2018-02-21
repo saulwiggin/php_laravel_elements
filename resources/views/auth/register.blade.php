@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style='background-image('{{aset('./img/background_dasboard')}}')'>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -65,7 +65,35 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
-                            </div>
+                                <!--facebook SDK -->
+                                <script>
+                                window.fbAsyncInit = function() {
+                                  FB.init({
+                                    appId      : '168859163742530',
+                                    cookie     : true,
+                                    xfbml      : true,
+                                    version    : 'v2.12'
+                                  });
+
+                                  FB.AppEvents.logPageView();
+
+                                };
+
+                                (function(d, s, id){
+                                   var js, fjs = d.getElementsByTagName(s)[0];
+                                   if (d.getElementById(id)) {return;}
+                                   js = d.createElement(s); js.id = id;
+                                   js.src = "https://connect.facebook.net/en_US/sdk.js";
+                                   fjs.parentNode.insertBefore(js, fjs);
+                                 }(document, 'script', 'facebook-jssdk'));
+                                </script>
+                                <!-- facebook login -->
+
+                                <fb:login-button
+                                  scope="public_profile,email"
+                                  onlogin="checkLoginState();">
+                                </fb:login-button>
+                                                          </div>
                         </div>
                     </form>
                 </div>
