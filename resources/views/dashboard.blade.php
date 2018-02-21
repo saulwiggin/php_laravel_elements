@@ -71,6 +71,7 @@
     height: 100%;'>
   <div id="wrapper" class='toggled' style='width:100%' >
         <!-- Navigation -->
+<!--
         <div class='row'>
           <div class='col-md-12'>
             <nav class="navbar navbar-fixed-top ">
@@ -79,24 +80,12 @@
                   <a href='http://www.nellnaturalelements.com'><img style='float:left;height:90px;'src='{{ asset('img/Nell_Logo_Main_CMYK.png') }}'}></a>
                   <div class='links' style='float:right;    margin-left: 700px;
     margin-top: 20px;'>
-                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Health Questionaire</a>
-                    <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Blood Results</a>
-                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My DNA Results</a> -->
-                    <!-- <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">My Products</a> --> -->
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="/upload">Settings</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="http://www.nellelements.com">Logout</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Account</a>
                     <a style='font-family:GTWalsham;margin:10px;color:black;' class="navbar-brand" href="#">Cart</a>
                     <div class="dropdown">
-                      <!-- <button class="dropbtn">Dropdown
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                      </div>
-                    </div> -->
+                      
                   </div>
                 </div>
               </div>
@@ -112,7 +101,7 @@
              $(".header").removeClass("active");
           }
         });
-        </script>
+        </script> -->
             <!-- Page Content -->
 
             <div class='page_content_wrapper' style='margin-top:70px;'  >

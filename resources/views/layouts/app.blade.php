@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Nell Natural Elements') }}</title>
 
     <!-- Styles -->
     <link href="{{asset('/css/app.css')}}" rel="stylesheet">
@@ -22,8 +22,10 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+    <div id="app" style='position: fixed;
+    top: 0px;
+    width: 100%;'>
+        <nav style='margin-left: -58px;'class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -36,9 +38,10 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="https://wwww.myelements.me">
+                        {{ config('app.name', 'Nell Natural Elements') }}
                     </a>
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
