@@ -72,13 +72,13 @@
                   </div>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-05.png')}}">   Home </a>
+                    <a style='color:white;font-size:18px'href="/home"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-05.png')}}">   Home </a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-06.png')}}">   Questionaires</a>
+                    <a style='color:white;font-size:18px'href="/theScience"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-06.png')}}"> SNP Encyclopedia</a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-07.png')}}">   Products</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-07.png')}}"> Your Products</a>
                 </li>
                 <!-- <li class="no-padding">
                 <ul class="collapsible collapsible-accordion" style='border-top:0;border-right:0;border-left:0;'>

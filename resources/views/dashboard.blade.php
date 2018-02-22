@@ -48,8 +48,8 @@
                           <div class="card" style="height:350px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Your Products</h5>
-                              <p class="card-text">Your Product Recommendations.</p>
+                              <h5 class="card-title">Product Recommendation</h5>
+                              <p class="card-text">We Analyse Your DNA Data To Give You A Personalised Product Recommendation With All The Essential Nutrients Your Body Needs.</p>
                               <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
@@ -60,7 +60,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Your Bloods</h5>
                               <p class="card-text">Access Your Blood Data.</p>
-                              <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
+                              <a href="/blood" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
                             </div>
                           </div>
                           </div>
@@ -106,7 +106,7 @@
                                     <div class="card-body">
                                       <h5 class="card-title"> Edit Your Customer Data </h5>
                                       <p class="card-text"> Collect Data From Personal Questionaires, Connected Devices, DNA Data and Bloods. </p>
-                                      <a href="/data" style='margin:10px;'class="btn btn-primary">Enter</a>
+                                      <a href="/settings" style='margin:10px;'class="btn btn-primary">Enter</a>
                                     </div>
                                   </div>
                                 </div>

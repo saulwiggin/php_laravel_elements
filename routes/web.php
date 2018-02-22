@@ -97,5 +97,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/brain', 'Brain@index');
 Route::get('/products', 'ProductRecommendation@index');
 Route::get('/data', 'ProductRecommendation@index');
+Route::get('/blood', 'blood@index');
+Route::get('/devices', 'devices@index');
+Route::get('/question', 'question@index');
+
 
 Route::get('/home', 'HomeController@index');

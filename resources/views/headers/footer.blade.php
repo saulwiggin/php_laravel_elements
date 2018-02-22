@@ -11,7 +11,7 @@ width: 100%;'>
   <footer class="page-footer center-on-small-only" style='background-color:white'>
 
       <!--Footer Links-->
-      <div class="container-fluid">
+      <div class="container-fluid" style='display:none'>
           <div class="row" style=" ">
 
               <!--First column-->
@@ -44,7 +44,7 @@ width: 100%;'>
       <!--Copyright-->
       <div class="footer-copyright" style='background-color:grey'>
           <div class="container-fluid" >
-              © 2017 Copyright: <a style='background-color:white' href="http://www.nell.co.uk"> Nell Natural Elements </a>
+              © 2017 Copyright: <a style='color:white' href="http://www.nell.co.uk"> Nell Natural Elements </a>
 
           </div>
       </div>
