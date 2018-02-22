@@ -1,5 +1,6 @@
+@section('sidenav2')
 <!--close page wrapper -->
-</div>
+  </div>
 <!-- close page content -->
-    </div>
-    <!-- /#wrapper -->
+</div>
+@show

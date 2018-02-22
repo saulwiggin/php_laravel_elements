@@ -1,9 +1,9 @@
 
-@extends('headers.header')
+@include('headers.header')
 
-@extends('sidenav.sidenav1')
-
-  <div id="wrapper" class='toggled' style='width:100%' >
+@include('sidenav.sidenav1')
+<!-- Page Content -->
+  <div id="main" class='toggled' style='width:100%' >
         <!-- Navigation -->
 <!--
         <div class='row'>
@@ -117,6 +117,6 @@
                   </div>
                 </div>
 
-@extends('sidenav.sidenav2');
+@include('sidenav.sidenav2');
 
-@extends('headers.footer');
+@include('headers.footer');

@@ -48,10 +48,8 @@ window.fbAsyncInit = function() {
  }(document, 'script', 'facebook-jssdk'));
 </script>
 <!-- HEADER BAR -->
-    <div id="app" style='position: fixed;
-    top: 0px;
-    width: 100%;'>
-        <nav style='margin-left: -58px;height:50px;'class="navbar navbar-default navbar-static-top">
+    <div id="app" style='position:relative'>
+        <nav style='margin-left: -58px;height:50px;'class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -64,24 +62,24 @@ window.fbAsyncInit = function() {
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="https://wwww.myelements.me">
+                    <a class="navbar-brand" href="https://www.myelements.me"style='color:white;'>
                         {{ config('app.name', 'Nell Natural Elements') }}
                     </a>
 
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div class="collapse navbar-collapse" id="app-navbar-collapse"style=" background-color: black;margin-left: -40px;" >
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" >
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a style='postion:relative;left:-20px;color:white;'href="{{ url('/login') }}">Login</a></li>
+                            <li><a style='postion:relative;left:-20px;color:white;'href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

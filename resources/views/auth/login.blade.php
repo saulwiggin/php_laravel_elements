@@ -63,18 +63,15 @@
                         <div class='form-group'>
                           <div class="col-md-8 col-md-offset-4">
 
-                            <!-- facebook login -->
-                            <a href='/home'>
+                            <!-- social login -->
+                            <!-- <a href='/home'>
                               <div style='display:inline-block'class="fb-login-button" data-width="77" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div><br>
                             </a>
-                            <!-- google -->
                             <div style='display:inline-block'class="g-signin2" data-onsuccess="onSignIn"></div><br>
-                            <!-- linked in -->
                             <img style='display:inline-block'src="{{asset('img/Sign-in-Small---Default.png')}}"></img><br>
-                            <!-- twitter -->
                             <a href='/home'>
                               <img style='display:inline-block'src="{{asset('img/sign-in-with-twitter-gray.png')}}"></img><br>
-                            </a>
+                            </a> -->
                           </div>
                         </div>
                     </form>
