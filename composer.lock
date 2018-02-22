@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "87f5e54274623decd5ab65f1e459c0bd",
+    "content-hash": "7c9fcc2330b159cde02cf6cb152cac10",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1437,16 +1437,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v6.1.0",
+            "version": "v6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "795eb011e2e02453f8a68be90826578eb6e6dae0"
+                "reference": "7395777177ad78c6502001adab30165ab3baf3e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/795eb011e2e02453f8a68be90826578eb6e6dae0",
-                "reference": "795eb011e2e02453f8a68be90826578eb6e6dae0",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/7395777177ad78c6502001adab30165ab3baf3e4",
+                "reference": "7395777177ad78c6502001adab30165ab3baf3e4",
                 "shasum": ""
             },
             "require": {
@@ -1488,7 +1488,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2018-02-12T19:47:57+00:00"
+            "time": "2018-02-21T19:40:01+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4243,7 +4243,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.2.2"
+        "php": "~7.1"
     },
     "platform-dev": []
 }
