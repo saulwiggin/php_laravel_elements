@@ -72,13 +72,13 @@
                   </div>
                 </li>
                 <li>
-                    <a style='color:white;'href=""> Home </a>
+                    <a style='color:white;font-size:18px'href=""> Home </a>
                 </li>
                 <li>
-                    <a style='color:white;'href="">Questionaires</a>
+                    <a style='color:white;font-size:18px'href="">Questionaires</a>
                 </li>
                 <li>
-                    <a style='color:white;'href="">Products</a>
+                    <a style='color:white;font-size:18px'href="">Products</a>
                 </li>
                 <!-- <li class="no-padding">
                 <ul class="collapsible collapsible-accordion" style='border-top:0;border-right:0;border-left:0;'>
@@ -94,16 +94,16 @@
                 </ul>
               </li> -->
                  <li>
-                    <a style='color:white;'href="">DNA Test Order</a>
+                    <a style='color:white;font-size:18px'href="">DNA Test Order</a>
                 </li>
                 <li>
-                    <a style='color:white;'href="">Devices Connected</a>
+                    <a style='color:white;font-size:18px'href="">Devices Connected</a>
                 </li>
                <li>
-                    <a style='color:white;'href="">Order History</a>
+                    <a style='color:white;font-size:18px'href="">Order History</a>
                 </li>
                  <li>
-                  <a style='color:white;'href="">Settings</a>
+                  <a style='color:white;font-size:18px'href="">Settings</a>
                 </li>
 <!--                 <li>
                   <a style='margin-bottom:40px;'href="">Report</a>
