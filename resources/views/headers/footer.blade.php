@@ -1,25 +1,30 @@
 @section('footer')
 <!-- /#wrapper -->
 <!--Footer-->
-<div class='row' style='margin-left:240px'>
+<div class='row' style='margin-left: 170px;
+margin-bottom: -100px;
+position: relative;
+bottom: -20px;
+left: 20p;
+width: 100%;'>
   <div class='col-md-12'>
   <footer class="page-footer center-on-small-only" style='background-color:white'>
 
       <!--Footer Links-->
       <div class="container-fluid">
-          <div class="row">
+          <div class="row" style=" ">
 
               <!--First column-->
               <div class="col-md-4">
                   <h3 class="title" style='color:black;font-family:Walsheim'>Nell Natural Elements</h3>
-                  <p style='color:black'>We want to grow vital relationships, day by day invigorating your body and mind. Giving you all the elements you need, to be everything you can be</p>
+                  <p style='color:black'>We want to grow vital relationships, day by day invigorating your body and mind. Giving you all the elements you need, to be everything you can be.</p>
 
               </div>
               <!--/.First column-->
               <div class="col-md-4">
                   <!-- <h5 class="title">Nell Natural Elements</h5>
               </div> -->
-              <img style='width:250px;    margin-left: 30px;  margin-top: -30px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'>
+              <img style='width:250px;     margin-top: -15px;'src='{{asset('img/Nell_Logo_Main_CMYK.png')}}'>
             </div>
               <!--Second column-->
               <div class="col-md-2">
@@ -37,9 +42,9 @@
       <!--/.Footer Links-->
 
       <!--Copyright-->
-      <div class="footer-copyright">
-          <div class="container-fluid" style='color:black'>
-              © 2017 Copyright: <a href="http://www.nell.co.uk"> Nell Natural Elements </a>
+      <div class="footer-copyright" style='background-color:grey'>
+          <div class="container-fluid" >
+              © 2017 Copyright: <a style='background-color:white' href="http://www.nell.co.uk"> Nell Natural Elements </a>
 
           </div>
       </div>

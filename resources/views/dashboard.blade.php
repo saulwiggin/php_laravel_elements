@@ -1,6 +1,7 @@
 
 @include('headers.header')
 
+
 @include('sidenav.sidenav1')
 <!-- Page Content -->
   <div id="main" class='toggled' style='width:100%' >
@@ -38,8 +39,8 @@
         </script> -->
             <!-- Page Content -->
 
-            <div class='page_content_wrapper' style='margin-top:70px;'  >
-              <div class='dashboard_container' >
+            <div class='page_content_wrapper' style='margin-top:70px;margin-bottom:-100px;'  >
+              <div class='dashboard_container' style='position:relative;top:-70px;'>
                 <div class="row slideanim" style='margin-top:100px;'>
                       <div class=" text-center">
                         <div class="">

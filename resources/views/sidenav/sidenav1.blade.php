@@ -19,7 +19,7 @@
 
           </div>
 
-          <div class="collapse navbar-collapse" id="app-navbar-collapse" style='background-color: black;margin-left: -40px;'>
+          <div class="collapse navbar-collapse" id="app-navbar-collapse" style='background-color: grey;margin-left: -40px;'>
               <!-- Left Side Of Navbar -->
               <ul class="nav navbar-nav">
                   &nbsp;
@@ -33,7 +33,7 @@
                       <li><a style='color:white;font-size:20px;position:relative;top:5px;left:-100px;'href="{{ url('/register') }}">Register</a></li>
                   @else
                       <li class="dropdown">
-                          <a href="#" style='color:white;font-size:20px;position:relative;top:5px;left:-100px;'class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                          <a href="#" style='color:white;font-size:18px;position:relative;top:5px;left:-100px;'class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
 
@@ -59,26 +59,26 @@
 
         <!-- /.navbar-top-links -->
         <!-- Sidebar -->
-        <div class='sidenav'id="sidebar-wrapper" style='font-size:12px;'>
+        <div class='sidenav'id="sidebar-wrapper" style='font-size:12px;background-color:#696969'>
             <ul class="sidebar-nav" id='slide-out'>
                  <li>
                    <div class="user-view">
                       <div class="background">
                         <img style='margin:10px;'width=180 class="circle" src="{{asset('/img/Nell_Logo_Stamp_Reversed.png')}}">
                       </div>
-                      <a href="#!user"></a>
+                      <!-- <a href="#!user"></a>
                       <a href="#!name"><span class="white-text name"></span></a>
-                      <a href="#!email"><span class="white-text email"></span></a>
+                      <a href="#!email"><span class="white-text email"></span></a> -->
                   </div>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""> Home </a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-05.png')}}">   Home </a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href="">Questionaires</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-06.png')}}">   Questionaires</a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href="">Products</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-07.png')}}">   Products</a>
                 </li>
                 <!-- <li class="no-padding">
                 <ul class="collapsible collapsible-accordion" style='border-top:0;border-right:0;border-left:0;'>
@@ -94,16 +94,16 @@
                 </ul>
               </li> -->
                  <li>
-                    <a style='color:white;font-size:18px'href="">DNA Test Order</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}">   DNA Test Order</a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href="">Devices Connected</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">   Devices Connected</a>
                 </li>
                <li>
-                    <a style='color:white;font-size:18px'href="">Order History</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}">   Order History</a>
                 </li>
                  <li>
-                  <a style='color:white;font-size:18px'href="">Settings</a>
+                  <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Settings</a>
                 </li>
 <!--                 <li>
                   <a style='margin-bottom:40px;'href="">Report</a>
