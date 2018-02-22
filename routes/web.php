@@ -13,7 +13,7 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('marketing');
+    return view('login');
 });
 Route::get('/foo', function () {
     return 'Hello World';
