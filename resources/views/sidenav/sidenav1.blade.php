@@ -37,9 +37,10 @@
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
 
-                          <ul class="dropdown-menu" role="menu">
+                          <ul class="dropdown-menu" role="menu"  style='position: relative;
+    left: -100px;'   >
                               <li>
-                                  <a style='color:white;font-size:20px;position:relative;top:5px;left:-100px;' href="{{ url('/logout') }}"
+                                  <a style='color:black;font-size:20px;position:relative;top:5px;' href="{{ url('/logout') }}"
                                       onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                       Logout
