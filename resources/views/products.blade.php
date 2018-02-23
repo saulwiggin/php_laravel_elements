@@ -39,7 +39,7 @@
                           Add as a booster to your daily Smoothie rituals</p>
                         </div>
                         <div class="panel-footer">
-                          <a href='reports' class='btn btn-default'type='submit' onclick='submit_delivery()'>Nutrition Report</a>
+                          <a href='nutrition_report' class='btn btn-default'type='submit' onclick='submit_delivery()'>Nutrition Report</a>
                           <a href='dispatch' class='btn btn-default'type='submit' onclick='order()'>Order</a>
                       </div>
                     </div>

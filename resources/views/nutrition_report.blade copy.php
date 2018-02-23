@@ -388,7 +388,7 @@ function page_redirect(){
   <div class="row slideanim">
     <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'>
       <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
-	    <img alt='product' style='height:500px;'src='img/purple_bottle.png'></img>
+	    <img alt='product' style='height:500px;'src='images/purple_bottle.png'></img>
       <h3></h3>
       <p>
 	</p>
@@ -471,7 +471,7 @@ function page_redirect(){
  <div class="row text-center slideanim">
    <div class="col-sm-6">
      <div class="thumbnail">
-       <img alt='' src="img/natural_age.png" alt="" style='height:200px;width:200px'>
+       <img alt='' src="images/natural_age.png" alt="" style='height:200px;width:200px'>
        <p><strong>Natural Age</strong></p>
         <p></p>
       </div>
@@ -479,7 +479,7 @@ function page_redirect(){
    <div class='row slideanim'>
     <div class="col-sm-6">
      <div class="thumbnail">
-        <img alt='' src="img/genetic_age.png" alt="" style='height:200px;width:200px'>
+        <img alt='' src="images/genetic_age.png" alt="" style='height:200px;width:200px'>
         <p><strong>Cell Age</strong></p>
       </div>
     </div>
@@ -496,7 +496,7 @@ function page_redirect(){
 <div id="connect_devices" class="container-fluid ">
   <h2 class="text-center">Connect with your fitness devices</h2>
   <div class="row">
-      <img src='img/nell_connected.png'>
+      <img src='images/nell_connected.png'>
   </div>
 </div>
 
@@ -506,7 +506,7 @@ function page_redirect(){
  <div class="row text-center slideanim">
    <div class="col-sm-4">
      <div class="thumbnail">
-       <a href=''> <img alt='' src="img/Thinking_Face_Emoji.png" alt="" style='height:200px;width:200px'>
+       <a href=''> <img alt='' src="images/Thinking_Face_Emoji.png" alt="" style='height:200px;width:200px'>
        <p>Take survey</p>
      </a>
       </div>
@@ -514,7 +514,7 @@ function page_redirect(){
     <div class="col-sm-4">
      <div class="thumbnail">
        <a href=''>
-        <img alt='' src="img/dna-strands-icon.jpg" alt="" style='height:200px;width:200px'>
+        <img alt='' src="images/dna-strands-icon.jpg" alt="" style='height:200px;width:200px'>
         <p><strong>Your DNA Analysis</strong></p>
         </a>
       </div>
@@ -522,7 +522,7 @@ function page_redirect(){
    <div class="col-sm-4">
     <div class="thumbnail">
       <a href=''>
-       <img alt='' src="img/discusson.png" alt="" style='height:200px;width:200px'>
+       <img alt='' src="images/discusson.png" alt="" style='height:200px;width:200px'>
        <p><strong>Discuss</strong></p>
        <p>Discuss in a curated forum your results</p></a>
      </div>

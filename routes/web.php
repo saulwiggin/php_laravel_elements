@@ -20,9 +20,9 @@ Route::get('/foo', function () {
 Route::get('/landing', function () {
     return view('index');
 });
-// Route::get('/login', function () {
-//     return view('login');
-// });
+Route::get('/nutrition_report', function () {
+    return view('nutrition_report');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
