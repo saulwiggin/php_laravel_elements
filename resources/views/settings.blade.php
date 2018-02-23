@@ -14,7 +14,7 @@
                       <div class="panel-heading">
                         <h1>Personal Details</h1>
                       </div>
-                      <div class="panel-body" id="app">
+                      <div id='' class="panel-body" id="app">
                         @{{ message }}
                         <h3>Name</h3>
                         <input type='text' name='username' value=>

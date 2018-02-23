@@ -1,6 +1,4 @@
-
 @include('headers.header')
-
 
 @include('sidenav.sidenav1')
 <!-- Page Content -->
@@ -50,7 +48,7 @@
                             <div class="card-body">
                               <h5 class="card-title">My Products</h5>
                               <p class="card-text">We Analyse Your DNA Data To Give You A Personalised Product Recommendation With All The Essential Nutrients Your Body Needs.</p>
-                              <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
+                              <a href="/dispatch" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
                           </div>
                         </div>
