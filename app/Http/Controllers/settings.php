@@ -14,22 +14,20 @@ class settings extends Controller
     $delivery = delivery::find(1);
     $payment = payment::find(1);
 
-    var_dump($delivery);
-     return view('settings')->with(compact('account'))
-     ->with(compact('delivery'))
-     ->with(compact('payment'));
+    //var_dump($delivery);
+     return view('settings')->with(compact('account'))->with(compact('delivery'))->with(compact('payment'));
   }
 
   public function postaccount(Request $request)
   {
-    $account = delivery::find(1);
+    $delivery = delivery::find(1);
 
-    $account->Address_1 = $request->address1;
-    $account->Address_2 = $request->address2;
-    $account->City = $request->city;
-    $account->postcode = $request->postcode;
+    $delivery->Address_1 = $request->address1;
+    $delivery->Address_2 = $request->address2;
+    $delivery->City = $request->city;
+    $delivery->postcode = $request->postcode;
 
-    $account->save();
+    $delivery->save();
   }
 
   public function user(Request $request)
@@ -42,13 +40,15 @@ class settings extends Controller
 
   }
 
-  public function delivery(Request $request)
+  public function creditsave(Request $request)
   {
-    $delivery = delivery::find(1);
+    $creditcard = payment::find(1);
 
-    $delivery->username = $request->username;
+    $creditcard->card_number = $request->card_number;
+    $creditcard->csv = $request->csv;
+    $creditcard->expiry_date = $request->expiry_date;
 
-    $account->save();
+    $creditcard->save();
 
   }
 }

@@ -110,5 +110,7 @@ Route::get('/settings', 'settings@index');
 
 Route::post('/accountupdate', 'settings@user');
 Route::post('/form_submission','settings@postaccount');
+Route::post('/credit_card','settings@creditsave');
+
 
 Route::get('/home', 'HomeController@index');
