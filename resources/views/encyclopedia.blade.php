@@ -8,28 +8,24 @@
     </div>
     <div class="navbar navbar-inverse navbar-fixed-left">
       <navbar class='navbar-fixed-left'>
-          <ul class="nav navbar-nav white">
-            <li> <a href='#b6'>Vitamin B6</a></li>
-            <li> <a href='#c'>Vitamin C</a></li>
-            <li> <a href='#vitamind'>Vitamin D</a></li>
-            <li> <a href='#vitaminB9'>Vitamin B9</a></li>
-            <li> <a href='#vitaminA1'>Vitamin A1</a></li>
-            <li> <a href='#vitaminB12'>Vitamin B12</a></li>
-            <li> <a href='#PEMT'>PEM</a></li>
-            <li> <a href='#zinc'>Zinc</a></li>
-            <li> <a href='#Glutathione'>Glutathione</a></li>
-            <li> <a href='#Monounsaturated'>Monounsaturated</a></li>
-            <li> <a href='#PUFAs'>PUFAs</a></li>
-            <li> <a href='#satfat'>Saturated Fats</a></li>
-            <li> <a href='#APOE4'>APOE4</a></li>
-            </ul>
-          </div>
-        </div>
+        <ul class="nav navbar-nav white">
+          <li> <a href='#b6'>Vitamin B6</a></li>
+          <li> <a href='#c'>Vitamin C</a></li>
+          <li> <a href='#vitamind'>Vitamin D</a></li>
+          <li> <a href='#vitaminB9'>Vitamin B9</a></li>
+          <li> <a href='#vitaminA1'>Vitamin A1</a></li>
+          <li> <a href='#vitaminB12'>Vitamin B12</a></li>
+          <li> <a href='#PEMT'>PEM</a></li>
+          <li> <a href='#zinc'>Zinc</a></li>
+          <li> <a href='#Glutathione'>Glutathione</a></li>
+          <li> <a href='#Monounsaturated'>Monounsaturated</a></li>
+          <li> <a href='#PUFAs'>PUFAs</a></li>
+          <li> <a href='#satfat'>Saturated Fats</a></li>
+          <li> <a href='#APOE4'>APOE4</a></li>
+          </ul>
       </navbar>
     </div>
-    <div class='row' style='    margin-right: 160px;
-    position: relative;
-    left: 260px;'>
+    <div class='row' style='  '>
       <div class='col-md-10' style='margin-right: auto;margin-left: auto;'>
         <div class="" id="accordion">
           <div class="panel panel-default" id='b6'>
@@ -1166,6 +1162,16 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 @include('sidenav.sidenav2');
 
 @include('headers.footer');
