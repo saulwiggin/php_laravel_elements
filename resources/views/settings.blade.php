@@ -11,45 +11,54 @@
                 <div class='customer_details' >
                   <div class="row slideanim" style='margin-top:100px;'>
                     <div class="panel panel-default text-center">
-                      <div class="panel-heading">
-                        <h1>Personal Details</h1>
-                      </div>
-                      <div class="panel-body">
-                        <div id='app'>
-                          @{{ message }}
+                      <form method='post' action='/user_update'>
+                        <div class="panel-heading">
+                          <h1>Personal Details</h1>
                         </div>
-                        <h3>Name</h3>
-                        <input type='text' name='username' value=>
+                        <div class="panel-body">
+                            <div id='app'>
+                              @{{ message }}
+                            </div>
+                            <h3>Name</h3>
+                            <input type='text' name='username' value=''>
+                        </div>
+                        <div class="panel-footer">
+                          <button type='submit' onclick=''>Save</button>
                       </div>
-                      <div class="panel-footer">
-                        <button type='submit' onclick='submit_delivery()'>Save</button>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
-
+              <script>
+                function submit_delivery(){
+                  console.log(submit);
+                }
+              </script>
               <!-- Container (Devliery Options) -->
 
                 <div class="row slideanim" style='margin-top:100px;'>
                   <div class=''>
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                          <h1>Delivery Address</h1>
-                        </div>
-                        <div class="panel-body">
-                          <h3>Address 1</h3>
-                          <input type='text' name='address1' value='{{ Auth::user()->name }} '>
-                          <h3>Address 2</h3>
-                          <input type='text' name='address2'>
-                          <h3>City</h3>
-                          <input type='text' name='city'>
-                          <h3>Post Code</h3>
-                          <input type='text' name='postcode'>
-                        </div>
-                        <div class="panel-footer">
-                          <button type='submit' onclick='submit_delivery'>Save</button>
-                        </div>
-                    </div>
+                    <form action='/form_submission'>
+                      {{ csrf_field() }}
+                      <div class="panel panel-default text-center">
+                          <div class="panel-heading">
+                            <h1>Delivery Address</h1>
+                          </div>
+                          <div class="panel-body">
+                            <h3>Address 1</h3>
+                            <input type='text' name='address1' value='{{ Auth::user()->name }} '>
+                            <h3>Address 2</h3>
+                            <input type='text' name='address2'>
+                            <h3>City</h3>
+                            <input type='text' name='city'>
+                            <h3>Post Code</h3>
+                            <input type='text' name='postcode'>
+                          </div>
+                          <div class="panel-footer">
+                            <button type='submit' onclick='submit_delivery'>Save</button>
+                          </div>
+                      </div>
+                    </form>
                   </div>
               </div>
 
@@ -74,6 +83,7 @@
                     </div>
                   </div>
                 </div>
+                <div id='app'></div>
 
 
           <!-- close page content -->

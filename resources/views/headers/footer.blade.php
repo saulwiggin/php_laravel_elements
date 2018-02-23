@@ -63,19 +63,18 @@ width: 100%;'>
 <!-- /#wrapper -->
 <script>
 //get access code
-var access_code = location.search.split('code=')[1];
-console.log(access_code);
-//call 23andme using ajax
-$.ajax({
-dataType:'json',
-url: "curl 'https://api.23andme.com/3/profile/?account_id='"+account_id+"-H 'Authorization: Bearer" + access_code + "'",
-success: function(data){
-console.log(data);
-},
-error: function(error){
-console.log(error);
-}
-});
+// var access_code = location.search.split('code=')[1];
+// console.log(access_code);
+// $.ajax({
+// dataType:'json',
+// url: "curl 'https://api.23andme.com/3/profile/?account_id='"+account_id+"-H 'Authorization: Bearer" + access_code + "'",
+// success: function(data){
+// console.log(data);
+// },
+// error: function(error){
+// console.log(error);
+// }
+// });
 // $.ajax({
 //    dataType:'jsonp',
 //    url: "https://api.23andme.com/3/account/ -H 'Authorization: Bearer" + access_code + "'",

@@ -18,7 +18,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- install angular -->
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
@@ -49,9 +48,9 @@
   <!-- Custom CSS -->
   <!-- <link href="simple-sidebar.css" rel="stylesheet"> -->
   <link src='myelements.css'>
-  <script src='script.js'></script>
+  <!-- <script src='script.js'></script> -->
 <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
-<script src='scripts/jquery-3.3.1.min.js'></script>
+<!-- <script src='scripts/jquery-3.3.1.min.js'></script> -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -72,22 +71,22 @@
 
 <!--scripts-->
 <script src='{{asset('js/jquery.colorbox-min.js')}}'></script>
-<script src='{{asset('js/app.js')}}'></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-<script src="js/app.js"></script>
 
 
 </head>
-<script>
+    <script src='{{asset('js/app.js')}}'></script>
+<style>
 .dashboard{
   background-image: url('{{asset('img/background_dashboard_small.jpg')}}');
 }
-</script>
+</style>
 <body ng-app='app' id='dashboard' class='container'    style=' background-size: 1400px 1200px;
     background-image: url(img/background_dashboard.jpg);
     width: 100%;
     height: 100%;'>
+    <div id='app'></div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHLQCSX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

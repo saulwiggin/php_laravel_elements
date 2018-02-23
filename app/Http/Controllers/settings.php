@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\account;
+use App\devliery;
+use App\payment;
 
 class settings extends Controller
 {
@@ -14,5 +17,14 @@ class settings extends Controller
     //place data into database
 
     //return view('settings');
+  }
+  public function user(Request $request)
+  {
+
+    $flight = new account;
+
+    $flight->name = $request->name;
+
+    $flight->save();
   }
 }
