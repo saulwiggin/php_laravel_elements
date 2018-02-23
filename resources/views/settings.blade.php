@@ -14,8 +14,10 @@
                       <div class="panel-heading">
                         <h1>Personal Details</h1>
                       </div>
-                      <div id='' class="panel-body" id="app">
-                        @{{ message }}
+                      <div class="panel-body">
+                        <div id='app'>
+                          @{{ message }}
+                        </div>
                         <h3>Name</h3>
                         <input type='text' name='username' value=>
                       </div>

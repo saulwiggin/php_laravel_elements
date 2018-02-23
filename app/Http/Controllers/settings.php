@@ -9,9 +9,9 @@ class settings extends Controller
 
     return view('settings');
   }
-  public function address()
+  public function postaccount()
   {
-
+    //place data into database
 
     //return view('settings');
   }

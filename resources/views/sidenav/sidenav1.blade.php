@@ -19,7 +19,7 @@
 
           </div>
 
-          <div class="collapse navbar-collapse" id="app-navbar-collapse" style='background-color: grey;margin-left: -40px;'>
+          <div class="collapse navbar-collapse" id="app-navbar-collapse" style='background-color: lightgrey;margin-left: -40px;'>
               <!-- Left Side Of Navbar -->
               <ul class="nav navbar-nav">
                   &nbsp;
@@ -59,7 +59,7 @@
 
         <!-- /.navbar-top-links -->
         <!-- Sidebar -->
-        <div class='sidenav'id="sidebar-wrapper" style='font-size:12px;background-color:#696969'>
+        <div class='sidenav'id="sidebar-wrapper" style='font-size:12px;background-color:darkgrey'>
             <ul class="sidebar-nav" id='slide-out'>
                  <li>
                    <div class="user-view">
@@ -79,7 +79,7 @@
                     <a style='color:white;font-size:18px'href="/theScience"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-06.png')}}"> SNP Encyclopedia</a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-07.png')}}"> Your Products</a>
+                    <a style='color:white;font-size:18px'href="/products"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-07.png')}}"> Your Products</a>
                 </li>
                 <!-- <li class="no-padding">
                 <ul class="collapsible collapsible-accordion" style='border-top:0;border-right:0;border-left:0;'>

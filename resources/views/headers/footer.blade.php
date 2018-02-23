@@ -42,7 +42,7 @@ width: 100%;'>
       <!--/.Footer Links-->
 
       <!--Copyright-->
-      <div class="footer-copyright" style='background-color:grey'>
+      <div class="footer-copyright" style='background-color:lightgrey'>
           <div class="container-fluid" >
               © 2017 Copyright: <a style='color:white' href="http://www.nell.co.uk"> Nell Natural Elements </a>
 

@@ -73,6 +73,9 @@
 <!--scripts-->
 <script src='{{asset('js/jquery.colorbox-min.js')}}'></script>
 <script src='{{asset('js/app.js')}}'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script src="js/app.js"></script>
 
 
 </head>

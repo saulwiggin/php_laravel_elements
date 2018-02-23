@@ -17,17 +17,21 @@
                     <div class='col-md-offset-6'>
                       <div class="panel panel-default text-center">
                         <div class="panel-heading">
-                          <h1>Title</h1>
+                          <h1>RECIPE 1  (DAILY HEALTH) </h1>
+                          <h3> BENEFIT AREAS: GENERAL HEALTH + OXIDATIVE STRESS </h3>
                         </div>
-                        <div class="panel-body" id="app">
-                          @{{ message }}
-                          <h3>Benefit Areas</h3>
-
-                          <h3>Personlisation</h3>
+                        <div class="panel-body" id="product" style='height:350px;'>
+                          <h2>Flavours </h2>
+                          <h3>Chocolate Cacao and Vanilla flavour</h3>
+                          <h2>Recommendations </h2>
+                          <h5>
+                          Must be able to mix with Water or milks (Normal Milk, Hazelnut, Cashew or Almond)
+                          Great sprinkled on  Porridge
+                          Add as a booster to your daily Smoothie rituals</h5>
                         </div>
                         <div class="panel-footer">
-                          <button type='submit' onclick='submit_delivery()'>Nutrition Report</button>
-                          <button type='submit' onclick='order()'>Order</button>
+                          <a href='reports' class='btn btn-default'type='submit' onclick='submit_delivery()'>Nutrition Report</a>
+                          <a href='dispatch' class='btn btn-default'type='submit' onclick='order()'>Order</a>
                       </div>
                     </div>
                 </div>
@@ -36,6 +40,8 @@
 
           <!-- close page content -->
 
+<!-- product page javascript -->
+          <script src="/js/welcome.js"></script>
 
         </div>
       <!-- /#wrapper -->

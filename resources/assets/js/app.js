@@ -15,9 +15,37 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
-var app = new Vue({
+new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!'
   }
-})
+});
+
+var basket = new Vue({
+
+        el: '#basket',
+
+        data() {
+          return {
+            basketItems: []
+          }
+        },
+
+        ready: function(){
+            this.fetchBasket();
+        },
+
+        methods: {
+
+            fetchBasket: function(){
+                this.$http.get('api/buy/fetchBasket')
+                  .then(response => {
+                    this.basketItems = response.data;
+                  })
+                  .catch(response => {
+                    // Error Handling
+                  });
+            }
+        }
+    });

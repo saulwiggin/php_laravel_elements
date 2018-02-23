@@ -108,5 +108,6 @@ Route::get('/devices', 'devices@index');
 Route::get('/question', 'question@index');
 // Route::get('/settings', 'settings@index');
 
+Route::post('/settings/account','settings@postaccount');
 
 Route::get('/home', 'HomeController@index');
