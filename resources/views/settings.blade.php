@@ -11,7 +11,9 @@
                 <div class='customer_details' >
                   <div class="row slideanim" style='margin-top:100px;'>
                     <div class="panel panel-default text-center">
-                      <form method='post' action='/user_update'>
+                      <form method='post' action='/accountupdate'>
+                        {{ csrf_field() }}
+
                         <div class="panel-heading">
                           <h1>Personal Details</h1>
                         </div>
@@ -20,7 +22,7 @@
                               @{{ message }}
                             </div>
                             <h3>Name</h3>
-                            <input type='text' name='username' value=''>
+                            <input type='text' name='username' value='{{ $account->name }}'>
                         </div>
                         <div class="panel-footer">
                           <button type='submit' onclick=''>Save</button>

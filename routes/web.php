@@ -106,8 +106,9 @@ Route::get('/data', 'ProductRecommendation@index');
 Route::get('/blood', 'blood@index');
 Route::get('/devices', 'devices@index');
 Route::get('/question', 'question@index');
-// Route::get('/settings', 'settings@index');
 
-Route::post('/settings/account','settings@postaccount');
+Route::post('/accountupdate', 'settings@index');
+
+Route::post('settings/account','settings@postaccount');
 
 Route::get('/home', 'HomeController@index');

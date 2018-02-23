@@ -2,29 +2,40 @@
 
 namespace App\Http\Controllers;
 use App\account;
-use App\devliery;
+use App\delivery;
 use App\payment;
 
 class settings extends Controller
 {
   public function index()
   {
+    $account = account::find(1);
+    $delivery = account::find(1);
+    $payment = account::find(1);
 
-    return view('settings');
+    View::make('settings')->withModel($account)->withModel($delivery)->withModel($payment);
+
+    // return view('settings');
   }
+
   public function postaccount()
   {
     //place data into database
 
     //return view('settings');
   }
+
   public function user(Request $request)
   {
+    var_dump($request);
 
-    $flight = new account;
+    $account = new account;
 
-    $flight->name = $request->name;
+    $account->name = $request->name;
 
-    $flight->save();
+    $account->save();
+
+    //return view('settings');
+
   }
 }
