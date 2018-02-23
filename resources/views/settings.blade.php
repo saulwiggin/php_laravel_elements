@@ -24,7 +24,9 @@
                             <input style='font-size:16px'type='text' name='username' value='{{ $account->username}}'>
                         </div>
                         <div class="panel-footer">
-                          <button type='submit' onclick=''>Save</button>
+                          <button type='submit' onclick=''style='border-radius: 50%;
+    height: 40px;
+    width: 95px;'>Save</button>
                       </div>
                     </form>
                   </div>
@@ -59,7 +61,9 @@
                             <input style='font-size:16px'type='text' name='postcode' value='{{ $delivery->Postcode }}'>
                           </div>
                           <div class="panel-footer">
-                            <button type='submit' onclick='submit_delivery'>Save</button>
+                            <button type='submit' onclick='submit_delivery'style='border-radius: 50%;
+      height: 40px;
+      width: 95px;'>Save</button>
                           </div>
                       </div>
                     </form>
@@ -87,7 +91,9 @@
                           <input style='font-size:16px'type='text' name='csv' value='{{ $payment->csv }}'>
                         </div>
                         <div class="panel-footer">
-                          <button type='submit' onclick='submit_delivery'>Save</button>
+                          <button type='submit' onclick='submit_delivery'style='border-radius: 50%;
+    height: 40px;
+    width: 95px;'>Save</button>
 
                       </div>
                     </div>
