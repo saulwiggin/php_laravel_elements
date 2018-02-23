@@ -14,14 +14,14 @@ class CreateDelivery extends Migration
     public function up()
     {
         Schema::table('Customer_delivery', function (Blueprint $table) {
-           // $table->increments('id');
-           // $table->string('First_name');
-           // $table->string('Last_name');
-           // $table->string('Address_1');
-           // $table->string('Address_2');
-           // $table->string('Postcode');
-           // $table->string('Country');
-           // $table->string('Phone');
+           $table->increments('id');
+           $table->string('First_name');
+           $table->string('Last_name');
+           $table->string('Address_1');
+           $table->string('Address_2');
+           $table->string('Postcode');
+           $table->string('Country');
+           $table->string('Phone');
            $table->timestamps();
         });
     }

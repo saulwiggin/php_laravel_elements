@@ -18,11 +18,8 @@
                           <h1>Personal Details</h1>
                         </div>
                         <div class="panel-body">
-                            <div id='app'>
-                              @{{ message }}
-                            </div>
                             <h3>Name</h3>
-                            <input type='text' name='username' value='{{ $account->name }}'>
+                            <input type='text' name='username' value='{{ $account->username}}'>
                         </div>
                         <div class="panel-footer">
                           <button type='submit' onclick=''>Save</button>
@@ -48,13 +45,13 @@
                           </div>
                           <div class="panel-body">
                             <h3>Address 1</h3>
-                            <input type='text' name='address1' value='{{ Auth::user()->name }} '>
+                            <input type='text' name='address1' value='{{ $delivery->Address1 }} '>
                             <h3>Address 2</h3>
-                            <input type='text' name='address2'>
+                            <input type='text' name='address2' value='{{ $delivery->Address2 }}'>
                             <h3>City</h3>
-                            <input type='text' name='city'>
+                            <input type='text' name='city' value='{{ $delivery->City }}'>
                             <h3>Post Code</h3>
-                            <input type='text' name='postcode'>
+                            <input type='text' name='postcode' value='{{ $delivery->postcode }}'>
                           </div>
                           <div class="panel-footer">
                             <button type='submit' onclick='submit_delivery'>Save</button>
