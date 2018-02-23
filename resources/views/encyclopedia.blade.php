@@ -1,21 +1,14 @@
-<html>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+@include('headers.header')
 
-<header>
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-  <script src="https://unpkg.com/ideogram@0.14.0/dist/js/ideogram.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></header>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<body>
+@include('sidenav.sidenav1')
   <div class-'container'>
     <div class="page-header" style='margin-left:10'>
-      <h1> <img style='height:100; margin-top:-20px;' src='{{asset('img/Nell_Logo_Alone_CMYK.png')}}'>  </h1>
-      <h4> The Building Blocks </h4>
+      <h1> <img style='height:100px; margin-top:-20px;' src='{{asset('img/Nell_Logo_Alone_CMYK.png')}}'>  </h1>
+      <h4> <i>The Building Blocks</i> </h4>
     </div>
     <div class="navbar navbar-inverse navbar-fixed-left">
       <navbar class='navbar-fixed-left'>
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav white">
             <li> <a href='#b6'>Vitamin B6</a></li>
             <li> <a href='#c'>Vitamin C</a></li>
             <li> <a href='#vitamind'>Vitamin D</a></li>
@@ -34,14 +27,15 @@
         </div>
       </navbar>
     </div>
-    <div class='row'>
-      <div class='col-md-5' style='margin-right: auto;margin-left: auto;'>
-        <div class="panel-group" id="accordion">
+    <div class='row' style='    margin-right: 160px;
+    position: relative;
+    left: 260px;'>
+      <div class='col-md-10' style='margin-right: auto;margin-left: auto;'>
+        <div class="" id="accordion">
           <div class="panel panel-default" id='b6'>
             <div class="panel-heading">
               <h1>
               Vitamin B6
-              <img style='height:60;' src='images/Nell_Icons_Green_CMYK-01.png'>
 
               </h1>
             </div>
@@ -131,7 +125,7 @@
           <div class='col-8' id='#c'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>Vitamin C: rs33972313 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-02.png'> </h1>
+                <h1>Vitamin C: rs33972313  </h1>
               </div>
               <div class="panel-body">
                 <p>
@@ -207,7 +201,7 @@
           <div id='vitamind'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>Vitamin D: rs12794714, rs10741657, rs2060793 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-03.png'> </h1>
+                <h1>Vitamin D: rs12794714, rs10741657, rs2060793 </h1>
               </div>
               <div class="panel-body">
                 <p>
@@ -324,7 +318,7 @@
             <div id='vitaminB9'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>B9 or Folic acid: rs1801133, rs1801131, rs1805087, rs1801394 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-04.png'> </h1>
+                <h1>B9 or Folic acid: rs1801133, rs1801131, rs1805087, rs1801394  </h1>
               </div>
               <div class="panel-body">
                 <p>
@@ -424,7 +418,7 @@
           <div id='vitaminA1'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>A1 or Retinol: rs7501331, rs12934922 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-05.png'> </h1>
+                <h1>A1 or Retinol: rs7501331, rs12934922 </h1>
               </div>
               <div class="panel-body">
                 <p>
@@ -541,7 +535,7 @@
           <div id='vitaminB12'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>B12: rs602662, rs492602 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-06.png'> </h1>
+                <h1>B12: rs602662, rs492602  </h1>
               </div>
               <div class="panel-body">
                 <p>
@@ -619,7 +613,7 @@
           <div id='PEMT'>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h1>Choline/PEMT: rs4646406, rs7946, rs12325817 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-07.png'> </h1>
+                <h1>Choline/PEMT: rs4646406, rs7946, rs12325817  </h1>
               </div>
               <div class="panel-body">
                 <h4>Studies on PEMT</h4>
@@ -659,7 +653,7 @@
             <div class=''>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h1>Zinc: rs13266634 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-08.png'> </h1>
+                  <h1>Zinc: rs13266634  </h1>
                 </div>
                 <div class="panel-body">
                   <p>
@@ -730,7 +724,7 @@
             <div class=''>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h1>Glutathione: rs1695 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-09.png'> </h1>
+                  <h1>Glutathione: rs1695  </h1>
                 </div>
                 <div class="panel-body">
                   <p>
@@ -852,7 +846,7 @@
             <div class=''>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h1>Mono-unsaturated fats: rs17300539 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-10.png'> </h1>
+                  <h1>Mono-unsaturated fats: rs17300539  </h1>
                 </div>
                 <div class="panel-body">
                   <p>
@@ -1006,7 +1000,7 @@
             <div class=''>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h1>Saturated fats: rs5082, rs3135506, rs1137101 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-12.png'> </h1>
+                  <h1>Saturated fats: rs5082, rs3135506, rs1137101 </h1>
                 </div>
                 <div class="panel-body">
                   <p>
@@ -1109,7 +1103,7 @@
             <div class-''>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h1>APOE4 (Dementia Prevention): rs429358 <img style='height:60;' src='images/Nell_Icons_Green_CMYK-13.png'> </h1>
+                  <h1>APOE4 (Dementia Prevention): rs429358 </h1>
                 </div>
                 <div class="panel-body">
                   <p>
@@ -1172,4 +1166,6 @@
           </div>
         </div>
       </div>
-</body>
+@include('sidenav.sidenav2');
+
+@include('headers.footer');
