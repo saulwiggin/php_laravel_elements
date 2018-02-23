@@ -13,7 +13,7 @@
               </button>
 
               <!-- Branding Image -->
-              <a class="navbar-brand" href="https://www.myelements.me" style='margin-top:5px;color:white'>
+              <a class="navbar-brand" href="http://www.myelements.me" style='margin-top:5px;color:white'>
                   {{ config('app.name', 'Nell Natural Elements') }}
               </a>
 
@@ -63,8 +63,9 @@
             <ul class="sidebar-nav" id='slide-out'>
                  <li>
                    <div class="user-view">
-                      <div class="background">
+                      <div class="background"><a href='/home'>
                         <img style='margin:10px;'width=180 class="circle" src="{{asset('/img/Nell_Logo_Stamp_Reversed.png')}}">
+                      </a>
                       </div>
                       <!-- <a href="#!user"></a>
                       <a href="#!name"><span class="white-text name"></span></a>
@@ -103,7 +104,7 @@
                     <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}">   Order History</a>
                 </li>
                  <li>
-                  <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Settings</a>
+                  <a style='color:white;font-size:18px'href="/settings"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Settings</a>
                 </li>
 <!--                 <li>
                   <a style='margin-bottom:40px;'href="">Report</a>

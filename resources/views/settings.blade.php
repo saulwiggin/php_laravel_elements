@@ -7,43 +7,48 @@
             <div class='page_content_wrapper' style='margin-top:70px;'  >
               <div class='dashboard_container' >
 
-                <div class="row slideanim" style='margin-top:100px;'>
-                  <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                      <h1>Personal Account Settings</h1>
+                <!-- customer name -->
+                <div class='customer_details' >
+                  <div class="row slideanim" style='margin-top:100px;'>
+                    <div class="panel panel-default text-center">
+                      <div class="panel-heading">
+                        <h1>Personal Details</h1>
+                      </div>
+                      <div class="panel-body" id="app">
+                        @{{ message }}
+                        <h3>Name</h3>
+                        <input type='text' name='username' value=>
+                      </div>
+                      <div class="panel-footer">
+                        <button type='submit' onclick='submit_delivery()'>Save</button>
                     </div>
-                    <div class="panel-body">
-                      <h3>User Name</h3>
-                      <input type='text' name='username'>
-                    </div>
-                    <div class="panel-footer">
-
                   </div>
                 </div>
               </div>
 
-
-
-
               <!-- Container (Devliery Options) -->
 
                 <div class="row slideanim" style='margin-top:100px;'>
-                  <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                      <h1>Delivery Options</h1>
+                  <div class=''>
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                          <h1>Delivery Address</h1>
+                        </div>
+                        <div class="panel-body">
+                          <h3>Address 1</h3>
+                          <input type='text' name='address1' value='{{ Auth::user()->name }} '>
+                          <h3>Address 2</h3>
+                          <input type='text' name='address2'>
+                          <h3>City</h3>
+                          <input type='text' name='city'>
+                          <h3>Post Code</h3>
+                          <input type='text' name='postcode'>
+                        </div>
+                        <div class="panel-footer">
+                          <button type='submit' onclick='submit_delivery'>Save</button>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                      <h3>Address 1</h3>
-                      <input type='text' name='address1'>
-                      <h3>Address 2</h3>
-                      <input type='text' name='address2'>
-                      <h3>Post Code</h3>
-                      <input type='text' name='postcode'>
-                    </div>
-                    <div class="panel-footer">
-
                   </div>
-                </div>
               </div>
 
                   <!-- credit card options -->

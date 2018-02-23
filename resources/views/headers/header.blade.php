@@ -72,6 +72,8 @@
 
 <!--scripts-->
 <script src='{{asset('js/jquery.colorbox-min.js')}}'></script>
+<script src='{{asset('js/app.js')}}'></script>
+
 
 </head>
 <script>
