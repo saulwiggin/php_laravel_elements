@@ -37,7 +37,7 @@
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
 
-                          <!-- <ul class="dropdown" role="menu">
+                          <ul class="dropdown-menu" role="menu">
                               <li>
                                   <a style='color:white;font-size:20px;position:relative;top:5px;left:-100px;' href="{{ url('/logout') }}"
                                       onclick="event.preventDefault();
@@ -49,7 +49,7 @@
                                       {{ csrf_field() }}
                                   </form>
                               </li>
-                          </ul> -->
+                          </ul>
                       </li>
                   @endif
               </ul>

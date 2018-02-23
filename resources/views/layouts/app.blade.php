@@ -49,8 +49,8 @@ window.fbAsyncInit = function() {
 </script>
 <!-- HEADER BAR -->
     <div id="app" style='position:relative'>
-        <nav style='margin-left: -58px;height:50px;'class="navbar navbar-static-top">
-            <div class="container">
+        <nav style='height:50px;'class="navbar navbar-static-top">
+            <div class="container"style='width:100%'>
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -68,7 +68,7 @@ window.fbAsyncInit = function() {
 
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse"style=" background-color: black;margin-left: -40px;" >
+                <div class="collapse navbar-collapse" id="app-navbar-collapse"style=" background-color: grey;margin-left: -40px;margin-right:-20px;" >
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;

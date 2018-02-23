@@ -86,6 +86,9 @@ Route::get('/mymarketing', function () {
 Route::get('/select', function () {
     return view('select');
 });
+Route::get('/settings', function () {
+    return view('settings');
+});
 Route::get('s3-upload','S3Controller@imageUpload');
 Route::post('s3-upload','S3Controller@imageUploadPost');
 Route::get('/receive', 'Receive@index');
@@ -100,6 +103,7 @@ Route::get('/data', 'ProductRecommendation@index');
 Route::get('/blood', 'blood@index');
 Route::get('/devices', 'devices@index');
 Route::get('/question', 'question@index');
+// Route::get('/settings', 'settings@index');
 
 
 Route::get('/home', 'HomeController@index');

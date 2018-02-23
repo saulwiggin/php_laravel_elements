@@ -48,7 +48,7 @@
                           <div class="card" style="height:350px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Product Recommendation</h5>
+                              <h5 class="card-title">My Products</h5>
                               <p class="card-text">We Analyse Your DNA Data To Give You A Personalised Product Recommendation With All The Essential Nutrients Your Body Needs.</p>
                               <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
                             </div>
@@ -58,7 +58,7 @@
                           <div class="card" style="height:350px;">
                             <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h5 class="card-title">Your Bloods</h5>
+                              <h5 class="card-title">My Bloods</h5>
                               <p class="card-text">Access Your Blood Data.</p>
                               <a href="/blood" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
                             </div>
@@ -68,7 +68,7 @@
                             <div class="card" style="height:350px;">
                               <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-01.png')}}" alt="Card image cap">
                               <div class="card-body">
-                                  <h5 class="card-title">Add Genome Data</h5>
+                                  <h5 class="card-title">My DNA Analysis</h5>
                                 <p class="card-text"> Collect Data From DNA Data. </p>
                                 <a href="/data" style='margin:10px;'class="btn btn-primary">Enter</a>
                               </div>
@@ -84,7 +84,7 @@
                                 <div class="card" style="height:350px;">
                                   <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-04.png')}}" alt="Card image cap">
                                   <div class="card-body">
-                                    <h5 class="card-title">Devices</h5>
+                                    <h5 class="card-title">My Devices</h5>
                                     <p class="card-text">Integrate Your FitBit, Oura Ring or Ova Ring</p>
                                     <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
                                   </div>
@@ -94,8 +94,8 @@
                                 <div class="card" style="height:350px;">
                                   <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-25.png')}}" alt="Card image cap">
                                   <div class="card-body">
-                                    <h5 class="card-title">Questionaires</h5>
-                                    <p class="card-text">Tell Us More About Yourself To Improve Our Matching.</p>
+                                    <h5 class="card-title">My Questionaires</h5>
+                                    <p class="card-text">Tell Us More About Yourself To Improve Our Matching With Our Professional Mentors.</p>
                                     <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
                                   </div>
                                 </div>
@@ -104,8 +104,8 @@
                                   <div class="card" style="height:350px;">
                                     <img class="card-img-top" style='height:150px;'src="{{asset('/img/icons/Orange/Nell_Icons_Orange_CMYK-16.png')}}" alt="Card image cap">
                                     <div class="card-body">
-                                      <h5 class="card-title"> Edit Your Customer Data </h5>
-                                      <p class="card-text"> Collect Data From Personal Questionaires, Connected Devices, DNA Data and Bloods. </p>
+                                      <h5 class="card-title"> My Customer Data </h5>
+                                      <p class="card-text"> Account Information </p>
                                       <a href="/settings" style='margin:10px;'class="btn btn-primary">Enter</a>
                                     </div>
                                   </div>
