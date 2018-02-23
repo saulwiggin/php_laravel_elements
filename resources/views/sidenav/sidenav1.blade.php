@@ -13,7 +13,7 @@
               </button>
 
               <!-- Branding Image -->
-              <a class="navbar-brand" href="http://www.myelements.me" style='margin-top:5px;color:white'>
+              <a class="navbar-brand" href="/home" style='margin-top:5px;color:white'>
                   {{ config('app.name', 'Nell Natural Elements') }}
               </a>
 
@@ -73,7 +73,7 @@
                   </div>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href="/home"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-05.png')}}">   Home </a>
+                    <a style='color:white;font-size:18px'href="/home"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-05.png')}}"> Home </a>
                 </li>
                 <li>
                     <a style='color:white;font-size:18px'href="/theScience"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-06.png')}}"> SNP Encyclopedia</a>
@@ -95,13 +95,13 @@
                 </ul>
               </li> -->
                  <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}">   DNA Test Order</a>
+                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}"> Order DNA Test</a>
                 </li>
                 <li>
                     <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">   Devices Connected</a>
                 </li>
                <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}">   Order History</a>
+                    <a style='color:white;font-size:18px'href="/dispatch"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}"> Order History</a>
                 </li>
                  <li>
                   <a style='color:white;font-size:18px'href="/settings"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Settings</a>
