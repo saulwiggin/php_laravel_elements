@@ -101,7 +101,7 @@ Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
 Route::get('/reports/{report_type}', '23andme@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/brain', 'Brain@index');
-Route::get('/products', 'ProductRecommendation@index');
+// Route::get('/products', 'ProductRecommendation@index');
 Route::get('/data', 'ProductRecommendation@index');
 Route::get('/blood', 'blood@index');
 Route::get('/devices', 'devices@index');
