@@ -84,7 +84,8 @@
 <body ng-app='app' id='dashboard' class='container'    style=' background-size: 1400px 1200px;
     background-image: url(img/background_dashboard.jpg);
     width: 100%;
-    height: 100%;'>
+    height: 100%;
+    font-family:walsheim;'>
     <div id='app'></div>
 
     <!-- Google Tag Manager (noscript) -->

@@ -14,20 +14,7 @@ class settings extends Controller
     $delivery = delivery::find(1);
     $payment = payment::find(1);
 
-    //var_dump($delivery);
      return view('settings')->with(compact('account'))->with(compact('delivery'))->with(compact('payment'));
-  }
-
-  public function postaccount(Request $request)
-  {
-    $delivery = delivery::find(1);
-
-    $delivery->Address_1 = $request->address1;
-    $delivery->Address_2 = $request->address2;
-    $delivery->City = $request->city;
-    $delivery->postcode = $request->postcode;
-
-    $delivery->save();
   }
 
   public function user(Request $request)
@@ -37,6 +24,33 @@ class settings extends Controller
     $account->username = $request->username;
 
     $account->save();
+
+    $account = account::find(1);
+    $delivery = delivery::find(1);
+    $payment = payment::find(1);
+
+    return view('settings')->with(compact('account'))->with(compact('delivery'))->with(compact('payment'));
+
+  }
+
+  public function postaccount(Request $request)
+  {
+    $delivery = delivery::find(1);
+
+    $delivery->Address_1 = $request->address1;
+    $delivery->Address_2 = $request->address2;
+    $delivery->Postcode = $request->postcode;
+    $delivery->city = $request->city;
+
+    $delivery->save();
+
+    //die($delivery);
+
+    $account = account::find(1);
+    $delivery = delivery::find(1);
+    $payment = payment::find(1);
+
+   return view('settings')->with(compact('account'))->with(compact('delivery'))->with(compact('payment'));
 
   }
 
@@ -49,6 +63,14 @@ class settings extends Controller
     $creditcard->expiry_date = $request->expiry_date;
 
     $creditcard->save();
+
+    //die($request);
+
+    $account = account::find(1);
+    $delivery = delivery::find(1);
+    $payment = payment::find(1);
+
+    return view('settings')->with(compact('account'))->with(compact('delivery'))->with(compact('payment'));
 
   }
 }
