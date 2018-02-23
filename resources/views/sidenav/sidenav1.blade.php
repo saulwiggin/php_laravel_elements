@@ -96,10 +96,10 @@
                 </ul>
               </li> -->
                  <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}"> Order DNA Test</a>
+                    <a style='color:white;font-size:18px'href="/DNA_test"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}"> Order DNA Test</a>
                 </li>
                 <li>
-                    <a style='color:white;font-size:18px'href=""><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">   Devices Connected</a>
+                    <a style='color:white;font-size:18px'href="/devices"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">   Devices Connected</a>
                 </li>
                <li>
                     <a style='color:white;font-size:18px'href="/dispatch"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}"> Order History</a>

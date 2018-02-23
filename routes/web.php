@@ -86,6 +86,12 @@ Route::get('/mymarketing', function () {
 Route::get('/select', function () {
     return view('select');
 });
+Route::get('/devices', function () {
+    return view('devices');
+});
+Route::get('/DNA_test', function () {
+    return view('genetic_age_information');
+});
 // Route::get('/settings', function () {
 //     return view('settings');
 // });
