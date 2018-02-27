@@ -119,7 +119,7 @@ Route::post('/form_submission','settings@postaccount');
 Route::post('/credit_card','settings@creditsave');
 
 Route::post('/23andmeupload','brain@23upload23andme');
-Route::post('/txtDNAupload','brain@txtDNAupload');
+Route::post('/txtDNAupload/{filename}','brain@txtDNAupload');
 
 
 Route::get('/home', 'HomeController@index');

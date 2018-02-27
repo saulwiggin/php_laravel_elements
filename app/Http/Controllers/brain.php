@@ -14,6 +14,20 @@ class brain extends Controller
     return view('dashboard');
   }
 
+  public function txtDNAupload($filename)
+  {
+    //  upload last uploaded genome
+    $contents = Storage::get($filename);
+
+    var_dump($contents);
+
+    // SNP matrix
+
+    // match SNP's
+
+    // display data
+  }
+
   public function upload23andme()
   {
     // upload last 23andme data
@@ -30,18 +44,7 @@ class brain extends Controller
 
     // report results after matching send to tabel for that users
 
-    
+
   }
-  public function txtDNAupload($firstname, $lastname)
-  {
-    //  upload last uploaded genome
-    $filename = $firstname . $lastname . '.txt';
-      $contents = Storage::get($filename);
 
-    // SNP matrix
-
-    // match SNP's
-
-    // display data
-  }
 }

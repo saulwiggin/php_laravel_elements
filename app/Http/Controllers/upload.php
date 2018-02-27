@@ -18,7 +18,7 @@ class upload extends Controller
     $public_path = public_path();
     $request->file('file')->move($public_path.'/storage/genetic_upload/'.$filename.'');
 
-    $url = '/txtDNAupload';
+    $url = '/txtDNAupload/'.$filename;
     return Redirect::to($url);
   }
 }
