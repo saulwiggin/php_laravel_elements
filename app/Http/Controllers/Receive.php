@@ -150,6 +150,8 @@ class Receive extends Controller
       }
     }
 
+    // vitamin D
+
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs12794714/', [
       'headers' => [
@@ -197,6 +199,8 @@ class Receive extends Controller
       //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     }
+
+    //Vitamin A - Carotene
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs7501331/', [
@@ -246,6 +250,8 @@ class Receive extends Controller
       //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     }
+
+    // Vitamin B12
 
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs602662/', [
@@ -344,6 +350,8 @@ class Receive extends Controller
       }
     }
 
+    // Iron
+
     $client = new \GuzzleHttp\Client();
     $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs855791/', [
       'headers' => [
@@ -392,6 +400,58 @@ class Receive extends Controller
       //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     }
+
+    // folic acid
+
+    $client = new \GuzzleHttp\Client();
+    $result = $client->get('https://api.23andme.com/3/profile/'.$profile_id.'/marker/rs1801133/', [
+      'headers' => [
+         'Authorization' => 'Bearer ' . $access_token
+        //'Authorization' => 'Bearer demo_oauth_token'
+
+        ]
+    ]);
+
+    $api = $result->getBody()->getContents();
+    $api = json_decode($api,true);
+
+    $gene_names = $api['gene_names'][0];
+    $accession_id = $api['accession_id'];
+    $start = $api['start'];
+    $end = $api['end'];
+    $is_genotyped = $api['is_genotyped'];
+    $is_assayed = $api['is_assayed'];
+    $is_no_call = $api['is_no_call'];
+
+
+    $sql = "INSERT INTO marker (profile_id, gene_names, accession_id, start,end,is_genotyped,is_assayed,is_no_call)
+    VALUES ('".$profile_id."', '".$gene_names."', '".$accession_id."','".$start."','".$end."','".$is_genotyped."','".$is_assayed."','".$is_no_call."')";
+
+    if (mysqli_query($conn, $sql)) {
+    //    echo "Marker record created successfully";
+    } else {
+    //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $variants = $api['variants'];
+    //loop through multiple variants;
+    foreach($variants as $key => $value){
+      $start = $variants[$key]['start'];
+      $allele = $variants[$key]['allele'];
+      $dosage = $variants[$key]['dosage'];
+      $is_assayed = $variants[$key]['is_assayed'];
+      $is_no_call = $variants[$key]['is_no_call'];
+
+      $sql = "INSERT INTO variants (profile_id, gene_names, start, allele,dosage,is_assayed,is_no_call)
+      VALUES ('".$profile_id."', '".$gene_names."', '".$start."','".$allele."','".$dosage."','".$is_assayed."','".$is_no_call."')";
+
+      if (mysqli_query($conn, $sql)) {
+        //  echo "Variant record created successfully";
+      } else {
+      //    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
+
 
     // // add specific details of 8 reports by 23andme Here:
     // $test = array(
