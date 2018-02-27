@@ -114,62 +114,7 @@
 
             <div class='page_content_wrapper' style='margin-top:70px;'  >
               <div class='dashboard_container' >
-                <div class="row slideanim" style='margin-top:100px;'>
-                      <div class=" text-center">
-                        <div class="">
-                          <div class='col-md-4'>
-                          <div class="card" style="height:350px;">
-                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/bottle.png')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Devices</h5>
-                              <p class="card-text">Integrate Your FitBit, Oura Ring or Ova Ring</p>
-                              <a href="/products" style='margin:10px;'class="btn btn-primary">Enter</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class='col-md-4'>
-                          <div class="card" style="height:350px;">
-                            <img class="card-img-top" style='height:150px;'src="{{asset('/img/brain.png')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Questionaires</h5>
-                              <p class="card-text">Tell Us More About Yourself To Improve Our Matching.</p>
-                              <a href="#" style='margin:10px;'class="btn btn-primary"data-toggle="modal" data-target="#GSCCModal">Enter</a>
-                            </div>
-                          </div>
-                            <div id="GSCCModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                             <div class="modal-dialog" style='width:100%'>
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                  </div>
-                                  <div class="modal-body">
-                                    <a href='/upload' class='btn btn-default'>Upload Your Genome</a>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <script>
-                            jQuery('a.gallery').colorbox();
-                          </script>
-                          <div class='col-md-4'>
-                            <div class="card" style="height:350px;">
-                              <img class="card-img-top" style='height:150px;'src="{{asset('/img/heart.png')}}" alt="Card image cap">
-                              <div class="card-body">
-                                <h5 class="card-title"> Edit Your Customer Data </h5>
-                                <p class="card-text"> Collect Data From Personal Questionaires, Connected Devices, DNA Data and Bloods. </p>
-                                <a href="/data" style='margin:10px;'class="btn btn-primary">Enter</a>
-                              </div>
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
+
                     </div>
                   </div>
                 </div>

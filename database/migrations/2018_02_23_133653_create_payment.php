@@ -14,11 +14,11 @@ class CreatePayment extends Migration
     public function up()
     {
         Schema::table('Customer_payment', function (Blueprint $table) {
-          // $table->string('First_name');
-          // $table->string('Last_name');
-          // $table->string('card_number');
-          // $table->string('expiry_date');
-          // $table->string('Csv');
+          $table->string('First_name');
+          $table->string('Last_name');
+          $table->string('card_number');
+          $table->string('expiry_date');
+          $table->string('Csv');
         });
     }
 

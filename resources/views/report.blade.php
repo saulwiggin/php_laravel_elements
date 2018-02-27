@@ -1,13 +1,6 @@
-<html>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+@include('headers.header')
 
-<header>
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-  <script src="https://unpkg.com/ideogram@0.14.0/dist/js/ideogram.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></header>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<body>
+@include('sidenav.sidenav1')
   <div class-'container'>
     <div class="page-header" style='margin-left:10'>
       <h1> <img style='height:100; margin-top:-20px;' src='images/Nell_Logo_Alone_CMYK.png'> Vitamins </h1>

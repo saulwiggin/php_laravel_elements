@@ -580,7 +580,7 @@ class Receive extends Controller
 
     mysqli_close($conn);
 
-    $url = 'http://www.nell.co.uk';
+    $url = '/23andmeupload';
     return Redirect::to($url);
   }
 }
