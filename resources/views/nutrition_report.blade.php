@@ -4,7 +4,6 @@
 @include('headers.header')
 
 @include('sidenav.sidenav1')
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6BWRVW"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -49,7 +48,7 @@ function page_redirect(){
 
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!-- <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>Vitamin B6</h2>
@@ -103,14 +102,7 @@ function page_redirect(){
       	});
       </script>
       <br>
-      <!--<h4>Your subscription to My Data can be used along with the dataloggers below to receive multiple sensor data from your areas in your production plant, for monitoring time variable signs and for use in conjuction with GPRS mobile to receive SMS messages and emails when alarms are breached. -->
-      <!-- <p>The amount of vitamin B6 adults (19-64 years) need is about:
-      1.4mg a day for men
-      1.2mg a day for women	</p>
-      <p> Vitamin B6, also known as pyridoxine, helps:
-      allow the body to use and store energy from protein and carbohydrates in food
-      form haemoglobin the substance in red blood cells that carries oxygen around the body
-      </p> -->
+
     </div>
     <div class="col-sm-4 panel panel-body" style='border:none'>
       <div class="thumbnail">
@@ -136,11 +128,11 @@ function page_redirect(){
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class='body_reports' style='height:500px;'>
   <div class='row'>
-    <div class=''>
+    <!-- <div class=''> -->
       <div class="container">
         <!-- <div id="weight" class="collapse">
           <h2> Weight Report </h2>
@@ -435,7 +427,6 @@ function page_redirect(){
   </div>
 </div> -->
 
-<!-- <!--  <!--Container (Portfolio Section) -->
 <!-- <div id="biological_age" class="container-fluid text-center">
  <h2>Cell age</h2><br>
  <h3></h3>
