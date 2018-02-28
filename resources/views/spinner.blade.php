@@ -115,7 +115,7 @@
    window.setTimeout(function(){
 
        // Move to a new location or you can do something else
-       window.location.href = "/reports/txtupload";
+       window.location.href = "/dashboard";
 
    }, 5000);
 </script>
