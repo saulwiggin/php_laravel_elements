@@ -24,7 +24,9 @@ class upload extends Controller
     Storage::disk('local')->put($filename, file_get_contents($file));
 
   //  $username = 'Saulwiggin';
-    $url = '/txtDNAupload';
-    return Redirect::to($url);
+  //  $url = '/txtDNAupload';
+  //  return Redirect::to($url);
+
+  return view('spinner');
   }
 }

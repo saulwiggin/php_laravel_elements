@@ -26,7 +26,7 @@ class brain extends Controller
     $contents = Storage::get($filename);
 
     //set $username
-    $username = Auth::user()->name;
+  //  $username = Auth::user()->name;
 
     $array = explode("\n",$contents);
     // SNP matrix
