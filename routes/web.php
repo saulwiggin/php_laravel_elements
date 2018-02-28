@@ -118,7 +118,7 @@ Route::post('/form_submission','settings@postaccount');
 Route::post('/credit_card','settings@creditsave');
 
 Route::get('/23andmeupload','brain@upload23andme');
-Route::get('/txtDNAupload/{username}','brain@txtDNAupload');
+Route::get('/txtDNAupload','brain@txtDNAupload');
 
 Route::get('/reports/txtupload', 'reports@txtupload');
 

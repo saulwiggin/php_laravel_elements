@@ -1027,7 +1027,7 @@ class Receive extends Controller
     $api = $result->getBody()->getContents();
     $api = json_decode($api,true);
 
-    $gene_names = $api['gene_names'][0];
+  //  $gene_names = $api['gene_names'][0];
     $accession_id = $api['accession_id'];
     $start = $api['start'];
     $end = $api['end'];
