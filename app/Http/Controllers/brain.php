@@ -15,7 +15,7 @@ class brain extends Controller
     return view('dashboard');
   }
 
-  public function txtDNAupload($username)
+  public function txtDNAupload()
   {
     //  upload last uploaded genome
     $filename = $username . '.txt';
@@ -582,6 +582,7 @@ class brain extends Controller
 
 
     //first gene rs12794714 vitamin D
+    $someModel->setConnection('mysql2');
 
     //$marker_data = marker
     $variant_data = variants::get();
