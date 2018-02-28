@@ -99,7 +99,7 @@
                     <a style='color:white;font-size:18px'href="/DNA_test"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-08.png')}}"> Order DNA Test</a>
                 </li>
                 <li>
-                   <a style='color:white;font-size:18px'href="/DNA_test"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-12.png')}}"> Our Expertese </a>
+                   <a style='color:white;font-size:18px'href="/products"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-12.png')}}"> Our Products </a>
                </li>
                 <li>
                     <a style='color:white;font-size:18px'href="/devices"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">  Elite Devices </a>

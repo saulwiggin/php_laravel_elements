@@ -25,11 +25,11 @@ class reports extends Controller
   {
     $username = Auth::user()->name;
     //    $results = $results->$username;
-
+    //var_dump($username);
     // get last genome uploaded $reports
     $results = results::get()
                ->where('username', $username);
-
+               //var_dump($results);
     return view('nutrition_report')->with('compact',$results);
 
   }

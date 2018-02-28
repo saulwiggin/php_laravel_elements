@@ -47,14 +47,6 @@ function page_redirect(){
 }
 </script>
 
-<div class="jumbotron text-center">
-  <h1>My Natural Elements</h1>
-  <!-- <p>Your genetic information has been analysed and produced a report which is able to give you information on on your fundamental building blocks, your natural elements.</p> -->
-  <!--<form class="form-inline">-->
-  <!--  <input type="email" class="form-control" size="50" placeholder="Email Address" required>-->
-  <!--  <button type="button" class="btn btn-danger">Subscribe</button>-->
-  <!--</form>-->
-</div>
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
@@ -112,13 +104,13 @@ function page_redirect(){
       </script>
       <br>
       <!--<h4>Your subscription to My Data can be used along with the dataloggers below to receive multiple sensor data from your areas in your production plant, for monitoring time variable signs and for use in conjuction with GPRS mobile to receive SMS messages and emails when alarms are breached. -->
-      <p>The amount of vitamin B6 adults (19-64 years) need is about:
+      <!-- <p>The amount of vitamin B6 adults (19-64 years) need is about:
       1.4mg a day for men
       1.2mg a day for women	</p>
       <p> Vitamin B6, also known as pyridoxine, helps:
       allow the body to use and store energy from protein and carbohydrates in food
       form haemoglobin the substance in red blood cells that carries oxygen around the body
-      </p>
+      </p> -->
     </div>
     <div class="col-sm-4 panel panel-body" style='border:none'>
       <div class="thumbnail">
@@ -128,7 +120,7 @@ function page_redirect(){
               container: '.ideogram',
               organism: "human",
               chromosome: "17",
-              chrHeight: 400,
+              chrHeight: 360,
               orientation: "vertical",
               annotations: [{
                 "name": "BRCA1",
@@ -265,11 +257,11 @@ function page_redirect(){
               alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
          <map name="shapes">
            <area class='area' shape=circle href="#demo" coords="200,75,50" data-toggle="collapse" alt="Green circle.">
-           <area class='area' shape=poly coords="325,25,262,125,388,125" data-toggle="collapse"  href="#intellegence" alt="Blue triangle.">
+           <area class='area' shape=poly coords="325,25,262,125,388,125" data-toggle="collapse"  href="#demo" alt="Blue triangle.">
            <area class='area' shape=circle coords="260, 200, 50"
                  href="#sleep" alt="gut" data-toggle="collapse" >
-          <area class='area' shape=circle href ='#energy' data-toggle="collapse" alt='hand' coords="360,270,50">
-          <area class='area' shape=circle coords="290,400,50" href="#weight"  alt="leg" data-toggle="collapse">
+          <area class='area' shape=circle href ='#demo' data-toggle="collapse" alt='hand' coords="360,270,50">
+          <area class='area' shape=circle coords="290,400,50" href="#demo"  alt="leg" data-toggle="collapse">
          </map>
         </p>
       </div>
@@ -281,7 +273,7 @@ function page_redirect(){
       <div class='col-md-4'>
         <div class="container">
 
-          <div id="intellegence" class="collapse">
+          <!-- <div id="intellegence" class="collapse">
             <h2> Intellegence Report </h2>
             <script type="text/javascript">
               google.charts.load('current', {'packages':['table']});
@@ -312,7 +304,7 @@ function page_redirect(){
               }
             </script>
             <div id="table_div_intellegence"></div>
-          </div>
+          </div> -->
           <div id="demo" class="collapse">
             <h2> Nutrition Report </h2>
             <script type="text/javascript">
@@ -326,7 +318,7 @@ function page_redirect(){
                 data.addColumn('string', 'Genotype');
                 data.addColumn('string', 'Description');
                 data.addRows([
-                  ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                  ['{{$results[0]->supplement}}', '{{$results[0]->gene}}', '{{$results[0]->genotype}}','{{$results[0]->report_results}}'],
                   ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
                   ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
                   ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
@@ -351,14 +343,13 @@ function page_redirect(){
   </div>
 
 <!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
+<!-- <div id="services" class="container-fluid text-center">
   <h2>Products</h2>
   <h3>What we suggest</h3>
   <p>This product is recommended on a detailed analysis of your genomic data, bloods analysis and personal information. </p>
   <br>
   <div class="row slideanim">
     <div class="col-sm-2" style='width: 200px;  margin-left: 200px;'>
-      <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
 	    <img alt='product' style='height:500px;'src='img/purple_bottle.png'></img>
       <h3></h3>
       <p>
@@ -433,10 +424,10 @@ function page_redirect(){
        </table>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <!--  <!--Container (Portfolio Section) -->
-<div id="biological_age" class="container-fluid text-center">
+<!-- <div id="biological_age" class="container-fluid text-center">
  <h2>Cell age</h2><br>
  <h3></h3>
  <div class="row text-center slideanim">
@@ -460,16 +451,16 @@ function page_redirect(){
    <p> This can be increased by smoking and drinking and poor health </p>
    <p> A poor biological age can be a signiture of early onset dementia </p>
  </div>
-<br>
+<br> -->
 
 
 <!-- Container (Contact Section) -->
-<div id="connect_devices" class="container-fluid ">
+<!-- <div id="connect_devices" class="container-fluid ">
   <h2 class="text-center">Connect with your fitness devices</h2>
   <div class="row">
       <img src='img/nell_connected.png'>
   </div>
-</div>
+</div> -->
 
 <div id="links" class="container-fluid text-center">
  <h2>Do more!</h2><br>

@@ -26,7 +26,7 @@ class brain extends Controller
     $contents = Storage::get($filename);
 
     //set $username
-  //  $username = Auth::user()->name;
+    $username = Auth::user()->name;
 
     $array = explode("\n",$contents);
     // SNP matrix
@@ -64,6 +64,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -94,6 +96,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -124,6 +128,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -154,6 +160,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -184,6 +192,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -215,6 +225,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -245,6 +257,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -275,6 +289,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -305,6 +321,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -335,6 +353,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -365,6 +385,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -395,6 +417,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -425,6 +449,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -455,6 +481,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -485,6 +513,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -515,6 +545,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -545,6 +577,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
@@ -575,6 +609,8 @@ class brain extends Controller
     $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
+    $results->gene = $gene;
+    $results->genotype = $genotype;
 
     $results->save();
 
