@@ -7,6 +7,8 @@ use App\snpmatrix;
 use App\variants;
 use App\results;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+
 
 class brain extends Controller
 {
@@ -17,11 +19,14 @@ class brain extends Controller
 
   public function txtDNAupload()
   {
-
     $username = 'saulwiggin';
+
     //  upload last uploaded genome
     $filename = $username . '.txt';
     $contents = Storage::get($filename);
+
+    //set $username
+    $username = Auth::user()->name;
 
     $array = explode("\n",$contents);
     // SNP matrix
@@ -56,7 +61,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -86,7 +91,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -116,7 +121,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -146,7 +151,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -176,7 +181,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -207,7 +212,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -237,7 +242,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -267,7 +272,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -297,7 +302,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -327,7 +332,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -357,7 +362,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -387,7 +392,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -417,7 +422,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -447,7 +452,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -477,7 +482,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -507,7 +512,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -537,7 +542,7 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
@@ -567,38 +572,13 @@ class brain extends Controller
     // store in display Database
     $results = new results;
 
-    $results->username = $filename;
+    $results->username = $username;
     $results->report_results = $snp_match_summary;
     $results->supplement = $name;
 
     $results->save();
 
     return view('spinner');
-
-  }
-
-  public function upload23andme()
-  {
-    // upload last 23andme data
-    // profile id /last uploaded
-
-
-    //first gene rs12794714 vitamin D
-    $someModel->setConnection('mysql2');
-
-    //$marker_data = marker
-    $variant_data = variants::get();
-
-    //var_dump($variant_data);
-
-    // match SNP's
-    $master_snp_matrix = snpmatrix::where('In23andme', 1)
-               ->get();
-
-    // report results after matching send to tabel for that users
-
-    return view('spinner');
-
 
   }
 
