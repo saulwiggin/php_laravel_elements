@@ -17,6 +17,8 @@ class brain extends Controller
 
   public function txtDNAupload($username)
   {
+
+    $username = 'saulwiggin';
     //  upload last uploaded genome
     $filename = $username . '.txt';
     $contents = Storage::get($filename);
