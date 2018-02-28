@@ -118,7 +118,7 @@ width:100%;height:100%;z-index:-1;'> -->
    window.setTimeout(function(){
 
        // Move to a new location or you can do something else
-       window.location.href = "/dashboard";
+       window.location.href = "/nutrition_report";
 
    }, 5000);
 </script>
