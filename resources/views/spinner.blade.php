@@ -1,8 +1,11 @@
-
-<div background-image='{{asset('img/background_subpage.jpg')}}'<div style='margin-left:auto;margin-right:auto;position:relative;margin-top:300px;'class="fulfilling-bouncing-circle-spinner">
-  <div class="circle"></div>
-  <div class="orbit"></div>
-</div>
+<!--
+<div style='background-image: url("{{asset('img/background_subpage.jpg')}}");
+width:100%;height:100%;z-index:-1;'> -->
+  <div style='z-index:2;margin-left:auto;margin-right:auto;position:relative;margin-top:300px;'class="fulfilling-bouncing-circle-spinner">
+    <div class="circle"></div>
+    <div class="orbit"></div>
+  </div>
+  <!-- </div> -->
 <style>
 .fulfilling-bouncing-circle-spinner, .fulfilling-bouncing-circle-spinner * {
       box-sizing: border-box;

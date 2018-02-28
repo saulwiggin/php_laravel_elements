@@ -15,7 +15,7 @@ class brain extends Controller
     return view('dashboard');
   }
 
-  public function txtDNAupload()
+  public function txtDNAupload($username)
   {
     //  upload last uploaded genome
     $filename = $username . '.txt';
