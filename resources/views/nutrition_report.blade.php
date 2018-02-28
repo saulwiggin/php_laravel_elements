@@ -138,11 +138,11 @@ function page_redirect(){
   </div>
 </div>
 
-<div class='body_reports' style='height:700px;'>
+<div class='body_reports' style='height:500px;'>
   <div class='row'>
-    <div class='col-md-4'>
+    <div class=''>
       <div class="container">
-        <div id="weight" class="collapse">
+        <!-- <div id="weight" class="collapse">
           <h2> Weight Report </h2>
           <script type="text/javascript">
             google.charts.load('current', {'packages':['table']});
@@ -239,7 +239,7 @@ function page_redirect(){
           <div id="table_div_energy"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
       <div class='col-md-4'>
         <div class='circle' id="circle-demo trigger"></div>
@@ -270,7 +270,7 @@ function page_redirect(){
           $('.collapse').collapse('hide');
       });
       </script>
-      <div class='col-md-4'>
+      <div class='col-md-4' style='margin-left:50px'>
         <div class="container">
 
           <!-- <div id="intellegence" class="collapse">
@@ -349,7 +349,8 @@ function page_redirect(){
       </div>
     </div>
   </div>
-
+</div>
+</div>
 <!-- Container (Services Section) -->
 <!-- <div id="services" class="container-fluid text-center">
   <h2>Products</h2>
