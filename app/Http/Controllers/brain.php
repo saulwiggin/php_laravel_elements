@@ -15,7 +15,7 @@ class brain extends Controller
     return view('dashboard');
   }
 
-  public function txtDNAupload($username)
+  public function txtDNAupload()
   {
 
     $username = 'saulwiggin';
