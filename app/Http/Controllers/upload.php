@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class upload extends Controller
 {
-  public function uploadFileToS3(uploadtxtfile $request)
+  public function uploadFileToS3(request $request)
   {
     $file = $request->file('file');
     $first_name = $request->input('first_name');

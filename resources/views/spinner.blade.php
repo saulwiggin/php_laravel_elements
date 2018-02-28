@@ -1,11 +1,34 @@
-<!--
-<div style='background-image: url("{{asset('img/background_subpage.jpg')}}");
-width:100%;height:100%;z-index:-1;'> -->
-  <div style='z-index:2;margin-left:auto;margin-right:auto;position:relative;margin-top:300px;'class="fulfilling-bouncing-circle-spinner">
-    <div class="circle"></div>
-    <div class="orbit"></div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("img/background_subpage.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+
+<!-- Container element -->
+<div class="parallax" style=''>
+  <div class="panel panel-default" style='position:relative;top:50px;margin-left:auto;margin-right:auto;width:400px;'>
+      <div class="panel-heading"></div>
+        <div class="panel-body">
+          <div style='z-index:2;margin-left:auto;margin-right:auto;position:relative;'class="fulfilling-bouncing-circle-spinner">
+        <div class="circle"></div>
+        <div class="orbit"></div>
+      </div>
+    </div>
   </div>
-  <!-- </div> -->
+</div>
+
+</div>
 <style>
 .fulfilling-bouncing-circle-spinner, .fulfilling-bouncing-circle-spinner * {
       box-sizing: border-box;
@@ -120,5 +143,5 @@ width:100%;height:100%;z-index:-1;'> -->
        // Move to a new location or you can do something else
        window.location.href = "/nutrition_report";
 
-   }, 5000);
+   }, 30000);
 </script>
