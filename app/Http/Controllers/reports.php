@@ -28,9 +28,12 @@ class reports extends Controller
     //var_dump($username);
     // get last genome uploaded $reports
     $results = results::get()
-               ->where('username', $username);
-               //var_dump($results);
-    return view('nutrition_report')->with('compact',$results);
+               ->where('username', $username)
+               ->toArray();
+   $results = array_values($results);
+  // var_dump($results);
+
+    return view('nutrition_report')->with(compact('results'));
 
   }
 }

@@ -105,11 +105,14 @@
                     <a style='color:white;font-size:18px'href="/devices"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-09.png')}}">  Elite Devices </a>
                 </li>
                <li>
-                    <a style='color:white;font-size:18px'href="/dispatch"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}"> Order History </a>
+                    <a style='color:white;font-size:18px'href="/dispatch"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-10.png')}}"> Discuss </a>
                 </li>
                  <li>
                   <a style='color:white;font-size:18px'href="/settings"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Settings</a>
                 </li>
+                <li>
+                 <a style='color:white;font-size:18px'href="/settings"><img style='height:30px' src="{{asset('img/icons/Second Purple/Nell_Icons_Second_Purple_CMYK-11.png')}}">   Order</a>
+               </li>
 <!--                 <li>
                   <a style='margin-bottom:40px;'href="">Report</a>
                 </li>

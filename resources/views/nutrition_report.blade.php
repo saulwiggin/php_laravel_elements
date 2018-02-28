@@ -318,15 +318,23 @@ function page_redirect(){
                 data.addColumn('string', 'Genotype');
                 data.addColumn('string', 'Description');
                 data.addRows([
-                  ['{{$results[0]->supplement}}', '{{$results[0]->gene}}', '{{$results[0]->genotype}}','{{$results[0]->report_results}}'],
-                  ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-                  ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-                  ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-                  ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-                  ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-                  ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-                  ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-                  ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+                  ['{{$results[0]['supplement']}}', '{{$results[0]['gene']}}', '{{$results[0]['genotype']}}','{{$results[0]['report_results']}}'],
+                  ['{{$results[1]['supplement']}}', '{{$results[1]['gene']}}', '{{$results[1]['genotype']}}','{{$results[1]['report_results']}}'],
+                  ['{{$results[2]['supplement']}}', '{{$results[2]['gene']}}', '{{$results[2]['genotype']}}','{{$results[2]['report_results']}}'],
+                  ['{{$results[3]['supplement']}}', '{{$results[3]['gene']}}', '{{$results[3]['genotype']}}','{{$results[3]['report_results']}}'],
+                  ['{{$results[4]['supplement']}}', '{{$results[4]['gene']}}', '{{$results[4]['genotype']}}','{{$results[4]['report_results']}}'],
+                  ['{{$results[5]['supplement']}}', '{{$results[5]['gene']}}', '{{$results[5]['genotype']}}','{{$results[5]['report_results']}}'],
+                  ['{{$results[6]['supplement']}}', '{{$results[6]['gene']}}', '{{$results[6]['genotype']}}','{{$results[6]['report_results']}}'],
+                  ['{{$results[7]['supplement']}}', '{{$results[7]['gene']}}', '{{$results[7]['genotype']}}','{{$results[7]['report_results']}}'],
+                  ['{{$results[8]['supplement']}}', '{{$results[8]['gene']}}', '{{$results[8]['genotype']}}','{{$results[8]['report_results']}}'],
+                  ['{{$results[9]['supplement']}}', '{{$results[9]['gene']}}', '{{$results[9]['genotype']}}','{{$results[9]['report_results']}}'],
+                  ['{{$results[10]['supplement']}}', '{{$results[10]['gene']}}', '{{$results[10]['genotype']}}','{{$results[10]['report_results']}}'],
+                  ['{{$results[11]['supplement']}}', '{{$results[11]['gene']}}', '{{$results[11]['genotype']}}','{{$results[11]['report_results']}}'],
+                  ['{{$results[12]['supplement']}}', '{{$results[12]['gene']}}', '{{$results[12]['genotype']}}','{{$results[12]['report_results']}}'],
+                  ['{{$results[13]['supplement']}}', '{{$results[13]['gene']}}', '{{$results[13]['genotype']}}','{{$results[13]['report_results']}}'],
+                  ['{{$results[14]['supplement']}}', '{{$results[14]['gene']}}', '{{$results[14]['genotype']}}','{{$results[14]['report_results']}}'],
+                  ['{{$results[15]['supplement']}}', '{{$results[15]['gene']}}', '{{$results[15]['genotype']}}','{{$results[15]['report_results']}}'],
+                  ['{{$results[16]['supplement']}}', '{{$results[16]['gene']}}', '{{$results[16]['genotype']}}','{{$results[16]['report_results']}}'],
 
                 ]);
 
@@ -462,7 +470,7 @@ function page_redirect(){
   </div>
 </div> -->
 
-<div id="links" class="container-fluid text-center">
+<!-- <div id="links" class="container-fluid text-center">
  <h2>Do more!</h2><br>
  <h3></h3>
  <div class="row text-center slideanim">
@@ -491,7 +499,7 @@ function page_redirect(){
    </div>
  </div>
 </div>
-<br>
+<br> -->
 <!-- <div id="googleMap" style="height:400px;width:100%;"></div>
  -->
 <!-- Add Google Maps -->
