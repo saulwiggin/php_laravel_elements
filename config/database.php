@@ -66,6 +66,20 @@ return [
             'engine' => null,
         ],
 
+        'mysql2' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '23andmedata.ctewbdzoj1q8.eu-west-2.rds.amazonaws.com'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'innodb'),
+            'username' => env('DB_USERNAME', 'drsaulwiggin'),
+            'password' => env('DB_PASSWORD', 'Mbcx5sw40!'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),

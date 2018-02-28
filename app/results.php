@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class snpmatrix extends Model
+class results extends Model
 {
-    protected $table = 'SNP_Matrix';
+    //
 }

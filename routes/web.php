@@ -104,7 +104,6 @@ Route::get('/receive', 'Receive@index');
 Route::post('/medium', 'stripe@medium');
 Route::get('/stripe/full', 'stripe@full');
 Route::post('/uploadTxtFile', 'upload@uploadFileToS3');
-Route::get('/reports/{report_type}', '23andme@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/brain', 'Brain@index');
 // Route::get('/products', 'ProductRecommendation@index');
@@ -118,8 +117,9 @@ Route::post('/accountupdate', 'settings@user');
 Route::post('/form_submission','settings@postaccount');
 Route::post('/credit_card','settings@creditsave');
 
-Route::post('/23andmeupload','brain@23upload23andme');
-Route::post('/txtDNAupload/{filename}','brain@txtDNAupload');
+Route::get('/23andmeupload','brain@upload23andme');
+Route::get('/txtDNAupload','brain@txtDNAupload');
 
+Route::get('/reports/txtupload', 'reports@txtupload');
 
 Route::get('/home', 'HomeController@index');
