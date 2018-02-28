@@ -1,202 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>My Natural Elements Report </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="gsm, dashboard, threshold, digital, sign, My-Data.me,industrial data, monitoring, automation, control, cybersecurity, critical processes, alarms, SMS, email, accessable information, iot, iiot">
-  <meta name="author" content="Saul Wiggin">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }
-  .jumbotron {
-      background-position: center;
-      background-image:url("stock-illustration-4543850-three-abstract-header-footer-images.jpg");
-      background-color: #FDDA24;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #FFA300;
-  }
-  .logo-small {
-      color: #FFA300;
-      font-size: 50px;
-  }
-  .logo {
-      color: #FFA300;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #FFA300;
-  }
-  .carousel-indicators li {
-      border-color: #FFA300;
-  }
-  .carousel-indicators li.active {
-      background-color: #FFA300;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #FFA300;
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #FFA300;
-      background-color: #fff !important;
-      color: #FFA300;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #FFA300 !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #FFA300;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #FFA300;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #FDDA24 !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #FDDA24;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-  </style>
-</head>
 <link href='myelements.css'>
+<link href='{{asset('/css/nutrition_reports.css')}}'>
 
+@include('headers.header')
+
+@include('sidenav.sidenav1')
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6BWRVW"
@@ -215,7 +22,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <script src="https://unpkg.com/ideogram@0.14.0/dist/js/ideogram.min.js"></script>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -224,8 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="icon-bar"></span>
 
       </button>
-<!--       <a class="navbar-brand" href="#myPage">Logo</a>
- -->    </div>
+   </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Share <span class="glyphicon share"></a></li>
@@ -233,7 +39,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <script>
 function page_redirect(){
@@ -243,7 +49,7 @@ function page_redirect(){
 
 <div class="jumbotron text-center">
   <h1>My Natural Elements</h1>
-  <p>Your genetic information has been analysed and produced a report which is able to give you information on on your fundamental building blocks, your natural elements.</p>
+  <!-- <p>Your genetic information has been analysed and produced a report which is able to give you information on on your fundamental building blocks, your natural elements.</p> -->
   <!--<form class="form-inline">-->
   <!--  <input type="email" class="form-control" size="50" placeholder="Email Address" required>-->
   <!--  <button type="button" class="btn btn-danger">Subscribe</button>-->
@@ -322,7 +128,7 @@ function page_redirect(){
               container: '.ideogram',
               organism: "human",
               chromosome: "17",
-              chrHeight: 600,
+              chrHeight: 400,
               orientation: "vertical",
               annotations: [{
                 "name": "BRCA1",
@@ -340,44 +146,209 @@ function page_redirect(){
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2> Full Nutrition Report </h2>
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-      <script type="text/javascript">
-        google.charts.load('current', {'packages':['table']});
-        google.charts.setOnLoadCallback(drawTable);
+<div class='body_reports' style='height:700px;'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <div class="container">
+        <div id="weight" class="collapse">
+          <h2> Weight Report </h2>
+          <script type="text/javascript">
+            google.charts.load('current', {'packages':['table']});
+            google.charts.setOnLoadCallback(drawTable1);
 
-        function drawTable() {
-          var data = new google.visualization.DataTable();
-          data.addColumn('string', 'Vitamin');
-          data.addColumn('string', 'Gene');
-          data.addColumn('string', 'Genotype');
-          data.addColumn('string', 'Description');
-          data.addRows([
-            ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
-            ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
-            ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
-            ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
-            ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
-            ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
-            ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
-            ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
-            ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+            function drawTable1() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Vitamin');
+              data.addColumn('string', 'Gene');
+              data.addColumn('string', 'Genotype');
+              data.addColumn('string', 'Description');
+              data.addRows([
+                ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
+                ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
+                ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
+                ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
+                ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
+                ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
 
-          ]);
+              ]);
 
-          var table = new google.visualization.Table(document.getElementById('table_div'));
+              var table = new google.visualization.Table(document.getElementById('table_div_weight'));
 
-          table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-        }
+              table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
+            }
+          </script>
+          <div id="table_div_weight"></div>
+        </div>
+        <div id="sleep" class="collapse">
+          <h2> Sleep Report </h2>
+          <script type="text/javascript">
+            google.charts.load('current', {'packages':['table']});
+            google.charts.setOnLoadCallback(drawTable2);
+
+            function drawTable2() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Vitamin');
+              data.addColumn('string', 'Gene');
+              data.addColumn('string', 'Genotype');
+              data.addColumn('string', 'Description');
+              data.addRows([
+                ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
+                ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
+                ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
+                ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
+                ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
+                ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table_div_sleep'));
+
+              table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
+            }
+          </script>
+          <div id="table_div_sleep"></div>
+        </div>
+        <div id="energy" class="collapse">
+          <h2> Energy Report </h2>
+          <script type="text/javascript">
+            google.charts.load('current', {'packages':['table']});
+            google.charts.setOnLoadCallback(drawTable3);
+
+            function drawTable3() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Vitamin');
+              data.addColumn('string', 'Gene');
+              data.addColumn('string', 'Genotype');
+              data.addColumn('string', 'Description');
+              data.addRows([
+                ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
+                ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
+                ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
+                ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
+                ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
+                ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
+                ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table_div_energy'));
+
+              table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
+            }
+          </script>
+          <div id="table_div_energy"></div>
+        </div>
+      </div>
+    </div>
+
+      <div class='col-md-4'>
+        <div class='circle' id="circle-demo trigger"></div>
+        <script>
+        $( "#trigger" ).click(function() {
+          document.getElementById("path_to_weight").beginElement();
+        });
+        </script>
+        <div id="circle-intellegence"></div>
+        <div id="circle-sleep"></div>
+        <div id="circle-energy"></div>
+        <div id="circle-weight"></div>
+        <h3> Click Your Body To Discover Your Vitals </h3>
+         <img src="{{ asset('img/human_profile.png') }}" usemap="#shapes"
+              alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+         <map name="shapes">
+           <area class='area' shape=circle href="#demo" coords="200,75,50" data-toggle="collapse" alt="Green circle.">
+           <area class='area' shape=poly coords="325,25,262,125,388,125" data-toggle="collapse"  href="#intellegence" alt="Blue triangle.">
+           <area class='area' shape=circle coords="260, 200, 50"
+                 href="#sleep" alt="gut" data-toggle="collapse" >
+          <area class='area' shape=circle href ='#energy' data-toggle="collapse" alt='hand' coords="360,270,50">
+          <area class='area' shape=circle coords="290,400,50" href="#weight"  alt="leg" data-toggle="collapse">
+         </map>
+        </p>
+      </div>
+      <script>
+      $('.area').click( function(e) {
+          $('.collapse').collapse('hide');
+      });
       </script>
-      <div id="table_div"></div>
+      <div class='col-md-4'>
+        <div class="container">
 
+          <div id="intellegence" class="collapse">
+            <h2> Intellegence Report </h2>
+            <script type="text/javascript">
+              google.charts.load('current', {'packages':['table']});
+              google.charts.setOnLoadCallback(drawTable4);
+
+              function drawTable4() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Vitamin');
+                data.addColumn('string', 'Gene');
+                data.addColumn('string', 'Genotype');
+                data.addColumn('string', 'Description');
+                data.addRows([
+                  ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                  ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
+                  ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
+                  ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
+                  ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
+                  ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
+                  ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
+                  ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
+                  ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+
+                ]);
+
+                var table = new google.visualization.Table(document.getElementById('table_div_intellegence'));
+
+                table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
+              }
+            </script>
+            <div id="table_div_intellegence"></div>
+          </div>
+          <div id="demo" class="collapse">
+            <h2> Nutrition Report </h2>
+            <script type="text/javascript">
+              google.charts.load('current', {'packages':['table']});
+              google.charts.setOnLoadCallback(drawTable6);
+
+              function drawTable6() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Vitamin');
+                data.addColumn('string', 'Gene');
+                data.addColumn('string', 'Genotype');
+                data.addColumn('string', 'Description');
+                data.addRows([
+                  ['Vitamin B6', 'rs429358', 'CT','1.45 ng/mL lower Vitamin B6 blood concentration.'],
+                  ['Vitamin B9', 'rs1801131','AC','Possibly impaired folate metabolism. Take more folic acid.'],
+                  ['Vitamin D','rs12794714','AA',  'you tend to have higher vitamin D levels.'],
+                  ['Vitamin D',   'rs12794714', 'AC', 'Possibly impaired folate metabolism. Take more folic acid.'],
+                  ['Vitamin A', 'rs7501331', 'TT','Reduced conversion of beta-carotene to retinol. Take more vitamin A.'],
+                  ['Vitamin B12','rs602662','GG',  'Lower vitamin B12 levels. Take more B12.'],
+                  ['Riboflavin', 'rs267606683','TT','Brown-Vialetto-Van Laere Syndrome; riboflavin treatment recommended.'],
+                  ['Folic Acid',   'rs4988235', 'TT', 'homozygous for C677T of MTHFR = 10-20% efficiency in processing folic acid = high homocysteine, low B12 and folate levels.'],
+                  ['Iron',   'rs855791', 'CT', '0.1 g/dL lower hemoglobin on average. Take more Iron.']
+
+                ]);
+
+                var table = new google.visualization.Table(document.getElementById('table_div_nutrition'));
+
+                table.draw(data, {showRowNumber: true, width: '400px', height: '600px'});
+              }
+            </script>
+            <div id="table_div_nutrition"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
@@ -595,6 +566,6 @@ $(document).ready(function(){
 })
 </script>
 
-</body>
+@include('sidenav.sidenav2');
 
-</html>
+@include('headers.footer');

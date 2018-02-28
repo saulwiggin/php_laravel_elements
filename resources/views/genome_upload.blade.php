@@ -29,11 +29,11 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <p id='genetic_upload_firstname' style='font-family: walsheim;
             margin-top: 10px;
-            margin-bottom: -10px;'>First Name: </p>
+            margin-bottom: -10px;font-size:25px;'>First Name: </p>
             <input style='margin-top:10px;'type="input" name="first_name" id="first_name">
             <p id='genetic_upload_lastname'style='font-family: walsheim;
             margin-top: 10px;
-            margin-bottom: -10px;'> Last Name: </p>
+            margin-bottom: -10px;font-size:25px;'> Last Name: </p>
             <input style='margin-top:10px;'type="input" name="last_name" id="last_name">
             <input style='margin-top:10px;'type="file" name="file" id="fileToUpload">
             <input class='btn btn-default' style='margin-top:10px;'type="submit" value="Upload" name="submit">

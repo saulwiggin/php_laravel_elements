@@ -141,7 +141,7 @@
    window.setTimeout(function(){
 
        // Move to a new location or you can do something else
-       window.location.href = "/nutrition_report";
+       window.location.href = "/report";
 
-   }, 30000);
+   }, 3000);
 </script>

@@ -121,5 +121,7 @@ Route::get('/23andmeupload','brain@upload23andme');
 Route::get('/txtDNAupload','brain@txtDNAupload');
 
 Route::get('/reports/txtupload', 'reports@txtupload');
+Route::get('/report', 'reports@showreport');
+
 
 Route::get('/home', 'HomeController@index');
